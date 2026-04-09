@@ -1,0 +1,1 @@
+-- Aqui ficará a estrutura do banco de dados para o projeto Furafila Digital

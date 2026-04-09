@@ -1,0 +1,1 @@
+// Nesta pasta "admin/js", os arquivos JavaScript são guardados e organizados. O arquivo "index.js" foi apenas criado para a pasta ser criada.
