@@ -10,9 +10,18 @@
 
     <div class="dashboard-fullscreen">
         <header class="main-header">
-            <input type="text" placeholder="Pesquisar" class="search-input">
-            <h2 class="admin-name">Olá, $admin</h2>
-            <button class="btn-link">Entrar como Aluno</button>
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo do Projeto" class="logo-img">
+            </div>
+
+            <div class="search-container">
+                <input type="text" placeholder="Pesquisar..." class="search-input">
+            </div>
+
+            <div class="header-right">
+                <h2 class="admin-name">Olá, $admin</h2>
+                <button class="btn-student">Aluno</button>
+            </div>
         </header>
 
         <section class="stats-row">
@@ -34,7 +43,7 @@
             </div>
             <div class="card">
                 <p>Valor Total Mensal</p>
-                <strong>R$6767,67</strong>
+                <strong>R$6.767,67</strong>
             </div>
         </section>
 
@@ -52,12 +61,42 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>Coxinha</td>
+                        <td>R$ 6,50</td>
+                        <td><span class="status-badge">Pago</span></td>
+                        <td>14:20</td>
+                        <td>19/04/2026</td>
+                        <td>Presencial</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Oliveira</td>
+                        <td>Enroladinho</td>
+                        <td>R$ 7,00</td>
+                        <td><span class="status-badge">Pendente</span></td>
+                        <td>12:10</td>
+                        <td>19/04/2026</td>
+                        <td>Entrega</td>
+                    </tr>
+                    <tr>
+                        <td>Pedro Santos</td>
+                        <td>Pastel de Forno</td>
+                        <td>R$ 8,00</td>
+                        <td><span class="status-badge">Pago</span></td>
+                        <td>10:05</td>
+                        <td>19/04/2026</td>
+                        <td>Presencial</td>
+                    </tr>
+                    <tr>
+                        <td>Ana Costa</td>
+                        <td>Kibe</td>
+                        <td>R$ 6,50</td>
+                        <td><span class="status-badge">Cancelado</span></td>
+                        <td>09:30</td>
+                        <td>18/04/2026</td>
+                        <td>Retirada</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
