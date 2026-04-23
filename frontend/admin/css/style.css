@@ -1,1 +1,195 @@
-/* Nesta pasta "admin/css", os arquivos CSS são guardados e organizados. O arquivo "style.css" foi apenas criado para a pasta ser criada. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.dashboard-fullscreen {
+    background-color: #E2D1F9;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* --- HEADER --- */
+.main-header {
+    background-color: #D3B8ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-color: #c0a3e9;
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #9b6dff;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(155, 109, 255, 0.2);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-name { font-size: 1.2rem; color: #333; }
+
+.btn-student {
+    background-color: #FFDEB8;
+    color: #555;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-student:hover {
+    background-color: #ffcc8e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* --- CARDS --- */
+.stats-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    flex: 1;
+    min-width: 180px;
+    padding: 25px 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.card p { color: #666; margin-bottom: 8px; font-size: 0.9rem; }
+.card strong { font-size: 1.6rem; color: #4A148C; }
+
+/* --- TABELA --- */
+.table-area {
+    background: white;
+    border-radius: 15px;
+    flex-grow: 1;
+    overflow-x: auto; 
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+th {
+    background-color: #f0f0f0;
+    padding: 12px 15px;
+    text-align: left;
+    border-right: 1px solid #ddd;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #ddd;
+    color: #444;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+tbody tr:hover {
+    background-color: #f9f5ff;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    background: #eee;
+}
+
+/* --- RESPONSIVIDADE (Celular e Tablet) --- */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .search-container {
+        order: 3;
+        width: 100%;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .stats-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-name { font-size: 1rem; }
+    
+    .dashboard-fullscreen { padding: 10px; }
+}
