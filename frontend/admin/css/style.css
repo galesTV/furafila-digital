@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: all 0.3s ease; /* Animação suave global */
+    transition: all 0.3s ease;
 }
 
 body, html {
@@ -48,7 +48,7 @@ body, html {
     padding: 12px 20px;
     border-radius: 10px;
     border: 2px solid transparent;
-    background-color: #D1BEEB;
+    background-color: #c0a3e9;
     width: 100%;
     max-width: 400px;
     outline: none;
@@ -68,7 +68,6 @@ body, html {
 
 .admin-name { font-size: 1.2rem; color: #333; }
 
-/* Botão Aluno Estilizado */
 .btn-student {
     background-color: #FFDEB8;
     color: #555;
@@ -76,7 +75,7 @@ body, html {
     padding: 10px 25px;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 50px;
+    border-radius: 10px;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -92,7 +91,7 @@ body, html {
     display: flex;
     gap: 15px;
     margin-bottom: 25px;
-    flex-wrap: wrap; /* Permite quebrar linha no mobile */
+    flex-wrap: wrap;
 }
 
 .card {
@@ -118,30 +117,32 @@ body, html {
     background: white;
     border-radius: 15px;
     flex-grow: 1;
-    overflow-x: auto; /* Rolagem horizontal para telas pequenas */
+    overflow-x: auto; 
     border: 1px solid #ddd;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 800px; /* Garante que a tabela não esmague no mobile */
+    min-width: 800px;
 }
 
 th {
     background-color: #f0f0f0;
-    padding: 15px;
+    padding: 12px 15px;
     text-align: left;
-    font-size: 1rem;
-    border-bottom: 2px solid #ddd;
-    position: sticky;
-    top: 0;
+    border-right: 1px solid #ddd;
 }
 
 td {
     padding: 12px 15px;
     border-bottom: 1px solid #eee;
+    border-right: 1px solid #ddd;
     color: #444;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
 }
 
 tbody tr:hover {
@@ -164,7 +165,7 @@ tbody tr:hover {
     }
     
     .search-container {
-        order: 3; /* Move a busca para baixo no mobile */
+        order: 3;
         width: 100%;
     }
 
@@ -175,7 +176,7 @@ tbody tr:hover {
 
     .stats-row {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* 2 colunas no tablet */
+        grid-template-columns: 1fr 1fr;
     }
 
     .card {
@@ -185,7 +186,7 @@ tbody tr:hover {
 
 @media (max-width: 480px) {
     .stats-row {
-        grid-template-columns: 1fr; /* 1 coluna no celular */
+        grid-template-columns: 1fr;
     }
 
     .admin-name { font-size: 1rem; }
