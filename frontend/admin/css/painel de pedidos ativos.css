@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* O Card Principal Roxo */
+.dashboard-container {
+    background-color: #E6E0F8; 
+    width: 100%;
+    max-width: 1050px;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+header h1 {
+    color: #481A8F;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Filtros */
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.badge {
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(0,0,0,0.15);
+}
+
+.purple { background-color: #D1C4E9; }
+.yellow { background-color: #FFF59D; }
+.blue { background-color: #BBDEFB; }
+.green { background-color: #C8E6C9; }
+.red { background-color: #FFCDD2; }
+
+/* Tabela de Pedidos */
+.order-list {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 6px; /* Espaço entre as linhas */
+}
+
+.order-list th {
+    text-align: left;
+    padding: 10px 20px;
+    color: #444;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.order-list td {
+    padding: 18px 20px;
+    font-size: 0.95rem;
+    color: #333;
+    border-top: 1px solid #C5B4E3;
+    border-bottom: 1px solid #C5B4E3;
+}
+
+/* Cores das Linhas (Efeito do Design) */
+.order-list tr td { background-color: #FFFFFF; } /* Linha Branca */
+.order-list tr.alt td { background-color: #F3EFFF; } /* Linha Roxinha */
+
+/* Arredondamento */
+.order-list td:first-child {
+    border-left: 1px solid #C5B4E3;
+    border-radius: 12px 0 0 12px;
+}
+
+.order-list td:last-child {
+    border-right: 1px solid #C5B4E3;
+    border-radius: 0 12px 12px 0;
+}
+
+.order-id { font-weight: 700; color: #481A8F; }
