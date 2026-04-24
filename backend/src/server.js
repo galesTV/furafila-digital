@@ -7,7 +7,6 @@ const adminRoutes = require("./routes/adminRoutes");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-
 // Middlewares
 app.use(cors()); // Permite que o frontend acesse a API sem problemas de CORS
 app.use(express.json()); // Permite que o servidor entenda requisições com corpo em JSON
@@ -22,7 +21,6 @@ app.get("/", (req, res) => {
         status: "online"
     });
 });
-
 
 // Inicialização
 app.listen(PORT, () => {

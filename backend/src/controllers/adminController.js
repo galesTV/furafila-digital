@@ -1,3 +1,28 @@
+const registerAdmin = (req, res) => {
+    const { escola, email, senha } = req.body;
+    
+    if (!escola || !email || !senha) {
+        return res.status(400).json({ 
+            message: "Erro: Todos os campos (escola, email, senha) são obrigatórios." 
+        });
+    }
+
+    if (!email.includes("@")) {
+        return res.status(400).json({ message: "Erro: Formato de email inválido." });
+    }
+
+    console.log(`Tentativa de registro na escola: ${escola}`);
+
+    return res.status(201).json({
+        message: "Admin registrado com sucesso!",
+        user: { 
+            email: email, 
+            escola: escola, 
+            role: "admin" 
+        }
+    });
+};
+
 const loginAdmin = (req, res) => {
     const { escola, email, senha } = req.body;
 
@@ -14,4 +39,4 @@ const loginAdmin = (req, res) => {
     return res.status(401).json({ message: "Usuário ou senha inválidos." });
 };
 
-module.exports = { loginAdmin };
+module.exports = { loginAdmin, registerAdmin };
