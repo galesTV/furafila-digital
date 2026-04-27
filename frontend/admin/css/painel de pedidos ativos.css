@@ -8,7 +8,7 @@
 
 /* 2. FUNDO DA PÁGINA (LILÁS ESCURO) */
 body { 
-    background-color: #D8B3FF; /* Cor lilás escura para o fundo total */
+    background-color: #D8B3FF; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +22,8 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1100px;
+    /* ALTERADO: Aumentado de 1100px para 1400px */
+    max-width: 1400px; 
     margin-bottom: 30px;
 }
 
@@ -32,9 +33,9 @@ body {
 }
 
 .logo-img-destaque {
-    height: 85px; /* Tamanho maior para dar destaque total à logo */
+    height: 85px; 
     width: auto;
-    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3)); /* Sombra para a logo "saltar" do fundo */
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3)); 
 }
 
 /* Barra de Pesquisa */
@@ -53,7 +54,7 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    color: white; /* Texto branco para ler melhor no fundo escuro */
+    color: white; 
     font-weight: 600;
 }
 
@@ -70,9 +71,10 @@ body {
 
 /* 4. PAINEL DE PEDIDOS (CARD CENTRAL) */
 .painel-principal {
-    background-color: #FEE8FF; /* Roxo claro do card */
+    background-color: #FEE8FF; 
     width: 100%;
-    max-width: 1100px;
+    /* ALTERADO: Aumentado de 1100px para 1400px para acompanhar a navbar */
+    max-width: 1400px; 
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
@@ -95,20 +97,19 @@ h1 { color: #4B0082; font-size: 1.7rem; margin-bottom: 5px; }
 .tabela-pedidos { width: 100%; border-collapse: separate; border-spacing: 0 10px; }
 .tabela-pedidos th { text-align: left; padding: 0 20px; color: #444; font-size: 0.85rem; }
 
-/* Configuração base para todas as células */
 .tabela-pedidos td {
     padding: 20px;
     font-size: 0.95rem;
 }
 
-/* LINHAS ÍMPARES (1, 3, 5...) - Tom Claro */
+/* LINHAS ÍMPARES - Tom Escuro conforme seu último código */
 .tabela-pedidos tr:nth-child(odd) td {
-    background-color: #FEE8FF;
+    background-color: #D8B3FF;
 }
 
-/* LINHAS PARES (2, 4, 6...) - Tom Escuro */
+/* LINHAS PARES - Tom Claro conforme seu último código */
 .tabela-pedidos tr:nth-child(even) td {
-    background-color: #D8B3FF;
+    background-color: #FEE8FF;
 }
 
 /* Arredondamento das Bordas das Linhas */
