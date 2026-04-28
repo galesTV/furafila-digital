@@ -1,4 +1,5 @@
 const db = require("../models/db");
+const bcrypt = require("bcrypt");
 
 const registerAdmin = (req, res) => {
     const { escola, email, senha, nome } = req.body;
@@ -14,9 +15,12 @@ const registerAdmin = (req, res) => {
     }
 
     try {
+        const salt = await bcrypt.genSalt(10);
+        const senhaCriptografada = await bcrypt.hash(senha, salt); 
+
         const [result] = db.execute(
             'INSERT INTO usuarios(nome, email, senha, id_escola, tipo_perfil) VALUES (?, ?, ?, ?, ?)',
-            [nome, email, senha, escola, 'admin']
+            [nome, email, senhaCriptografada, escola, 'admin']
         );
 
         return res.status(201).json({
@@ -55,7 +59,9 @@ const loginAdmin = (req, res) => {
 
         const usuario = usuarios[0];
 
-        if (usuario.senha !== senha) {
+        const senhaValida = await bcrypt.compare(senha, usuario.senha);
+
+        if (!senhaValida) {
             return res.status(401).json({ message: "Senha incorreta." });
         }
 
