@@ -1,0 +1,124 @@
+/* 1. RESET E FONTES */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Inter', sans-serif, Arial; 
+}
+
+/* 2. FUNDO DA PÁGINA (LILÁS ESCURO) */
+body { 
+    background-color: #D8B3FF; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* 3. BARRA SUPERIOR E LOGO EM DESTAQUE */
+.navbar-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* ALTERADO: Aumentado de 1100px para 1400px */
+    max-width: 1400px; 
+    margin-bottom: 30px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img-destaque {
+    height: 85px; 
+    width: auto;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3)); 
+}
+
+/* Barra de Pesquisa */
+.barra-pesquisa input {
+    width: 380px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FEE8FF;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Perfil e Botão Aluno */
+.perfil-usuario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white; 
+    font-weight: 600;
+}
+
+.btn-aluno-header {
+    background-color: #FFE0B2;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* 4. PAINEL DE PEDIDOS (CARD CENTRAL) */
+.painel-principal {
+    background-color: #FEE8FF; 
+    width: 100%;
+    /* ALTERADO: Aumentado de 1100px para 1400px para acompanhar a navbar */
+    max-width: 1400px; 
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+h1 { color: #4B0082; font-size: 1.7rem; margin-bottom: 5px; }
+.legenda-filtros { color: #555; font-size: 0.9rem; margin-bottom: 30px; }
+
+/* 5. TAGS DE FILTRO */
+.container-tags { display: flex; gap: 12px; margin-bottom: 35px; flex-wrap: wrap; }
+.tag { padding: 8px 16px; border-radius: 10px; font-weight: bold; font-size: 0.8rem; border: 1px solid #777; }
+
+.tag-todos { background: #C5B4E3; }
+.tag-pendentes { background: #FFF9C4; }
+.tag-preparando { background: #BBDEFB; }
+.tag-pronto { background: #C8E6C9; }
+.tag-atrasados { background: #FFCDD2; }
+
+/* 6. TABELA DE PEDIDOS (LILÁS ALTERNADO) */
+.tabela-pedidos { width: 100%; border-collapse: separate; border-spacing: 0 10px; }
+.tabela-pedidos th { text-align: left; padding: 0 20px; color: #444; font-size: 0.85rem; }
+
+.tabela-pedidos td {
+    padding: 20px;
+    font-size: 0.95rem;
+}
+
+/* LINHAS ÍMPARES - Tom Escuro conforme seu último código */
+.tabela-pedidos tr:nth-child(odd) td {
+    background-color: #D8B3FF;
+}
+
+/* LINHAS PARES - Tom Claro conforme seu último código */
+.tabela-pedidos tr:nth-child(even) td {
+    background-color: #FEE8FF;
+}
+
+/* Arredondamento das Bordas das Linhas */
+.tabela-pedidos td:first-child { 
+    border-radius: 12px 0 0 12px; 
+    font-weight: bold; 
+    color: #4B0082;
+}
+
+.tabela-pedidos td:last-child { 
+    border-radius: 0 12px 12px 0; 
+}
