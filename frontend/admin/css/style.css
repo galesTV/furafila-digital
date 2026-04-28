@@ -1,6 +1,6 @@
 :root {
-    --bg-main: #E2D1F9;
-    --bg-header: #D3B8ff;
+    --bg-main: #E6CEEE;
+    --bg-header: #D8B3FF;
     --bg-card: #ffffff;
     --text-dark: #333;
     --accent: #FFDEB8;
@@ -31,7 +31,7 @@ body { background-color: var(--bg-main); padding: 20px; transition: 0.3s; }
     margin-bottom: 20px;
 }
 
-.logo-img { height: 40px; }
+.logo-img { height: 60px; }
 
 .search-input {
     width: 350px;
@@ -82,7 +82,7 @@ body { background-color: var(--bg-main); padding: 20px; transition: 0.3s; }
     background: var(--table-head-bg);
     padding: 15px;
     text-align: left;
-    border: 1px solid #999;
+    border: 1px solid #fffbfb;
     color: var(--text-dark);
 }
 
