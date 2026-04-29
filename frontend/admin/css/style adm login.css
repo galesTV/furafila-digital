@@ -1,22 +1,19 @@
-/* 1. DEFINIÇÃO DE CORES E VARIÁVEIS (Essencial para o Modo Escuro) */
 :root {
-    --bg-color: #FEE8FF;      /* Tom claro original */
-    --input-bg: #D1B3FF;      /* Tom lilás dos inputs e botões */
-    --text-h1: #4B0082;       /* Roxo escuro do título */
-    --text-label: #333;       /* Cor dos rótulos */
-    --btn-text: #000;         /* Cor do texto nos botões */
+    --bg-color: #FEE8FF;
+    --input-bg: #D1B3FF;
+    --text-h1: #4B0082;
+    --text-label: #333;
+    --btn-text: #000;
 }
 
-/* 2. CORES DO MODO ESCURO (Solicitadas por você) */
 body.dark-mode {
-    --bg-color: #945797;      /* Substitui #FEE8FF */
-    --input-bg: #31083F;      /* Substitui #D1B3FF */
-    --text-h1: #FEE8FF;       /* Invertido para contraste */
-    --text-label: #FEE8FF;    /* Invertido para contraste */
-    --btn-text: #FEE8FF;      /* Texto claro no botão escuro */
+    --bg-color: #945797;
+    --input-bg: #31083F;
+    --text-h1: #FEE8FF;
+    --text-label: #FEE8FF;
+    --btn-text: #FEE8FF;
 }
 
-/* 3. ESTILOS GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -25,12 +22,12 @@ body.dark-mode {
 }
 
 body {
-    background-color: var(--bg-color); /* Variável aplicada */
+    background-color: var(--bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    transition: background-color 0.3s ease; /* Transição suave de cor */
+    transition: background-color 0.3s ease;
 }
 
 .login-container {
@@ -46,7 +43,7 @@ body {
 }
 
 h1 {
-    color: var(--text-h1); /* Variável aplicada */
+    color: var(--text-h1);
     margin-bottom: 30px;
     font-weight: 400;
 }
@@ -68,7 +65,7 @@ h1 {
 
 label {
     margin-bottom: 8px;
-    color: var(--text-label); /* Variável aplicada */
+    color: var(--text-label);
 }
 
 input {
@@ -76,7 +73,7 @@ input {
     padding: 12px;
     border: none;
     border-radius: 8px;
-    background-color: var(--input-bg); /* Variável aplicada */
+    background-color: var(--input-bg);
     color: var(--text-label);
     outline: none;
 }
@@ -107,7 +104,7 @@ button,
 
 .btn-secondary,
 .btn-primary {
-    background-color: var(--input-bg); /* Variável aplicada */
+    background-color: var(--input-bg);
     color: var(--btn-text);
 }
 
