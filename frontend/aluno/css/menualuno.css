@@ -1,0 +1,113 @@
+body {
+    background-color: #FFF9E2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#master{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1440px;
+    height: 1024px;
+}
+     #topo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1440px;
+    height: 116px;
+    background-color: #FFDEB8;
+    
+}
+#topo img{
+    width: 450px;
+    height: 120px;
+    
+    
+}
+#topo input{
+    width: 200px;
+    height: 40px;
+    margin-left: 120px;
+    margin-right: 50px;
+    border-radius: 7px;
+    border: none;
+    font-size: medium;
+    
+}
+#topo button{
+    width: 100px;
+    height: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 7px;
+    background-color: #D1B3FF;
+    border: none;
+    font-size: medium;
+}
+#topo p{
+    font-size:larger;
+    font-weight: bold;
+    color: #000000;
+     margin-left: 80px;
+    margin-right: 50px;
+
+}
+
+.row {
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: #D1B3FF;
+    margin-left: 100px;
+    margin-right: 50px;
+    border-radius: 8px;
+}
+button,
+.row a {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.deitado {
+    
+    margin-bottom: 100px;
+    width: 1440px;
+    height: 116px;
+    
+    
+}
+.deitado img{
+    width: 180px;
+    height: 160px;
+    margin-left: 20px;
+    border-radius: 5px;
+    
+}
+.deitadobebida {
+    
+    margin-bottom: 100px;
+    width: 1440px;
+    height: 116px;
+    
+    
+}
+.deitadobebida img{
+    width: 180px;
+    height: 160px;
+    margin-left: 20px;
+    border-radius: 5px;
+    
+}
