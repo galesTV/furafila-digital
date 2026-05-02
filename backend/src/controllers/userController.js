@@ -1,7 +1,7 @@
 const db = require("../models/db");
 const bcrypt = require("bcrypt");
 
-const registerAdmin = async (req, res) => {
+const registerStudent = async (req, res) => {
   const { escola, email, senha, nome } = req.body;
 
   if (!escola || !email || !senha || !nome) {
@@ -23,22 +23,22 @@ const registerAdmin = async (req, res) => {
 
     const [result] = await db.execute(
       "INSERT INTO usuarios(nome, email, senha, id_escola, tipo_perfil) VALUES (?, ?, ?, ?, ?)",
-      [nome, email, senhaCriptografada, escola, "admin"],
+      [nome, email, senhaCriptografada, escola, "aluno"],
     );
 
     return res.status(201).json({
-      message: "Admin registrado com sucesso!",
+      message: "Aluno cadastrado com sucesso!",
       id: result.insertId,
     });
   } catch (error) {
-    console.error("Erro ao registrar admin:", error);
+    console.error("Erro ao registrar aluno:", error);
     if (error.code === "ER_DUP_ENTRY")
-      return res.status(409).json({ message: "Erro: Email já registrado." });
-    return res.status(500).json({ message: "Erro interno do servidor." });
+      return res.status(409).json({ message: "Email já cadastrado." });
+    return res.status(500).json({ message: "Erro no servidor." });
   }
 };
 
-const loginAdmin = async (req, res) => {
+const loginStudent = async (req, res) => {
   const { escola, email, senha } = req.body;
 
   if (!escola || !email || !senha) {
@@ -50,14 +50,11 @@ const loginAdmin = async (req, res) => {
   try {
     const [usuarios] = await db.execute(
       "SELECT * FROM usuarios WHERE email = ? AND id_escola = ? AND tipo_perfil = ?",
-      [email, escola, "admin"],
+      [email, escola, "aluno"],
     );
 
-    if (usuarios.length === 0) {
-      return res
-        .status(401)
-        .json({ message: "Usuário não encontrado." });
-    }
+    if (usuarios.length === 0)
+      return res.status(401).json({ message: "Usuário não encontrado." });
 
     const usuario = usuarios[0];
 
@@ -77,11 +74,8 @@ const loginAdmin = async (req, res) => {
       },
     });
   } catch (error) {
-    console.error(error);
-    return res
-      .status(500)
-      .json({ message: "Erro interno no servidor ao tentar realizar login." });
+    return res.status(500).json({ message: "Erro no servidor." });
   }
 };
 
-module.exports = { loginAdmin, registerAdmin };
+module.exports = { registerStudent, loginStudent };
