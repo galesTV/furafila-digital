@@ -4,6 +4,7 @@ const cors = require("cors"); // Middleware para lidar com CORS (Cross-Origin Re
 
 const adminRoutes = require("./routes/adminRoutes");
 const userRoutes = require("./routes/userRoutes");
+const productRoutes = require("./routes/productRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -15,6 +16,7 @@ app.use(express.json()); // Permite que o servidor entenda requisições com cor
 // Rotas
 app.use("/admin", adminRoutes);
 app.use("/user", userRoutes);
+app.use("/products", productRoutes);
 
 // Rota de teste
 app.get("/", (req, res) => {
