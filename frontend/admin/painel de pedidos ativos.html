@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Pedidos - FuraFila Digital</title>
+    <link rel="stylesheet" href="../admin/css/painel de pedidos ativos.css">
+</head>
+<body>
+
+    <nav class="navbar-superior">
+        <div class="logo-area">
+            <img src="../images/logo-horizontal.png" alt="Logo do Projeto" class="logo-img-destaque">
+        </div>
+
+        <div class="barra-pesquisa">
+            <input type="text" placeholder="Pesquisar">
+        </div>
+
+        <div class="perfil-usuario">
+            <span>Olá, Admin</span>
+            <button class="btn-aluno-header">Aluno</button>
+        </div>
+    </nav>
+
+    <main class="painel-principal">
+        <header>
+            <h1>Painel de Pedidos Ativos - Fila de Preparo</h1>
+            <p class="legenda-filtros">Filtros Rápidos e indicadores</p>
+        </header>
+
+        <div class="container-tags">
+            <span class="tag tag-todos">Todos(28)</span>
+            <span class="tag tag-pendentes">Pendentes (8)</span>
+            <span class="tag tag-preparando">Preparando (12)</span>
+            <span class="tag tag-pronto">Pronto para Retirada(6)</span>
+            <span class="tag tag-atrasados">Atrasados (2)</span>
+        </div>
+
+        <table class="tabela-pedidos">
+            <thead>
+                <tr>
+                    <th>Fila de Preparos<br><small>Pedido</small></th>
+                    <th><br><small>Aluno</small></th>
+                    <th><br><small>Itens</small></th>
+                    <th><br><small>Status</small></th>
+                    <th><br><small>Hora Pedido</small></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>#12301</td><td>Gael Guzman</td><td>1x Coxinha, 1x Pepsi</td><td>Entregue</td><td>10:15</td></tr>
+                <tr><td>#12302</td><td>Lucas Silvestre</td><td>1x Bolinha de Queijo, 1x Coca-Cola</td><td>Entregue</td><td>10:18</td></tr>
+                <tr><td>#12303</td><td>Gabriel Pieira</td><td>1x Esfiha de carne, 1x Brigadeiro</td><td>Entregue</td><td>10:20</td></tr>
+                <tr><td>#12304</td><td>Mario Ayala</td><td>1x X-salada, 1x Suco de laranja</td><td>Entregue</td><td>10:21</td></tr>
+                <tr><td>#12305</td><td>Isabelly Mendes</td><td>3x Coxinha, 2x Pepsi</td><td>Em Preparo</td><td>10:25</td></tr>
+                <tr><td>#12306</td><td>Jaime Palilo</td><td>2x Coxinha, 1x Suco de Limão</td><td>Em Preparo</td><td>10:27</td></tr>
+                <tr><td>#12307</td><td>Cauê Anhê</td><td>1x X-tudo, 1x Pepsi</td><td>Em Preparo</td><td>10:30</td></tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>
