@@ -19,28 +19,31 @@ body {
     width: 1440px;
     height: 116px;
     background-color: #FFDEB8;
+    border-radius: 8px;
     
 }
 #topo img{
-    width: 450px;
-    height: 120px;
+    width: 300px;
+    height: 70px;
+    margin-left: 20px;
     
     
 }
 #topo input{
     width: 200px;
     height: 40px;
-    margin-left: 120px;
+    margin-left: 170px;
     margin-right: 50px;
     border-radius: 7px;
     border: none;
+    opacity: 0.8;
     font-size: medium;
     
 }
 #topo button{
     width: 100px;
     height: 40px;
-    margin-left: 50px;
+    margin-left: 80px;
     margin-right: 50px;
     border-radius: 7px;
     background-color: #D1B3FF;
@@ -51,7 +54,7 @@ body {
     font-size:larger;
     font-weight: bold;
     color: #000000;
-     margin-left: 80px;
+     margin-left: 120px;
     margin-right: 50px;
 
 }
@@ -96,6 +99,12 @@ button,
     border-radius: 5px;
     
 }
+.deitado img:hover {
+    cursor: pointer;
+    color: #FFF9E2;
+    opacity: 0.5;
+}   
+
 .deitadobebida {
     
     margin-bottom: 100px;
@@ -109,5 +118,13 @@ button,
     height: 160px;
     margin-left: 20px;
     border-radius: 5px;
+    transition: 0.3s ;
     
 }
+
+.deitadobebida img:hover {
+    cursor: pointer;
+    color: #FFF9E2;
+    opacity: 0.5;
+}   
+
