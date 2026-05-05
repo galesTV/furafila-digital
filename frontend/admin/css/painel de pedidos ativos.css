@@ -1,4 +1,3 @@
-/* 1. RESET E FONTES */
 * { 
     margin: 0; 
     padding: 0; 
@@ -23,6 +22,102 @@ body {
     width: 100%;
     max-width: 1400px; 
     margin-bottom: 30px;
+}
+
+.logo-img-destaque {
+    height: 85px; 
+    width: auto;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3)); 
+}
+
+.barra-pesquisa input {
+    width: 380px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FEE8FF;
+    font-size: 1rem;
+    outline: none;
+}
+
+.perfil-usuario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white; 
+    font-weight: 600;
+}
+
+.btn-aluno-header {
+    background-color: #FFE0B2;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-toggle {
+    background-color: #333;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.painel-principal {
+    background-color: #FEE8FF; 
+    width: 100%;
+    max-width: 1400px; 
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+}
+
+h1 { color: #4B0082; font-size: 1.7rem; margin-bottom: 5px; }
+.legenda-filtros { color: #555; font-size: 0.9rem; margin-bottom: 30px; }
+
+.container-tags { display: flex; gap: 12px; margin-bottom: 35px; flex-wrap: wrap; }
+.tag { padding: 8px 16px; border-radius: 10px; font-weight: bold; font-size: 0.8rem; border: 1px solid #777; }
+.tag-todos { background: #C5B4E3; }
+.tag-pendentes { background: #FFF9C4; }
+.tag-preparando { background: #BBDEFB; }
+.tag-pronto { background: #C8E6C9; }
+.tag-atrasados { background: #FFCDD2; }
+
+.tabela-pedidos { width: 100%; border-collapse: separate; border-spacing: 0 10px; }
+.tabela-pedidos th { text-align: left; padding: 0 20px; color: #444; font-size: 0.85rem; }
+
+.tabela-pedidos td {
+    padding: 20px;
+    font-size: 0.95rem;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.tabela-pedidos tr:nth-child(odd) td { background-color: #D8B3FF; }
+.tabela-pedidos tr:nth-child(even) td { background-color: #FEE8FF; }
+
+.tabela-pedidos td:first-child { 
+    border-radius: 12px 0 0 12px; 
+    font-weight: bold; 
+    color: #4B0082;
+    border-left: 2px solid #000;
+}
+
+.tabela-pedidos td:last-child { 
+    border-radius: 0 12px 12px 0; 
+    border-right: 2px solid #000;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
 }
 
 .logo-img-destaque {
@@ -109,157 +204,8 @@ h1 { color: #4B0082; font-size: 1.7rem; margin-bottom: 5px; }
 body.dark-mode { background-color: #945797; }
 body.dark-mode .painel-principal { background-color: #31083F; }
 body.dark-mode h1, body.dark-mode .perfil-usuario { color: #FEE8FF; }
-body.dark-mode .legenda-filtros { color: #31083F; }
+body.dark-mode .legenda-filtros { color: #FEE8FF; }
 body.dark-mode .tabela-pedidos tr:nth-child(odd) td { background-color: #945797; color: #fff; }
 body.dark-mode .tabela-pedidos tr:nth-child(even) td { background-color: #31083F; color: #fff; }
 body.dark-mode .tabela-pedidos td:first-child { color: #FFE0B2; }
-=======
-.logo-area {
-    display: flex;
-    align-items: center;
-}
-
->>>>>>> develop
-.logo-img-destaque {
-    height: 85px; 
-    width: auto;
-    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3)); 
-}
-
-<<<<<<< HEAD
-=======
-/* Barra de Pesquisa */
->>>>>>> develop
-.barra-pesquisa input {
-    width: 380px;
-    padding: 12px 20px;
-    border-radius: 10px;
-    border: none;
-    background-color: #FEE8FF;
-    font-size: 1rem;
-    outline: none;
-}
-
-<<<<<<< HEAD
-=======
-/* Perfil e Botão Aluno */
->>>>>>> develop
-.perfil-usuario {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: white; 
-    font-weight: 600;
-}
-
-.btn-aluno-header {
-    background-color: #FFE0B2;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-<<<<<<< HEAD
-/* 4. PAINEL DE PEDIDOS */
-.painel-principal {
-    background-color: #FEE8FF; 
-    width: 100%;
-=======
-/* 4. PAINEL DE PEDIDOS (CARD CENTRAL) */
-.painel-principal {
-    background-color: #FEE8FF; 
-    width: 100%;
-    /* ALTERADO: Aumentado de 1100px para 1400px para acompanhar a navbar */
->>>>>>> develop
-    max-width: 1400px; 
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-<<<<<<< HEAD
-    transition: background-color 0.3s;
-=======
->>>>>>> develop
-}
-
-h1 { color: #4B0082; font-size: 1.7rem; margin-bottom: 5px; }
-.legenda-filtros { color: #555; font-size: 0.9rem; margin-bottom: 30px; }
-
-/* 5. TAGS DE FILTRO */
-.container-tags { display: flex; gap: 12px; margin-bottom: 35px; flex-wrap: wrap; }
-.tag { padding: 8px 16px; border-radius: 10px; font-weight: bold; font-size: 0.8rem; border: 1px solid #777; }
-<<<<<<< HEAD
-=======
-
->>>>>>> develop
-.tag-todos { background: #C5B4E3; }
-.tag-pendentes { background: #FFF9C4; }
-.tag-preparando { background: #BBDEFB; }
-.tag-pronto { background: #C8E6C9; }
-.tag-atrasados { background: #FFCDD2; }
-
-<<<<<<< HEAD
-/* 6. TABELA COM BORDAS PRETAS */
-=======
-/* 6. TABELA DE PEDIDOS (LILÁS ALTERNADO) */
->>>>>>> develop
-.tabela-pedidos { width: 100%; border-collapse: separate; border-spacing: 0 10px; }
-.tabela-pedidos th { text-align: left; padding: 0 20px; color: #444; font-size: 0.85rem; }
-
-.tabela-pedidos td {
-    padding: 20px;
-    font-size: 0.95rem;
-<<<<<<< HEAD
-    /* Adicionando as bordas pretas */
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
-}
-
-.tabela-pedidos tr:nth-child(odd) td { background-color: #D8B3FF; }
-.tabela-pedidos tr:nth-child(even) td { background-color: #FEE8FF; }
-
-=======
-}
-
-/* LINHAS ÍMPARES - Tom Escuro conforme seu último código */
-.tabela-pedidos tr:nth-child(odd) td {
-    background-color: #D8B3FF;
-}
-
-/* LINHAS PARES - Tom Claro conforme seu último código */
-.tabela-pedidos tr:nth-child(even) td {
-    background-color: #FEE8FF;
-}
-
-/* Arredondamento das Bordas das Linhas */
->>>>>>> develop
-.tabela-pedidos td:first-child { 
-    border-radius: 12px 0 0 12px; 
-    font-weight: bold; 
-    color: #4B0082;
-<<<<<<< HEAD
-    border-left: 2px solid #000; /* Borda esquerda */
-=======
->>>>>>> develop
-}
-
-.tabela-pedidos td:last-child { 
-    border-radius: 0 12px 12px 0; 
-<<<<<<< HEAD
-    border-right: 2px solid #000; /* Borda direita */
-}
-
-/* 7. REGRAS DO MODO ESCURO */
-body.dark-mode { background-color: #945797; }
-body.dark-mode .painel-principal { background-color: #31083F; }
-body.dark-mode h1, body.dark-mode .perfil-usuario { color: #FEE8FF; }
-body.dark-mode .legenda-filtros { color: #31083F; }
-body.dark-mode .tabela-pedidos tr:nth-child(odd) td { background-color: #945797; color: #fff; }
-body.dark-mode .tabela-pedidos tr:nth-child(even) td { background-color: #31083F; color: #fff; }
-body.dark-mode .tabela-pedidos td:first-child { color: #FFE0B2; }
-=======
-}
->>>>>>> develop
+body.dark-mode .tabela-pedidos th { color: #ffffff; }

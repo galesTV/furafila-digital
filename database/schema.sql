@@ -20,6 +20,7 @@ CREATE TABLE usuarios (
 CREATE TABLE produtos (
     id_produto INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
+    imagem VARCHAR(255) NOT NULL,
     categoria ENUM('Salgados', 'Doces', 'Bebidas') NOT NULL,
     preco DECIMAL(10, 2) NOT NULL,
     ativo BOOLEAN DEFAULT TRUE

@@ -2,10 +2,8 @@ const db = require("../models/db");
 const bcrypt = require("bcrypt");
 
 const registerProduct = async (req, res) => {
-  // Destruturação dos campos baseada na tabela 'produtos' vista no DBeaver
   const { nome, preco, categoria } = req.body;
 
-  // Validação de campos obrigatórios para evitar erro de 'undefined'
   if (!nome || !preco || !categoria) {
     return res.status(400).json({
       message: "Erro: Nome, preço e categoria são campos obrigatórios.",
@@ -25,7 +23,6 @@ const registerProduct = async (req, res) => {
   } catch (error) {
     console.error("Erro ao registrar produto:", error);
     
-    // Tratamento para o erro 'Data too long' que apareceu no seu log
     if (error.code === "ER_DATA_TOO_LONG") {
       return res.status(400).json({ message: "Erro: Valor muito longo para um dos campos." });
     }
