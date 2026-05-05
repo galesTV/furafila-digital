@@ -63,6 +63,16 @@ body {
     color: var(--text-dark);
 }
 
+.btn-logout {
+    background: #ff0000;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
 .btn-student {
     background: var(--accent);
     border: none;
