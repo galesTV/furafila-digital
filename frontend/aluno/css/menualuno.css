@@ -151,6 +151,109 @@ button,
 
 #Abrir1{
     background-color: #FFF9E2;
+    width: 220px;
+    
+}
+#Abrir2{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir3{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir4{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir5{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir6{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir7{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir8{
+    background-color: #FFF9E2;
+    width: 240px;
+ 
+}
+#Abrir9{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 10px;
+}
+#Abrir10{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir11{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir12{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir13{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir14{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+
+#Abrir15{
+    background-color: #FFF9E2;
+    width: 240px;
+ 
+}
+#Abrir16{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 10px;
+}
+#Abrir17{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir18{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir19{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir20{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
+}
+#Abrir21{
+    background-color: #FFF9E2;
+    width: 220px;
+    margin-left: 20px;
 }
 
 
@@ -197,6 +300,7 @@ button,
   font-size: 28px;
   cursor: pointer;
   background-color: #FFF9E2;
+
 }
 
 .fechar:hover {
