@@ -20,27 +20,23 @@ logout.addEventListener('click', () => {
 document.getElementById('product-form').addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const nome = document.getElementById('nome').value;
-    const preco = document.getElementById('preco').value;
-    const categoria = document.getElementById('categoria').value;
+    const formData = new FormData();
+    formData.append('nome', document.getElementById('nome').value);
+    formData.append('preco', document.getElementById('preco').value);
+    formData.append('categoria', document.getElementById('categoria').value);
+    formData.append('imagem', document.getElementById('imagem').files[0]);
 
     try {
         const response = await fetch('http://localhost:3000/products/register', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ nome, preco, categoria })
+            body: formData
         });
 
-        const data = await response.json();
-
         if (response.ok) {
-            alert('Produto cadastrado com sucesso!');
+            alert('Produto e imagem salvos!');
             window.location.href = 'index.html';
-        } else {
-            alert(data.message);
         }
     } catch (error) {
-        console.error('Erro:', error);
-        alert('Erro ao conectar com o servidor.');
+        console.error(error);
     }
 });

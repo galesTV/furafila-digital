@@ -1,19 +1,29 @@
 const db = require("../models/db");
-const bcrypt = require("bcrypt");
+const multer = require('multer');
+const path = require('path');
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => cb(null, 'uploads/'),
+    filename: (req, file, cb) => cb(null, Date.now() + path.extname(file.originalname))
+});
+
+const upload = multer({ storage });
 
 const registerProduct = async (req, res) => {
   const { nome, preco, categoria } = req.body;
 
-  if (!nome || !preco || !categoria) {
+  const imagem = req.file ? `/uploads/${req.file.filename}` : null;
+
+  if (!nome || !preco || !categoria || !imagem) {
     return res.status(400).json({
-      message: "Erro: Nome, preço e categoria são campos obrigatórios.",
+      message: "Erro: Nome, preço, categoria e imagem são campos obrigatórios.",
     });
   }
 
   try {
     const [result] = await db.execute(
-      "INSERT INTO produtos(nome, preco, categoria, ativo) VALUES (?, ?, ?, ?)",
-      [nome, preco, categoria, 1]
+      "INSERT INTO produtos(nome, preco, categoria, imagem, ativo) VALUES (?, ?, ?, ?, ?)",
+      [nome, preco, categoria, imagem, 1]
     );
 
     return res.status(201).json({
