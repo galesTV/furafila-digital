@@ -3,9 +3,9 @@ const express = require("express"); // Framework para criar o servidor e lidar c
 const cors = require("cors"); // Middleware para lidar com CORS (Cross-Origin Resource Sharing)
 const path = require("path");
 
-const adminRoutes = require("./routes/adminRoutes");
-const userRoutes = require("./routes/userRoutes");
-const productRoutes = require("./routes/productRoutes");
+const adminRoutes = require('./routes/adminRoutes');
+const userRoutes = require('./routes/userRoutes');
+const productRoutes = require('./routes/productRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
