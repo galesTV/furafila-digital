@@ -22,6 +22,7 @@ document.getElementById('product-form').addEventListener('submit', async (e) => 
 
     const formData = new FormData();
     formData.append('nome', document.getElementById('nome').value);
+    formData.append('descricao', document.getElementById('descricao').value);
     formData.append('preco', document.getElementById('preco').value);
     formData.append('categoria', document.getElementById('categoria').value);
     formData.append('imagem', document.getElementById('imagem').files[0]);

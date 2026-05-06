@@ -10,20 +10,20 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 const registerProduct = async (req, res) => {
-  const { nome, preco, categoria } = req.body;
+  const { nome, descricao, preco, categoria } = req.body;
 
   const imagem = req.file ? `/uploads/${req.file.filename}` : null;
 
-  if (!nome || !preco || !categoria || !imagem) {
+  if (!nome || !descricao || !preco || !categoria || !imagem) {
     return res.status(400).json({
-      message: "Erro: Nome, preço, categoria e imagem são campos obrigatórios.",
+      message: "Erro: Nome, descrição, preço, categoria e imagem são campos obrigatórios.",
     });
   }
 
   try {
     const [result] = await db.execute(
-      "INSERT INTO produtos(nome, preco, categoria, imagem, ativo) VALUES (?, ?, ?, ?, ?)",
-      [nome, preco, categoria, imagem, 1]
+      "INSERT INTO produtos(nome, descricao, preco, categoria, imagem, ativo) VALUES (?, ?, ?, ?, ?, ?)",
+      [nome, descricao, preco, categoria, imagem, 1]
     );
 
     return res.status(201).json({
