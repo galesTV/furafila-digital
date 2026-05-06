@@ -83,6 +83,60 @@ body {
     color: black;
 }
 
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    gap: 20px;
+}
+
+.btn-produto {
+    background: var(--bg-header);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.btn-produto:hover {
+    filter: brightness(0.9);
+    transform: translateY(-2px);
+}
+
+.btn-painel {
+    background: var(--bg-header);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.btn-painel:hover {
+    filter: brightness(0.9);
+    transform: translateY(-2px);
+}
+
+.btn-toggle {
+    background-color: #333;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
 .stats-row {
     display: flex;
     gap: 15px;

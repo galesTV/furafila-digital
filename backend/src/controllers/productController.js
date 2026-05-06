@@ -1,21 +1,29 @@
 const db = require("../models/db");
-const bcrypt = require("bcrypt");
+const multer = require('multer');
+const path = require('path');
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => cb(null, 'uploads/'),
+    filename: (req, file, cb) => cb(null, Date.now() + path.extname(file.originalname))
+});
+
+const upload = multer({ storage });
 
 const registerProduct = async (req, res) => {
-  // Destruturação dos campos baseada na tabela 'produtos' vista no DBeaver
   const { nome, preco, categoria } = req.body;
 
-  // Validação de campos obrigatórios para evitar erro de 'undefined'
-  if (!nome || !preco || !categoria) {
+  const imagem = req.file ? `/uploads/${req.file.filename}` : null;
+
+  if (!nome || !preco || !categoria || !imagem) {
     return res.status(400).json({
-      message: "Erro: Nome, preço e categoria são campos obrigatórios.",
+      message: "Erro: Nome, preço, categoria e imagem são campos obrigatórios.",
     });
   }
 
   try {
     const [result] = await db.execute(
-      "INSERT INTO produtos(nome, preco, categoria, ativo) VALUES (?, ?, ?, ?)",
-      [nome, preco, categoria, 1]
+      "INSERT INTO produtos(nome, preco, categoria, imagem, ativo) VALUES (?, ?, ?, ?, ?)",
+      [nome, preco, categoria, imagem, 1]
     );
 
     return res.status(201).json({
@@ -25,7 +33,6 @@ const registerProduct = async (req, res) => {
   } catch (error) {
     console.error("Erro ao registrar produto:", error);
     
-    // Tratamento para o erro 'Data too long' que apareceu no seu log
     if (error.code === "ER_DATA_TOO_LONG") {
       return res.status(400).json({ message: "Erro: Valor muito longo para um dos campos." });
     }

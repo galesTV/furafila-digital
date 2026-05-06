@@ -1,25 +1,26 @@
 require("dotenv").config();
-const express = require("express"); 
-const cors = require("cors"); 
+const express = require("express"); // Framework para criar o servidor e lidar com rotas
+const cors = require("cors"); // Middleware para lidar com CORS (Cross-Origin Resource Sharing)
+const path = require("path");
 
-// 1. IMPORTAÇÃO DAS ROTAS
-const adminRoutes = require("./routes/adminRoutes");
-const userRoutes = require('./routes/userRoutes'); 
-const productRoutes = require("./routes/productRoutes");
+const adminRoutes = require('./routes/adminRoutes');
+const userRoutes = require('./routes/userRoutes');
+const productRoutes = require('./routes/productRoutes');
 
-// 2. INICIALIZAÇÃO DO APP (Isso deve vir antes de usar as rotas!)
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// 3. MIDDLEWARES
-app.use(cors()); 
-app.use(express.json()); 
+// Middlewares
+app.use(cors()); // Permite que o frontend acesse a API sem problemas de CORS
+app.use(express.json()); // Permite que o servidor entenda requisições com corpo em JSON
+app.use(express.urlencoded({ extended: true })); // Permite processar dados de formulários comuns
 
-// 4. DEFINIÇÃO DAS ROTAS
-// Note: Mudei para "/aluno" para bater com o seu fetch do frontend
+// Torna a pasta 'uploads' pública para que as imagens apareçam no navegador
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
+// Rotas
 app.use("/admin", adminRoutes);
-app.use("/aluno", userRoutes); // Se o seu JS do front chama /aluno/login, use "/aluno" aqui
-app.use("/user", userRoutes);  // Mantive este caso você use /user em outro lugar
+app.use("/user", userRoutes);
 app.use("/products", productRoutes);
 
 // Rota de teste
@@ -30,7 +31,7 @@ app.get("/", (req, res) => {
     });
 });
 
-// 5. INICIALIZAÇÃO
+// Inicialização
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });

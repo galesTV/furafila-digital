@@ -1,11 +1,22 @@
 const express = require('express');
 const router = express.Router();
 const productController = require('../controllers/productController');
+const multer = require('multer');
+const path = require('path');
 
-// Rota para cadastrar um novo produto
-router.post('/register', productController.registerProduct);
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads/');
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname));
+    }
+});
 
-// Rota para listar todos os produtos
+const upload = multer({ storage });
+
+router.post('/register', upload.single('imagem'), productController.registerProduct);
+
 router.get('/', productController.listProducts);
 
 module.exports = router;

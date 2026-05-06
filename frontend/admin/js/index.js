@@ -8,6 +8,7 @@ if (nomeSalvo) {
 const btnToggle = document.getElementById('toggle-dark');
 btnToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
+    btnToggle.textContent = document.body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Escuro';
 });
 
 const logout = document.getElementById('logout');
