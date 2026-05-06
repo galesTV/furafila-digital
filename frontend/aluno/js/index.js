@@ -1,4 +1,4 @@
-const alunoNameElement = document.querySelector('.admin-name'); // Ajuste a classe se no menu do aluno for diferente
+const alunoNameElement = document.querySelector('.admin-name');
 const nomeSalvo = localStorage.getItem('alunoNome');
 
 if (nomeSalvo && alunoNameElement) {

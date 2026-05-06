@@ -8,7 +8,6 @@ loginForm.addEventListener('submit', async (event) => {
     const senha = document.getElementById('senha').value;
 
     try {
-        // Rota baseada no seu userRoutes.js configurado no server.js
         const response = await fetch('http://localhost:3000/aluno/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -19,7 +18,6 @@ loginForm.addEventListener('submit', async (event) => {
 
         if (response.ok) {
             alert("Bem-vindo(a)!");
-            // Salvamos como 'alunoData' para não dar conflito com 'adminNome'
             localStorage.setItem('alunoNome', data.user.nome); 
             window.location.href = 'menualuno.html';
         } else {

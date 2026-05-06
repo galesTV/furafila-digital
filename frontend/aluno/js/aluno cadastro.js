@@ -3,7 +3,7 @@ const registerForm = document.querySelector('.cadastro-form');
 registerForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     
-    const escola = document.getElementById('escola').value; // ID da Escola
+    const escola = document.getElementById('escola').value;
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
 
