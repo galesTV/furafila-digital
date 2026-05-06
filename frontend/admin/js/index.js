@@ -1,1 +1,18 @@
-// Nesta pasta "admin/js", os arquivos JavaScript são guardados e organizados. O arquivo "index.js" foi apenas criado para a pasta ser criada.
+const adminNameElement = document.querySelector('.admin-name');
+const nomeSalvo = localStorage.getItem('adminNome');
+
+if (nomeSalvo) {
+    adminNameElement.textContent = `Olá, ${nomeSalvo}`;
+}
+
+const btnToggle = document.getElementById('toggle-dark');
+btnToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    btnToggle.textContent = document.body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Escuro';
+});
+
+const logout = document.getElementById('logout');
+logout.addEventListener('click', () => {
+    localStorage.removeItem('adminNome');
+    window.location.href = 'adm login.html';
+});

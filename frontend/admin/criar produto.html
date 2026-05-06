@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Produto - FuraFila Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style criar produto.css">
+</head>
+
+<body class="admin-panel">
+    <div class="dashboard-fullscreen">
+        <header class="main-header">
+            <div class="header-left">
+                <a href="index.html" style="text-decoration: none; color: black;">← Voltar</a>
+                <img src="../images/logo-horizontal.png" alt="Logo" class="logo-img">
+            </div>
+            <h2>Cadastrar Novo Produto</h2>
+            <div class="header-right">
+                <button type="button" id="toggle-dark" class="btn-toggle">Modo Escuro</button>
+                <span class="admin-name">Olá, Admin</span>
+                <a class="btn-student" href="../aluno/loginaluno.html">Aluno</a>
+                <a class="btn-logout" href="adm login.html" id="logout">Sair</a>
+            </div>
+        </header>
+
+        <main class="form-container">
+            <form id="product-form">
+                <div class="form-group">
+                    <label for="nome">Nome do Produto:</label>
+                    <input type="text" id="nome" placeholder="Ex: Coxinha de Frango" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="imagem">Foto do Produto:</label>
+                    <input type="file" id="imagem" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="preco">Preço (R$):</label>
+                    <input type="number" id="preco" step="0.01" placeholder="6.50" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" required>
+                        <option value="">Selecione...</option>
+                        <option value="Salgados">Salgados</option>
+                        <option value="Doces">Doces</option>
+                        <option value="Bebidas">Bebidas</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-save">Salvar Produto</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="js/criar produto.js"></script>
+</body>
+
+</html>
