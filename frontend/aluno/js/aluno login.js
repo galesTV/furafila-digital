@@ -8,7 +8,7 @@ loginForm.addEventListener('submit', async (event) => {
     const senha = document.getElementById('senha').value;
 
     try {
-        const response = await fetch('http://localhost:3000/aluno/login', {
+        const response = await fetch('http://localhost:3000/user/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ escola, email, senha })
