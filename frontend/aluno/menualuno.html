@@ -1,335 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/menualuno.css">
-        <title>Menu do Aluno</title>
+        <title>Menu do Aluno - FuraFila Digital</title>
     </head>
 
     <body>
         <div id="master">
             <div id="topo">
                 <img src="../images/logo-horizontal.png" alt="logo-horizontal">
-                <center><input type="text"
-                        placeholder="   Pesquisar..."></center>
+                <input type="text" id="search-input"
+                    placeholder="Pesquisar...">
                 <p>Olá, alunos</p>
                 <div class="row">
-                    <a href="../admin/adm login.html" class="button-row">Administrador</a>
-                </div>
-            </div>
-            <div class="deitado">
-                <p>Categoria dos Salgados</p>
-
-                <!-- Botão para abrir o modal -->
-                <button id="Abrir1"><img src="../images/bolinha_de_queijo.png"
-                        alt="bolinha_de_queijo"></button>
-                <!-- bolinha de queijo -->
-                <div id="Modal1" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar1">&times</span>
-                        <center>
-                            <h2>Bolinha de queijo</h2>
-                            <hr>
-                            <p>Bolinha de queijo isso que é viver</p>
-                            <p>R$ 5,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir2"><img src="../images/coxinha.png"
-                        alt="coxinha"></button>
-                <div id="Modal2" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar2">&times</span>
-                        <center>
-                            <h2>Coxinha</h2>
-                            <hr>
-                            <p>Uma saborosa coxinha</p>
-                            <p>R$ 4,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir3"><img src="../images/esfiha_de_carne.png"
-                        alt="esfiha_de_carne"></button>
-                <div id="Modal3" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar3">&times</span>
-                        <center>
-                            <h2>Esfiha de Carne</h2>
-                            <hr>
-                            <p>Esfiha de carne deliciosa</p>
-                            <p>R$ 6,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir4"><img src="../images/esfihe_de_calabresa.png"
-                        alt="esfihe_de_calabresa"></button>
-                <div id="Modal4" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar4">&times</span>
-                        <center>
-                            <h2>Esfiha de Calabresa</h2>
-                            <hr>
-                            <p>Esfiha de calabresa saborosa</p>
-                            <p>R$ 6,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir5"><img src="../images/ESFIHA-DE-FRANGO.png"
-                        alt="esfiha_de_frango_com_catupiry"></button>
-                <div id="Modal5" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar5">&times</span>
-                        <center>
-                            <h2>Esfiha de Frango com Catupiry</h2>
-                            <hr>
-                            <p>Esfiha de frango com catupiry de verdade</p>
-                            <p>R$ 7,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir6"><img src="../images/hamburguer.png"
-                        alt="hamburguer"></button>
-                <div id="Modal6" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar6">&times</span>
-                        <center>
-                            <h2>Hamburguer</h2>
-                            <hr>
-                            <p>Um hamburguer, alface, queijo, molho especial e
-                                um pão com gergilin</p>
-                            <p>R$ 8,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir7"><img src="../images/pizza.png"
-                        alt="pizza"></button>
-                <div id="Modal7" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar7">&times</span>
-                        <center>
-                            <h2>Pizza</h2>
-                            <hr>
-                            <p>Esta é uma pizza que as tartarugas adoram</p>
-                            <p>R$ 25,00</p>
-                        </center>
-                    </div>
+                    <a href="../admin/adm login.html"
+                        class="button-row">Administrador</a>
                 </div>
             </div>
 
             <div class="deitado">
-                <p>Categoria dos Doces</p>
-
-                <button id="Abrir8"><img src="../images/bolo_de_choco.jpg"
-                        alt="bolo_de_choco"></button>
-                <div id="Modal8" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar8">&times</span>
-                        <center>
-                            <h2>Bolo de Chocolate</h2>
-                            <hr>
-                            <p>bolo de chocolate saboroso com calda</p>
-                            <p>R$ 15,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir9"><img src="../images/brigadeiro.jpg"
-                        alt="brigadeiro"></button>
-                <div id="Modal9" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar9">&times</span>
-                        <center>
-                            <h2>Brigadeiro</h2>
-                            <hr>
-                            <p>Brigadeiro com gosto de infancia</p>
-                            <p>R$ 3,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir10"><img src="../images/brigadeiroLP.jpg"
-                        alt="brigadeiroLP"></button>
-                <div id="Modal10" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar10">&times</span>
-                        <center>
-                            <h2>Brigadeiro de Leite Ninho</h2>
-                            <hr>
-                            <p>Brigadeiro de leite ninho leve e saboroso</p>
-                            <p>R$ 3,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir11"><img src="../images/cocada.jpg"
-                        alt="cocada"></button>
-                <div id="Modal11" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar11">&times</span>
-                        <center>
-                            <h2>Cocada</h2>
-                            <hr>
-                            <p>Cocada cremosa e saborosa</p>
-                            <p>R$ 3,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir12"><img src="../images/pudim.jpg"
-                        alt="pudim"></button>
-                <div id="Modal12" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar12">&times</span>
-                        <center>
-                            <h2>Pudim</h2>
-                            <hr>
-                            <p>Pudim com uma doce calda de caramelo</p>
-                            <p>R$ 4,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir13"><img src="../images/sonhovalsa.jpg"
-                        alt="sonhovalsa"></button>
-                <div id="Modal13" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar13">&times</span>
-                        <center>
-                            <h2>Sonho de Valsa</h2>
-                            <hr>
-                            <p>Um bombom para alegrar o seu dia com uma bela
-                                dança</p>
-                            <p>R$ 2,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir14"><img src="../images/rapadura.jpg"
-                        alt="rapadura"></button>
-                <div id="Modal14" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar14">&times</span>
-                        <center>
-                            <h2>Rapadura</h2>
-                            <hr>
-                            <p>Rapadura é doce mas não é mole não</p>
-                            <p>R$ 1,50</p>
-                        </center>
-                    </div>
-                </div>
+                <p>Salgados</p>
+                <div id="salgados-container" class="product-row"></div>
             </div>
 
-            <div class="deitadobebida">
-                <p>Categoria das Bebidas</p>
-
-                <button id="Abrir15"><img src="../images/refris.jpg"
-                        alt="refris"></button>
-                <div id="Modal15" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar15">&times</span>
-                        <center>
-                            <h2>Refrigerante</h2>
-                            <hr>
-                            <p>Coca-Cola, Pepsi, Guaraná, Fanta</p>
-                            <p>R$ 5,50</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir16"><img src="../images/cafezinho.jpg"
-                        alt="cafezinho"></button>
-                <div id="Modal16" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar16">&times</span>
-                        <center>
-                            <h2>Café</h2>
-                            <hr>
-                            <p>Cafézinho cremozinho</p>
-                            <p>R$ 3,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir17"><img src="../images/comgas.jpg"
-                        alt="comgas"></button>
-                <div id="Modal17" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar17">&times</span>
-                        <center>
-                            <h2>Água com Gás</h2>
-                            <hr>
-                            <p>Hidratante e refrescante</p>
-                            <p>R$ 2,50</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir18"><img src="../images/suco_de_laranja.png"
-                        alt="suco_de_laranja"></button>
-                <div id="Modal18" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar18">&times</span>
-                        <center>
-                            <h2>Suco de Laranja</h2>
-                            <hr>
-                            <p>Um delicioso e nutritivo suco de laranja</p>
-                            <p>R$ 4,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir19"><img src="../images/suco_de_limao.png"
-                        alt="suco_de_limao"></button>
-                <div id="Modal19" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar19">&times</span>
-                        <center>
-                            <h2>Suco de Limão</h2>
-                            <hr>
-                            <p>Um refrescante e saboroso suco de limão</p>
-                            <p>R$ 3,50</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir20"><img src="../images/acho.jpg"
-                        alt="acho"></button>
-                <div id="Modal20" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar20">&times</span>
-                        <center>
-                            <h2>Achocolatado</h2>
-                            <hr>
-                            <p>Um delicioso e quente achocolatado</p>
-                            <p>R$ 3,00</p>
-                        </center>
-                    </div>
-                </div>
-
-                <button id="Abrir21"><img src="../images/milks.jpg"
-                        alt="milks"></button>
-                <div id="Modal21" class="modal">
-                    <div class="modal-content">
-                        <span class="fechar21">&times</span>
-                        <center>
-                            <h2>Milk Shake</h2>
-                            <hr>
-                            <p>Um delicioso e cremoso milk shake de morango
-                                ,chocolate e limão</p>
-                            <p>R$ 4,00</p>
-                        </center>
-                    </div>
-                </div>
+            <div class="deitado">
+                <p>Doces</p>
+                <div id="doces-container" class="product-row"></div>
             </div>
 
+            <div class="deitado">
+                <p>Bebidas</p>
+                <div id="bebidas-container" class="product-row"></div>
+            </div>
         </div>
-        <script src="../aluno/js/menualuno.js"></script>
+
+        <div id="modals-container"></div>
+
+        <script src="js/menualuno.js"></script>
     </body>
+
+</html>

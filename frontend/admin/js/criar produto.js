@@ -25,7 +25,11 @@ document.getElementById('product-form').addEventListener('submit', async (e) => 
     formData.append('descricao', document.getElementById('descricao').value);
     formData.append('preco', document.getElementById('preco').value);
     formData.append('categoria', document.getElementById('categoria').value);
-    formData.append('imagem', document.getElementById('imagem').files[0]);
+    
+    const imagemInput = document.getElementById('imagem').files[0];
+    if (imagemInput) {
+        formData.append('imagem', imagemInput);
+    }
 
     try {
         const response = await fetch('http://localhost:3000/products/register', {
@@ -36,8 +40,11 @@ document.getElementById('product-form').addEventListener('submit', async (e) => 
         if (response.ok) {
             alert('Produto e imagem salvos!');
             window.location.href = 'index.html';
+        } else {
+            const err = await response.json();
+            alert('Erro ao salvar: ' + err.message);
         }
     } catch (error) {
-        console.error(error);
+        console.error('Erro de conexão:', error);
     }
 });

@@ -16,7 +16,7 @@ app.use(express.json()); // Permite que o servidor entenda requisições com cor
 app.use(express.urlencoded({ extended: true })); // Permite processar dados de formulários comuns
 
 // Torna a pasta 'uploads' pública para que as imagens apareçam no navegador
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+app.use('/uploads', express.static(path.join(__dirname, '../', 'uploads')));
 
 // Rotas
 app.use("/admin", adminRoutes);
