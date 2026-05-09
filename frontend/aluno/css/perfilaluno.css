@@ -1,0 +1,166 @@
+body {
+    background-color: #FFF9E2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+#master{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 1024px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    #topo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+    height: 80px;
+    background-color: #FFDEB8;
+    border-radius: 8px;
+    
+}
+#topo img{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px;
+    
+    
+}
+#topo input{
+    width: 600px;
+    height: 40px;
+    margin-left: 450px;
+    margin-right: 50px;
+    border-radius: 7px;
+    border: none;
+    opacity: 0.8;
+    font-size: medium;
+    
+}
+
+#topo p{
+    font-size:18px;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 150px;
+
+}
+
+#topo button{
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 7px;
+    background-color: #D1B3FF;
+    border: none;
+    font-size: medium;
+}
+.row {
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: #D1B3FF;
+    margin-left: 100px;
+    margin-right: 50px;
+    border-radius: 8px;
+}
+button,
+.row a {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+}
+#corpo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 800px;
+    background-color: #FFDEB8;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+#corpo-esquerda{
+    width: 20%;
+    height: 85%;
+    background-color: #FFF9E2;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-top: 20px;   
+}
+#corpo-esquerda img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+#corpo-esquerda hr{
+    width: 160px;
+    height: 1px;
+    background-color: #000;
+    margin-bottom: 10px;
+}
+
+#corpo-centro{
+    width: 50%;
+    height: 85%;
+    background-color: #FFF9E2;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-top:  20px;      
+}
+#corpo-centro button{
+     width: 70%;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    background-color: #FFDEB8;
+    border: none;
+    font-size: x-large;
+}
+
+
+#corpo-direita{
+    width: 27%;
+    height: 85%;
+    background-color: #FFF9E2;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-right: 20px; 
+    margin-top: 20px;
+}
+#corpo-direita button{
+     width: 70%;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 7px;
+    background-color: #FFDEB8;
+    border: none;
+    font-size: large;
+}
+
+.bolder{
+    font-weight: bold;
+}
+.roxo{
+    color: #5E2F91;
+}
+.dourado{
+    color: #936025;
+}
