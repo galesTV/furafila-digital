@@ -32,18 +32,21 @@ document.addEventListener("DOMContentLoaded", async () => {
             `;
 
       const modalHTML = `
-                <div id="${idModal}" class="modal">
-                    <div class="modal-content">
-                        <span class="${idFechar}">&times;</span>
-                        <center>
-                            <h2>${produto.nome}</h2>
-                            <hr>
-                            <p>${produto.descricao || "Sem descrição disponível."}</p>
-                            <p><strong>R$ ${parseFloat(produto.preco).toFixed(2).replace(".", ",")}</strong></p>
-                        </center>
-                    </div>
-                </div>
-            `;
+          <div id="${idModal}" class="modal">
+              <div class="modal-content">
+                  <span class="${idFechar}">&times;</span>
+                  <img src="http://localhost:3000${produto.imagem}" alt="${produto.nome}" onerror="this.src='../images/placeholder.png'">
+                  <div class="modal-info">
+                      <h2>${produto.nome}</h2>
+                      <p>${produto.descricao}</p>
+                      <p class="modal-price">R$ ${parseFloat(produto.preco).toFixed(2).replace(".", ",")}</p>
+                      <button class="btn-add-cart" onclick='adicionarAoCarrinho(${JSON.stringify(produto)})'>
+                          Adicionar ao Carrinho
+                      </button>
+                  </div>
+              </div>
+          </div>
+      `;
 
       if (produto.categoria === "Salgados") {
         salgadosContainer.insertAdjacentHTML("beforeend", productCardHTML);
@@ -62,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (btn && modal && span) {
           btn.onclick = () => {
-            modal.style.display = "block";
+            modal.style.display = "flex";
           };
 
           span.onclick = () => {
@@ -95,3 +98,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Erro ao inicializar o cardápio:", error);
   }
 });
+
+window.adicionarAoCarrinho = (produto) => {
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    const index = carrinho.findIndex(item => item.id === produto.id);
+
+    if (index > -1) {
+        carrinho[index].qtd += 1;
+    } else {
+        carrinho.push({
+            id: produto.id,
+            nome: produto.nome,
+            preco: parseFloat(produto.preco),
+            qtd: 1,
+            imagem: `http://localhost:3000${produto.imagem}`
+        });
+    }
+
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+    alert(`${produto.nome} foi adicionado ao seu carrinho!`);
+};

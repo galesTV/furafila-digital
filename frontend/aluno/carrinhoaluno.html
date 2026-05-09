@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/carrinhoaluno.css">
+        <title>Carrinho - FuraFila Digital</title>
+    </head>
+    
+    <body>
+        <div id="master">
+            <div id="topo">
+                <img src="../images/logo-horizontal.png" alt="logo-horizontal">
+                <input type="text" id="search-input"
+                    placeholder="Pesquisar pedido...">
+                <p>Olá, aluno</p>
+                <div class="row">
+                    <a href="menualuno.html"
+                        class="btn-cardapio">Cardápio</a>
+                    <a href="../admin/adm login.html"
+                        class="btn-admin">Admin</a>
+                    <a class="btn-logout" href="adm login.html"
+                        id="logout">Sair</a>
+                </div>
+            </div>
+
+            <div class="container-carrinho">
+                <main class="checkout-area">
+                    <div class="card-carrinho">
+                        <h3>Seu Carrinho e Pagamento</h3>
+
+                        <div id="lista-produtos">
+                            <div class="item-cart">
+                                <img src="../images/bolinha_de_queijo.png"
+                                    alt="Produto">
+                                <div class="item-info">
+                                    <h4>Bolinha de Queijo</h4>
+                                    <p>R$ 4,50</p>
+                                </div>
+                                <div class="controles-qtd">
+                                    <button>-</button>
+                                    <span>1</span>
+                                    <button>+</button>
+                                </div>
+                                <span class="subtotal-item">R$ 4,50</span>
+                            </div>
+                        </div>
+
+                        <div class="resumo-total">
+                            <span>TOTAL:</span>
+                            <span id="valor-total">R$ 4,50</span>
+                        </div>
+
+                        <div class="pagamento-section">
+                            <h4>SELECIONE A FORMA DE PAGAMENTO</h4>
+                            <div class="opcoes-pagamento">
+                                <label class="metodo-card">
+                                    <input type="radio" name="pagamento"
+                                        value="carteira" checked>
+                                    <div class="metodo-info">
+                                        <strong>Carteira</strong>
+                                        <p>Saldo: R$ 30,00</p>
+                                    </div>
+                                </label>
+                                <label class="metodo-card">
+                                    <input type="radio" name="pagamento"
+                                        value="pix">
+                                    <div class="metodo-info">
+                                        <strong>PIX</strong>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button class="btn-finalizar"
+                            onclick="finalizarPedido()">Finalizar e Gerar QR
+                            Code</button>
+                    </div>
+                </main>
+
+                <aside class="sidebar">
+                    <div class="card-mini pedidos-recentes">
+                        <h4>Pedidos Recentes</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Data</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#012123</td>
+                                    <td>14/04/26</td>
+                                    <td class="status-entregue">Entregue</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="card-mini perfil-aluno">
+                        <h4>Seu Perfil</h4>
+                        <p><strong>Nome:</strong> Gael Leite Guzman</p>
+                        <p><strong>Detalhe:</strong> Aluno</p>
+                        <a href="#" class="perfil-link">Alterar
+                            Perfil</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <script src="js/carrinhoaluno.js"></script>
+    </body>
+</html>

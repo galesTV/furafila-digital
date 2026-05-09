@@ -3,9 +3,9 @@ const express = require("express"); // Framework para criar o servidor e lidar c
 const cors = require("cors"); // Middleware para lidar com CORS (Cross-Origin Resource Sharing)
 const path = require("path");
 
-const adminRoutes = require('./routes/adminRoutes');
-const userRoutes = require('./routes/userRoutes');
-const productRoutes = require('./routes/productRoutes');
+const adminRoutes = require("./routes/adminRoutes");
+const userRoutes = require("./routes/userRoutes");
+const productRoutes = require("./routes/productRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,7 +16,7 @@ app.use(express.json()); // Permite que o servidor entenda requisições com cor
 app.use(express.urlencoded({ extended: true })); // Permite processar dados de formulários comuns
 
 // Torna a pasta 'uploads' pública para que as imagens apareçam no navegador
-app.use('/uploads', express.static(path.join(__dirname, '../', 'uploads')));
+app.use("/uploads", express.static(path.join(__dirname, "../", "uploads")));
 
 // Rotas
 app.use("/admin", adminRoutes);
@@ -25,13 +25,13 @@ app.use("/products", productRoutes);
 
 // Rota de teste
 app.get("/", (req, res) => {
-    res.json({
-        message: "Servidor da FuraFila Digital funcionando!",
-        status: "online"
-    });
+  res.json({
+    message: "Servidor da FuraFila Digital funcionando!",
+    status: "online",
+  });
 });
 
 // Inicialização
 app.listen(PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando em http://localhost:${PORT}`);
 });

@@ -54,9 +54,7 @@ const loginAdmin = async (req, res) => {
     );
 
     if (usuarios.length === 0) {
-      return res
-        .status(401)
-        .json({ message: "Usuário não encontrado." });
+      return res.status(401).json({ message: "Usuário não encontrado." });
     }
 
     const usuario = usuarios[0];
