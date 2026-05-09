@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 1024px;
+    height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
     #topo{
@@ -19,15 +19,15 @@ body {
     flex-direction: row;
     align-items: center;
     width:100%;
-    height: 80px;
+    height: 5%;
     background-color: #FFDEB8;
     border-radius: 8px;
     
 }
 #topo img{
-    width: 200px;
-    height: 50px;
-    margin-left: 20px;
+    width: 15%;
+    height: 4%;
+    margin-left: 2%;
     
     
 }
@@ -62,13 +62,13 @@ body {
     font-size: medium;
 }
 .row {
-    width: 130px;
+    width: 5%;
     display: flex;
     justify-content: space-between;
     gap: 15px;
     background-color: #D1B3FF;
-    margin-left: 100px;
-    margin-right: 50px;
+    margin-left: 3%;
+    margin-right: 3%;
     border-radius: 8px;
 }
 button,
@@ -90,9 +90,9 @@ button,
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 800px;
+    height: 90%;
     background-color: #FFDEB8;
-    margin-top: 20px;
+    margin-top: 2%;
     border-radius: 8px;
 }
 #corpo-esquerda{
@@ -100,8 +100,8 @@ button,
     height: 85%;
     background-color: #FFF9E2;
     border-radius: 8px;
-    margin-left: 20px;
-    margin-top: 20px;   
+    margin-left: 3%;
+    margin-top: 3%;   
 }
 #corpo-esquerda img{
     width: 120px;
@@ -110,10 +110,10 @@ button,
     margin-top: 10px;
 }
 #corpo-esquerda hr{
-    width: 160px;
+    width: 70%;
     height: 1px;
     background-color: #000;
-    margin-bottom: 10px;
+    margin-bottom: 2%;
 }
 
 #corpo-centro{
@@ -121,13 +121,13 @@ button,
     height: 85%;
     background-color: #FFF9E2;
     border-radius: 8px;
-    margin-left: 20px;
-    margin-top:  20px;      
+    margin-left: 5%;
+    margin-top:  3%;      
 }
 #corpo-centro div{
      width: 70%;
-    height: 140px;
-    margin-bottom: 20px;
+    height: 25%;
+    margin-bottom: 5%;
     border-radius: 7px;
     background-color: #FFDEB8;
     border: none;
@@ -136,8 +136,9 @@ button,
 
 #corpo-centro button{
      width: 70%;
-    height: 60px;
-    margin-bottom: 20px;
+    height: 25%;
+    margin-bottom: 3%;
+    margin-top: 3%;
     border-radius: 7px;
     background-color: #FFDEB8;
     border: none;
@@ -150,15 +151,15 @@ button,
     height: 85%;
     background-color: #FFF9E2;
     border-radius: 8px;
-    margin-left: 20px;
-    margin-right: 20px; 
-    margin-top: 20px;
+    margin-left:3%;
+    margin-right: 3%; 
+    margin-top: 3%;
 }
 #corpo-direita button{
      width: 70%;
-    height: 50px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    height: 25%;
+    margin-bottom: 3%;
+    margin-top: 3%;
     border-radius: 7px;
     background-color: #FFDEB8;
     border: none;
