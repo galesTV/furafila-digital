@@ -124,6 +124,16 @@ button,
     margin-left: 20px;
     margin-top:  20px;      
 }
+#corpo-centro div{
+     width: 70%;
+    height: 140px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    background-color: #FFDEB8;
+    border: none;
+    
+}
+
 #corpo-centro button{
      width: 70%;
     height: 60px;
