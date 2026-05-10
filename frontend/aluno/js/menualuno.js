@@ -1,10 +1,14 @@
+let produtosCarregados = [];
+
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const response = await fetch("http://localhost:3000/products");
     if (!response.ok) {
       throw new Error("Erro ao carregar os produtos");
     }
+
     const produtos = await response.json();
+    produtosCarregados = produtos;
 
     const salgadosContainer = document.getElementById("salgados-container");
     const docesContainer = document.getElementById("doces-container");
@@ -40,7 +44,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                       <h2>${produto.nome}</h2>
                       <p>${produto.descricao}</p>
                       <p class="modal-price">R$ ${parseFloat(produto.preco).toFixed(2).replace(".", ",")}</p>
-                      <button class="btn-add-cart" onclick='adicionarAoCarrinho(${JSON.stringify(produto)})'>
+                      
+                      <button class="btn-add-cart" onclick="prepararAdicao(${index})">
                           Adicionar ao Carrinho
                       </button>
                   </div>
@@ -99,24 +104,30 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
+window.prepararAdicao = (index) => {
+  const produto = produtosCarregados[index];
+  adicionarAoCarrinho(produto);
+};
+
 window.adicionarAoCarrinho = (produto) => {
-    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-    const index = carrinho.findIndex(item => item.id === produto.id);
+  const idBanco = produto.id_produto;
 
-    if (index > -1) {
-        carrinho[index].qtd += 1;
-    } else {
-        carrinho.push({
-            id: produto.id,
-            nome: produto.nome,
-            preco: parseFloat(produto.preco),
-            qtd: 1,
-            imagem: `http://localhost:3000${produto.imagem}`
-        });
-    }
+  const index = carrinho.findIndex((item) => item.id === idBanco);
 
-    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+  if (index > -1) {
+    carrinho[index].qtd += 1;
+  } else {
+    carrinho.push({
+      id: produto.idBanco,
+      nome: produto.nome,
+      preco: parseFloat(produto.preco),
+      qtd: 1,
+      imagem: `http://localhost:3000${produto.imagem}`,
+    });
+  }
 
-    alert(`${produto.nome} foi adicionado ao seu carrinho!`);
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
+  alert(`${produto.nome} adicionado com sucesso!`);
 };
