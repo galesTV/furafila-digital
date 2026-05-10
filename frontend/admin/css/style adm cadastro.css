@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 1. DEFINIÇÃO DE CORES E VARIÁVEIS (Essencial para o Modo Escuro) */
 :root {
     --bg-color: #FEE8FF;      /* Tom claro original */
@@ -17,6 +18,8 @@ body.dark-mode {
 }
 
 /* 3. ESTILOS GERAIS */
+=======
+>>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
 * {
     margin: 0;
     padding: 0;
@@ -25,15 +28,25 @@ body.dark-mode {
 }
 
 body {
+<<<<<<< HEAD
     background-color: var(--bg-color); /* Variável aplicada */
+=======
+    background-color: #FEE8FF; 
+>>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+<<<<<<< HEAD
     transition: background-color 0.3s ease; /* Transição suave de cor */
 }
 
 .login-container {
+=======
+}
+
+.cadastro-container {
+>>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
     text-align: center;
     width: 100%;
     max-width: 800px;
@@ -46,12 +59,20 @@ body {
 }
 
 h1 {
+<<<<<<< HEAD
     color: var(--text-h1); /* Variável aplicada */
+=======
+    color: #4B0082;
+>>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
     margin-bottom: 30px;
     font-weight: 400;
 }
 
+<<<<<<< HEAD
 .login-form {
+=======
+.cadastro-form {
+>>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -68,7 +89,11 @@ h1 {
 
 label {
     margin-bottom: 8px;
+<<<<<<< HEAD
     color: var(--text-label); /* Variável aplicada */
+=======
+    color: #333;
+>>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
 }
 
 input {
@@ -76,9 +101,13 @@ input {
     padding: 12px;
     border: none;
     border-radius: 8px;
+<<<<<<< HEAD
     background-color: var(--input-bg); /* Variável aplicada */
     color: var(--text-label);
     outline: none;
+=======
+    background-color: #D1B3FF; 
+>>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
 }
 
 .button-row {
@@ -107,8 +136,13 @@ button,
 
 .btn-secondary,
 .btn-primary {
+<<<<<<< HEAD
     background-color: var(--input-bg); /* Variável aplicada */
     color: var(--btn-text);
+=======
+    background-color: #D1B3FF;
+    color: #000;
+>>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
 }
 
 .btn-highlight {
