@@ -6,3 +6,7 @@ node_modules/
 
 # Ignore logs
 *.log
+
+# Ignore image files
+backend/uploads/*.png
+backend/uploads/*.jpg

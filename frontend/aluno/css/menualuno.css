@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary: #FFDEB8;
+    --bg: #FFF9E2;
+    --text: #000;
+    --modal-bg: #FFF9E2;
+}
+
+body {
+    background-color: var(--bg);
+    min-height: 100vh;
+    width: 100%;
+}
+
+#master {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    border-radius: 8px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#topo img {
+    width: 150px;
+    height: auto;
+}
+
+#topo input {
+    flex: 1;
+    min-width: 200px;
+    max-width: 600px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.button-row {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: bold;
+    padding: 8px 15px;
+    background: #D8B3FF;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.deitado {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.deitado > p {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #4B0082;
+    padding-left: 10px;
+}
+
+.product-row {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.product-btn {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    min-width: 200px;
+    max-width: 220px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex-shrink: 0;
+}
+
+.product-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-btn img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background-color: var(--modal-bg);
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-content span {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #topo {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    
+    #topo input {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #topo p, .row {
+        margin: 0;
+    }
+}

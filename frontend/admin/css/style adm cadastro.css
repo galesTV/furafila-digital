@@ -1,156 +1,119 @@
-<<<<<<< HEAD
-/* 1. DEFINIÇÃO DE CORES E VARIÁVEIS (Essencial para o Modo Escuro) */
 :root {
-    --bg-color: #FEE8FF;      /* Tom claro original */
-    --input-bg: #D1B3FF;      /* Tom lilás dos inputs e botões */
-    --text-h1: #4B0082;       /* Roxo escuro do título */
-    --text-label: #333;       /* Cor dos rótulos */
-    --btn-text: #000;         /* Cor do texto nos botões */
+  --bg-color: #fee8ff;
+  --input-bg: #d1b3ff;
+  --text-h1: #4b0082;
+  --text-label: #333;
+  --btn-text: #000;
 }
 
-/* 2. CORES DO MODO ESCURO (Solicitadas por você) */
 body.dark-mode {
-    --bg-color: #945797;      /* Substitui #FEE8FF */
-    --input-bg: #31083F;      /* Substitui #D1B3FF */
-    --text-h1: #FEE8FF;       /* Invertido para contraste */
-    --text-label: #FEE8FF;    /* Invertido para contraste */
-    --btn-text: #FEE8FF;      /* Texto claro no botão escuro */
+  --bg-color: #945797;
+  --input-bg: #31083f;
+  --text-h1: #fee8ff;
+  --text-label: #fee8ff;
+  --btn-text: #fee8ff;
 }
 
-/* 3. ESTILOS GERAIS */
-=======
->>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-<<<<<<< HEAD
-    background-color: var(--bg-color); /* Variável aplicada */
-=======
-    background-color: #FEE8FF; 
->>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-<<<<<<< HEAD
-    transition: background-color 0.3s ease; /* Transição suave de cor */
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
 }
 
 .login-container {
-=======
-}
-
-.cadastro-container {
->>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
-    text-align: center;
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
 }
 
 .logo {
-    width: 250px;
-    margin-bottom: 20px;
+  width: 250px;
+  margin-bottom: 20px;
 }
 
 h1 {
-<<<<<<< HEAD
-    color: var(--text-h1); /* Variável aplicada */
-=======
-    color: #4B0082;
->>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
-    margin-bottom: 30px;
-    font-weight: 400;
+  color: var(--text-h1);
+  margin-bottom: 30px;
+  font-weight: 400;
 }
 
-<<<<<<< HEAD
-.login-form {
-=======
-.cadastro-form {
->>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+.register-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 1 1 30%; 
-    min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 30%;
+  min-width: 200px;
 }
 
 label {
-    margin-bottom: 8px;
-<<<<<<< HEAD
-    color: var(--text-label); /* Variável aplicada */
-=======
-    color: #333;
->>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
+  margin-bottom: 8px;
+  color: var(--text-label);
 }
 
 input {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-<<<<<<< HEAD
-    background-color: var(--input-bg); /* Variável aplicada */
-    color: var(--text-label);
-    outline: none;
-=======
-    background-color: #D1B3FF; 
->>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-label);
+  outline: none;
 }
 
 .button-row {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 button,
 .button-row a {
-    flex: 1;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 1rem;
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 .btn-secondary,
 .btn-primary {
-<<<<<<< HEAD
-    background-color: var(--input-bg); /* Variável aplicada */
-    color: var(--btn-text);
-=======
-    background-color: #D1B3FF;
-    color: #000;
->>>>>>> bcfbf40 (feat: add feature/admin-cadastro-login)
+  background-color: var(--input-bg);
+  color: var(--btn-text);
 }
 
 .btn-highlight {
-    background-color: #FFE4B5; 
-    color: #000;
+  background-color: #ffe4b5;
+  color: #000;
 }
 
 button:hover,
 .button-row a:hover {
-    filter: brightness(0.9);
+  filter: brightness(0.9);
 }

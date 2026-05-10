@@ -1,86 +1,177 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel Admin - FuraFila Digital</title>
-    <link rel="stylesheet" href="../admin/css/style.css">
-</head>
-<body class="admin-panel">
-    <div class="dashboard-fullscreen">
-        <header class="main-header">
-            <div class="header-left">
-                <img src="../images/logo-horizontal.png" alt="Logo" class="logo-img">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Painel Admin - FuraFila Digital</title>
+        <link rel="stylesheet" href="../admin/css/style.css">
+    </head>
+
+    <body class="admin-panel">
+        <div class="dashboard-fullscreen">
+            <header class="main-header">
+                <div class="header-left">
+                    <img src="../images/logo-horizontal.png" alt="Logo"
+                        class="logo-img">
+                </div>
+
+                <div class="search-container">
+                    <input type="text" placeholder="Pesquisar..."
+                        class="search-input">
+                </div>
+
+                <div class="header-right">
+                    <button type="button" id="toggle-dark" class="btn-toggle"
+                        style="background-color: #333; color: #fff;">Modo
+                        Escuro</button>
+                    <span class="admin-name">Olá, Admin</span>
+                    <a class="btn-student"
+                        href="../aluno/loginaluno.html">Aluno</a>
+                    <a class="btn-logout" href="adm login.html"
+                        id="logout">Sair</a>
+                </div>
+            </header>
+
+            <section class="stats-row">
+                <div class="card">
+                    <p>Vendas diárias</p>
+                    <strong>10</strong>
+                </div>
+                <div class="card">
+                    <p>Vendas semanais</p>
+                    <strong>50</strong>
+                </div>
+                <div class="card">
+                    <p>Vendas Mensais</p>
+                    <strong>200</strong>
+                </div>
+                <div class="card">
+                    <p>Valor Total diário</p>
+                    <strong>R$237,67</strong>
+                </div>
+                <div class="card">
+                    <p>Valor Total Mensal</p>
+                    <strong>R$6767,67</strong>
+                </div>
+            </section>
+
+            <div class="table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Aluno</th>
+                            <th>Salgado</th>
+                            <th>R$</th>
+                            <th>Status</th>
+                            <th>Atualizado</th>
+                            <th>Criado</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <div class="search-container">
-                <input type="text" placeholder="Pesquisar..." class="search-input">
+            <div class="btn-container">
+                <a href="criar produto.html" class="btn-produto">Criar
+                    produto</a>
+                <a href="painel de pedidos ativos.html"
+                    class="btn-painel">Painel de Pedidos Ativos</a>
             </div>
-
-            <div class="header-right">
-                <button type="button" id="toggle-dark" class="btn-toggle">Alternar Modo</button>
-                <span class="admin-name">Olá, Admin</span>
-                <button class="btn-student">Aluno</button>
-            </div>
-        </header>
-
-        <section class="stats-row">
-            <div class="card">
-                <p>Vendas diárias</p>
-                <strong>10</strong>
-            </div>
-            <div class="card">
-                <p>Vendas semanais</p>
-                <strong>50</strong>
-            </div>
-            <div class="card">
-                <p>Vendas Mensais</p>
-                <strong>200</strong>
-            </div>
-            <div class="card">
-                <p>Valor Total diário</p>
-                <strong>R$237,67</strong>
-            </div>
-            <div class="card">
-                <p>Valor Total Mensal</p>
-                <strong>R$6767,67</strong>
-            </div>
-        </section>
-
-        <div class="table-container">
-            <table class="admin-table">
-                <thead>
-                    <tr>
-                        <th>Aluno</th>
-                        <th>Salgado</th>
-                        <th>R$</th>
-                        <th>Status</th>
-                        <th>Atualizado</th>
-                        <th>Criado</th>
-                        <th>Tipo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                    <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                </tbody>
-            </table>
         </div>
-    </div>
 
-    <script>
-        const btnToggle = document.getElementById('toggle-dark');
-        btnToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
-</body>
+        <script src="js/index.js"></script>
+    </body>
+
 </html>
