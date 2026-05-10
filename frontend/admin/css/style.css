@@ -1,196 +1,196 @@
 :root {
-    --bg-main: #E6CEEE;
-    --bg-header: #D8B3FF;
-    --bg-card: #ffffff;
-    --text-dark: #333;
-    --accent: #FFDEB8;
-    --border-color: #ddd;
-    --border-table: #fffbfb;
-    --table-head-bg: #ccc;
-    --text-card: #666;
+  --bg-main: #e6ceee;
+  --bg-header: #d8b3ff;
+  --bg-card: #ffffff;
+  --text-dark: #333;
+  --accent: #ffdeb8;
+  --border-color: #ddd;
+  --border-table: #fffbfb;
+  --table-head-bg: #ccc;
+  --text-card: #666;
 }
 
 body.dark-mode {
-    --bg-main: #31083F;
-    --bg-header: #6d34b3;
-    --bg-card: #945797;
-    --text-dark: #FEE8FF;
-    --border-color: #7B3E7E;
-    --border-table: #945797;
-    --table-head-bg: #6A1B9A;
-    --text-card: #000000;
+  --bg-main: #31083f;
+  --bg-header: #6d34b3;
+  --bg-card: #945797;
+  --text-dark: #fee8ff;
+  --border-color: #7b3e7e;
+  --border-table: #945797;
+  --table-head-bg: #6a1b9a;
+  --text-card: #000000;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
-    background-color: var(--bg-main);
-    padding: 20px;
-    transition: 0.3s;
+  background-color: var(--bg-main);
+  padding: 20px;
+  transition: 0.3s;
 }
 
 .main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--bg-header);
-    padding: 10px 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-header);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .logo-img {
-    height: 60px;
+  height: 60px;
 }
 
 .search-input {
-    width: 450px;
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-    background: rgba(255, 255, 255, 0.5);
+  width: 450px;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .header-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--text-dark);
 }
 
 .btn-logout {
-    background: #ff0000;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
+  background: #ff0000;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 .btn-student {
-    background: var(--accent);
-    border: none;
-    padding: 8px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
+  background: var(--accent);
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 .btn-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    padding-bottom: 30px;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  gap: 20px;
 }
 
 .btn-produto {
-    background: var(--bg-header);
-    border: none;
-    padding: 12px 30px;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: 0.3s;
+  background: var(--bg-header);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
 }
 
 .btn-produto:hover {
-    filter: brightness(0.9);
-    transform: translateY(-2px);
+  filter: brightness(0.9);
+  transform: translateY(-2px);
 }
 
 .btn-painel {
-    background: var(--bg-header);
-    border: none;
-    padding: 12px 30px;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: 0.3s;
+  background: var(--bg-header);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
 }
 
 .btn-painel:hover {
-    filter: brightness(0.9);
-    transform: translateY(-2px);
+  filter: brightness(0.9);
+  transform: translateY(-2px);
 }
 
 .btn-toggle {
-    background-color: #333;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 8px;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-color: #333;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .stats-row {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 .card {
-    background: var(--bg-card);
-    flex: 1;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: var(--bg-card);
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card p {
-    font-size: 0.8rem;
-    margin-bottom: 10px;
-    color: var(--text-card);
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  color: var(--text-card);
 }
 
 .card strong {
-    font-size: 1.5rem;
-    color: var(--text-dark);
+  font-size: 1.5rem;
+  color: var(--text-dark);
 }
 
 .table-container {
-    background: var(--bg-card);
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: var(--bg-card);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .admin-table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .admin-table th {
-    background: var(--table-head-bg);
-    padding: 15px;
-    text-align: left;
-    border: 1px solid var(--border-table);
-    color: var(--text-dark);
+  background: var(--table-head-bg);
+  padding: 15px;
+  text-align: left;
+  border: 1px solid var(--border-table);
+  color: var(--text-dark);
 }
 
 .admin-table td {
-    padding: 15px;
-    border: 1px solid var(--border-color);
-    height: 50px;
-    background-color: transparent;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  height: 50px;
+  background-color: transparent;
 }
 
 .admin-table tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgba(0, 0, 0, 0.02);
 }
