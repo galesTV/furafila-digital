@@ -1,5 +1,13 @@
 let produtosCarregados = [];
 
+document.addEventListener("DOMContentLoaded", () => {
+  const nomeAluno = localStorage.getItem("alunoNome");
+  if (nomeAluno) {
+    const saudacao = document.querySelector("#topo p");
+    if (saudacao) saudacao.innerText = `Olá, ${nomeAluno}`;
+  }
+});
+
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const response = await fetch("http://localhost:3000/products");
@@ -131,3 +139,13 @@ window.adicionarAoCarrinho = (produto) => {
   localStorage.setItem("carrinho", JSON.stringify(carrinho));
   alert(`${produto.nome} adicionado com sucesso!`);
 };
+
+document.getElementById("logout").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  localStorage.removeItem("alunoNome");
+  localStorage.removeItem("carrinho");
+
+  alert("Sessão encerrada!");
+  window.location.href = "loginaluno.html";
+});

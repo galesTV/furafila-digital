@@ -70,18 +70,51 @@ window.finalizarPedido = async () => {
     return;
   }
 
-  const pedido = {
-    alunoId: 1,
-    itens: carrinho,
-    pagamento: metodoPagamento,
-    total: carrinho.reduce((acc, item) => acc + item.preco * item.qtd, 0),
+  if (!metodoPagamento) {
+    alert("Selecione uma forma de pagamento!");
+    return;
+  }
+
+  const totalGeral = carrinho.reduce(
+    (acc, item) => acc + item.preco * item.qtd,
+    0,
+  );
+
+  const dadosPedido = {
+    usuario_id: 1, // Por enquanto fixo, até você ter o sistema de login pronto
+    total_pedido: totalGeral,
+    forma_pagamento: metodoPagamento,
+    itens: carrinho, // O array de itens que o backend vai percorrer
   };
 
-  console.log("Enviando pedido ao servidor:", pedido);
-
   try {
-    alert("Simulação: Pedido enviado com sucesso via " + metodoPagamento);
+    const response = await fetch("http://localhost:3000/orders/checkout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dadosPedido),
+    });
+
+    const resultado = await response.json();
+
+    if (response.ok) {
+      alert("Pedido #" + resultado.pedidoId + " enviado com sucesso!");
+      localStorage.removeItem("carrinho"); // Limpa o carrinho
+      window.location.href = "menualuno.html"; // Volta para o início
+    } else {
+      alert("Erro: " + resultado.message);
+    }
   } catch (error) {
-    console.error("Erro ao finalizar pedido:", error);
+    console.error("Erro na requisição:", error);
+    alert("Erro ao conectar com o servidor.");
   }
 };
+
+document.getElementById("logout").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  localStorage.removeItem("alunoNome");
+  localStorage.removeItem("carrinho");
+
+  alert("Sessão encerrada!");
+  window.location.href = "loginaluno.html";
+});
