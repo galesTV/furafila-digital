@@ -1,10 +1,14 @@
+let produtosCarregados = [];
+
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const response = await fetch("http://localhost:3000/products");
     if (!response.ok) {
       throw new Error("Erro ao carregar os produtos");
     }
+
     const produtos = await response.json();
+    produtosCarregados = produtos;
 
     const salgadosContainer = document.getElementById("salgados-container");
     const docesContainer = document.getElementById("doces-container");
@@ -32,18 +36,22 @@ document.addEventListener("DOMContentLoaded", async () => {
             `;
 
       const modalHTML = `
-                <div id="${idModal}" class="modal">
-                    <div class="modal-content">
-                        <span class="${idFechar}">&times;</span>
-                        <center>
-                            <h2>${produto.nome}</h2>
-                            <hr>
-                            <p>${produto.descricao || "Sem descrição disponível."}</p>
-                            <p><strong>R$ ${parseFloat(produto.preco).toFixed(2).replace(".", ",")}</strong></p>
-                        </center>
-                    </div>
-                </div>
-            `;
+          <div id="${idModal}" class="modal">
+              <div class="modal-content">
+                  <span class="${idFechar}">&times;</span>
+                  <img src="http://localhost:3000${produto.imagem}" alt="${produto.nome}" onerror="this.src='../images/placeholder.png'">
+                  <div class="modal-info">
+                      <h2>${produto.nome}</h2>
+                      <p>${produto.descricao}</p>
+                      <p class="modal-price">R$ ${parseFloat(produto.preco).toFixed(2).replace(".", ",")}</p>
+                      
+                      <button class="btn-add-cart" onclick="prepararAdicao(${index})">
+                          Adicionar ao Carrinho
+                      </button>
+                  </div>
+              </div>
+          </div>
+      `;
 
       if (produto.categoria === "Salgados") {
         salgadosContainer.insertAdjacentHTML("beforeend", productCardHTML);
@@ -62,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (btn && modal && span) {
           btn.onclick = () => {
-            modal.style.display = "block";
+            modal.style.display = "flex";
           };
 
           span.onclick = () => {
@@ -95,3 +103,31 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Erro ao inicializar o cardápio:", error);
   }
 });
+
+window.prepararAdicao = (index) => {
+  const produto = produtosCarregados[index];
+  adicionarAoCarrinho(produto);
+};
+
+window.adicionarAoCarrinho = (produto) => {
+  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+  const idBanco = produto.id_produto;
+
+  const index = carrinho.findIndex((item) => item.id === idBanco);
+
+  if (index > -1) {
+    carrinho[index].qtd += 1;
+  } else {
+    carrinho.push({
+      id: produto.idBanco,
+      nome: produto.nome,
+      preco: parseFloat(produto.preco),
+      qtd: 1,
+      imagem: `http://localhost:3000${produto.imagem}`,
+    });
+  }
+
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
+  alert(`${produto.nome} adicionado com sucesso!`);
+};

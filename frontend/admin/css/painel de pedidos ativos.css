@@ -154,7 +154,7 @@ h1 {
 
 .tabela-pedidos td:last-child {
   border-radius: 0 12px 12px 0;
-  border-right: 2px solid #000; /* Borda direita */
+  border-right: 2px solid #000;
 }
 
 .logo-area {
