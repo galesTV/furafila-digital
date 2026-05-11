@@ -28,9 +28,9 @@ body {
     
 }
 #topo input{
-    width: 100%;
-    height: 10%;
-    margin-left: 80%;
+    width: 600px;
+    height: 40px;
+    margin-left: 40%;
     margin-right: 5%;
     border-radius: 7px;
     border: none;
@@ -46,12 +46,14 @@ body {
     margin-left: 30%;
 
 }
+#topo button {
+    height: 5%;
+    background-color: #FFDEB8;
+}
 
-#topo button{
-    width: 40%;
+#topo button a{
+    width: 100%;
     height: 6%;
-    margin-left: 2%;
-    margin-right: 2%;
     border-radius: 7px;
     background-color: #D1B3FF;
     border: none;
@@ -89,6 +91,7 @@ button,
     height: 90%;
     background-color: #FFDEB8;
     margin-top: 2%;
+    margin-bottom: 2%;
     border-radius: 8px;
 }
 #corpo-esquerda{
@@ -97,7 +100,8 @@ button,
     background-color: #FFF9E2;
     border-radius: 8px;
     margin-left: 3%;
-    margin-top: 3%;   
+    margin-right:3%;
+    margin-top: 1%;   
 }
 #corpo-esquerda img{
     width: 120px;
@@ -113,31 +117,42 @@ button,
 }
 
 #corpo-centro{
-    width: 50%;
-    height: 85%;
+    width: 40%;
+    height: 75%;
     background-color: #FFF9E2;
     border-radius: 8px;
-    margin-top:  3%;      
+    margin-top: 1%;   
+    margin-bottom: 2%;   
 }
 #corpo-centro div{
      width: 70%;
-    height: 25%;
-    margin-bottom: 5%;
+    height: 140px;
     border-radius: 7px;
     background-color: #FFDEB8;
     border: none;
     
 }
-
-#corpo-centro button{
-     width: 70%;
-    height: 25%;
-    margin-bottom: 3%;
-    margin-top: 3%;
+#corpo-centro .saldo {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    width: 70%;
+    height: 15%;
     border-radius: 7px;
     background-color: #FFDEB8;
     border: none;
-    font-size: x-large;
+    font-size: 18px;
+   
+}
+
+#corpo-centro button{
+    width: 70%;
+    height: 15%;
+    margin-bottom: 3%;
+    margin-top: 1%;
+    border-radius: 7px;
+    background-color: #FFDEB8;
+    border: none;
+    font-size: 18px;
 }
 
 
@@ -148,7 +163,7 @@ button,
     border-radius: 8px;
     margin-left:3%;
     margin-right: 3%; 
-    margin-top: 3%;
+    margin-top: 1%;
 }
 #corpo-direita button{
      width: 70%;
