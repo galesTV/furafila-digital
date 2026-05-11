@@ -1,6 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
   renderizarCarrinho();
+  exibirPerfil();
 });
+
+function exibirPerfil() {
+  const nomeSalvo = localStorage.getItem("alunoNome");
+
+  if (nomeSalvo) {
+    const saudacaoTopo = document.querySelector("#topo p");
+    if (saudacaoTopo) saudacaoTopo.innerText = `Olá, ${nomeSalvo}`;
+
+    const perfilNome = document.querySelector(".perfil-aluno p strong");
+    if (perfilNome && perfilNome.nextSibling) {
+      perfilNome.nextSibling.textContent = ` ${nomeSalvo}`;
+    }
+  }
+}
 
 function renderizarCarrinho() {
   const listaProdutos = document.getElementById("lista-produtos");
@@ -61,9 +76,18 @@ window.alterarQuantidade = (index, delta) => {
 
 window.finalizarPedido = async () => {
   const carrinho = JSON.parse(localStorage.getItem("carrinho"));
+  const alunoId = localStorage.getItem("alunoId");
   const metodoPagamento = document.querySelector(
     'input[name="pagamento"]:checked',
   ).value;
+
+  if (!alunoId || alunoId === "undefined") {
+    alert(
+      "Sessão expirada ou usuário não identificado. Por favor, faça login novamente.",
+    );
+    window.location.href = "loginaluno.html";
+    return;
+  }
 
   if (!carrinho || carrinho.length === 0) {
     alert("O seu carrinho está vazio!");
@@ -81,10 +105,10 @@ window.finalizarPedido = async () => {
   );
 
   const dadosPedido = {
-    usuario_id: 1, // Por enquanto fixo, até você ter o sistema de login pronto
+    usuario_id: parseInt(alunoId),
     total_pedido: totalGeral,
     forma_pagamento: metodoPagamento,
-    itens: carrinho, // O array de itens que o backend vai percorrer
+    itens: carrinho,
   };
 
   try {
@@ -99,7 +123,7 @@ window.finalizarPedido = async () => {
     if (response.ok) {
       alert("Pedido #" + resultado.pedidoId + " enviado com sucesso!");
       localStorage.removeItem("carrinho"); // Limpa o carrinho
-      window.location.href = "menualuno.html"; // Volta para o início
+      window.location.href = "meuspedidos.html"; // Volta para o início
     } else {
       alert("Erro: " + resultado.message);
     }

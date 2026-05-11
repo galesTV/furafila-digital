@@ -1,0 +1,153 @@
+:root {
+  --primary: #ffdeb8;
+  --bg: #fff9e2;
+  --text: #000;
+  --accent: #4b0082;
+  --card-bg: #ffffff;
+  --border-radius: 12px;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+#topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: var(--primary);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid rgba(0,0,0,0.05);
+}
+
+#topo img {
+  height: 50px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info p {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.btn-voltar, .btn-logout {
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-voltar {
+  background-color: white;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn-logout {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.btn-voltar:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.header-pagina {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header-pagina h2 {
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+#lista-pedidos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card-pedido {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 8px solid var(--accent);
+}
+
+.info-principal h3 {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+.info-principal p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.detalhes-pagamento {
+  text-align: right;
+}
+
+.valor-total {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #27ae60;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-pendente { background: #ffeaa7; color: #d6a01e; }
+.status-preparando { background: #fab1a0; color: #e17055; }
+.status-concluido { background: #55efc4; color: #00b894; }
+
+.loader {
+  text-align: center;
+  padding: 50px;
+  color: var(--accent);
+  font-weight: bold;
+}

@@ -64,13 +64,11 @@ const loginStudent = async (req, res) => {
       return res.status(401).json({ message: "Senha incorreta." });
 
     return res.status(200).json({
-      message: "Login realizado com sucesso!",
+      message: "Login bem-sucedido!",
       user: {
-        id: usuario.id_usuario,
+        id_usuario: usuario.id_usuario, // Forçando a chave id_usuario
         nome: usuario.nome,
         email: usuario.email,
-        escola: usuario.id_escola,
-        role: usuario.tipo_perfil,
       },
     });
   } catch (error) {
