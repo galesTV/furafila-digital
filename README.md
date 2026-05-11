@@ -49,6 +49,9 @@ npm start
 
 O servidor rodará por padrão na porta http://localhost:3000.
 
+### 3.1 Pasta `uploads`
+*Caso não encontre a pasta `uploads` dentro da raiz de `backend`, ao lado de `src`, crie-a manualmente*
+
 ### 4. Rodar o Frontend
 Abra a estrutura de pastas do frontend e selecione o arquivo que deseja abrir.
 
