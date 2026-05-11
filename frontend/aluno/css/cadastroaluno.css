@@ -1,101 +1,123 @@
+/* --- DEFINIÇÃO DE CORES (VARIÁVEIS) --- */
+:root {
+    /* Modo Claro (Igual ao seu original) */
+    --bg-page: #fff9e2;
+    --bg-input: #ffdeb8;
+    --bg-btn-primary: #ffdeb8;
+    --bg-btn-admin: #d1b3ff;
+    --text-main: #4b0082;
+    --text-label: #333;
+    --text-btn: #000;
+}
+
+/* --- SELETOR DO MODO ESCURO (IGUAL ÀS IMAGENS ENVIADAS) --- */
+body:has(#dark-mode-trigger:checked) {
+    --bg-page: #121212;      /* Preto da tela toda */
+    --bg-input: #4a4a4a;     /* Cinza dos inputs */
+    --bg-btn-primary: #4a4a4a; /* Botão Cadastrar cinza */
+    --bg-btn-admin: #3b0a45;   /* Roxo escuro do Admin */
+    --text-main: #ffffff;    /* Título Branco */
+    --text-label: #ffffff;   /* Labels Brancas */
+    --text-btn: #ffffff;     /* Texto dos botões Branco */
+}
+
+/* --- ESTILOS GERAIS --- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
 body {
-  background-color: #fff9e2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    background-color: var(--bg-page);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+#dark-mode-trigger { display: none; }
+
+/* Botão Alternar */
+.toggle-label {
+    position: fixed; top: 20px; right: 20px;
+    background-color: var(--text-main);
+    color: var(--bg-page);
+    padding: 10px 15px; border-radius: 8px;
+    cursor: pointer; font-weight: bold; z-index: 1000;
+    border: 1px solid var(--text-main);
 }
 
 .cadastro-container {
-  text-align: center;
-  width: 100%;
-  max-width: 800px;
-  padding: 20px;
+    text-align: center;
+    width: 100%; max-width: 950px;
+    padding: 20px;
 }
 
-.logo {
-  width: 250px;
-  margin-bottom: 20px;
-}
+.logo { width: 250px; margin-bottom: 20px; }
 
-h1 {
-  color: #4b0082;
-  margin-bottom: 30px;
-  font-weight: 400;
-}
+h1 { color: var(--text-main); margin-bottom: 30px; font-weight: 500; }
 
-.cadastro-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+/* --- INPUTS EM LINHA --- */
+.input-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
 .input-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1 1 30%;
-  min-width: 200px;
-  font-weight: bold;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 label {
-  margin-bottom: 8px;
-  color: #333;
+    color: var(--text-label);
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
 input {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background-color: #ffdeb8;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--bg-input);
+    color: var(--text-label);
 }
 
+/* --- BOTÕES COM ESPAÇAMENTO DA IMAGEM 1 --- */
 .button-row {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* Espaço igual entre os 3 */
+    gap: 20px;
 }
 
-button,
-.button-row a {
-  flex: 1;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-size: 1rem;
+button, .button-row a {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+    color: var(--text-btn);
 }
 
-.btn-secondary,
-.btn-primary {
-  background-color: #ffdeb8;
-  color: #000;
+.btn-secondary, .btn-primary {
+    background-color: var(--bg-btn-primary);
 }
 
 .btn-highlight {
-  background-color: #d1b3ff;
-  color: #000;
+    background-color: var(--bg-btn-admin);
 }
 
-button:hover,
-.button-row a:hover {
-  filter: brightness(0.9);
+button:hover, .button-row a:hover {
+    filter: brightness(0.9);
 }

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FuraFila Digital - Cadastro</title>
-        <link rel="stylesheet" href="css/cadastroaluno.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuraFila Digital - Cadastro</title>
+    <link rel="stylesheet" href="../aluno/css/cadastroaluno.css">
+</head>
+<body>
+    <input type="checkbox" id="dark-mode-trigger">
+    
+    <label for="dark-mode-trigger" class="toggle-label">Alternar Modo</label>
 
-    <body>
-        <main class="cadastro-container">
-            <img src="../images/Logo.png" alt="Logo"
-                class="logo">
+    <main class="cadastro-container">
+        <img src="../images/Logo.png" alt="Logo" class="logo">
 
-            <h1>CADASTRO - Aluno</h1>
+        <h1>CADASTRO - Aluno</h1>
 
-            <form class="cadastro-form">
+        <form class="cadastro-form">
+            <div class="input-row">
                 <div class="input-group">
                     <label for="escola">ID da Escola:</label>
                     <input type="text" id="escola">
@@ -29,18 +32,14 @@
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha">
                 </div>
+            </div>
 
-                <div class="button-row">
-                    <a href="loginaluno.html" class="btn-secondary">Já tenho
-                        conta</a>
-                    <button type="submit" class="btn-primary">Cadastrar</button>
-                    <a href="../admin/adm cadastro.html"
-                        class="btn-highlight">Entrar Como
-                        Admin</a>
-                </div>
-            </form>
-        </main>
-
-        <script src="js/aluno cadastro.js"></script>
-    </body>
+            <div class="button-row">
+                <a href="loginaluno.html" class="btn-secondary">Já tenho conta</a>
+                <button type="submit" class="btn-primary">Cadastrar</button>
+                <a href="../admin/adm cadastro.html" class="btn-highlight">Entrar Como Admin</a>
+            </div>
+        </form>
+    </main>
+</body>
 </html>
