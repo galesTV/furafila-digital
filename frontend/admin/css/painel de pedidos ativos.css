@@ -285,6 +285,15 @@ h1 {
   border-right: 2px solid #000;
 }
 
+.status-select {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #4b0082;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 body.dark-mode {
   background-color: #945797;
 }

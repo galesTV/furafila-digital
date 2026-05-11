@@ -102,6 +102,15 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (error) {
     console.error("Erro ao inicializar o cardápio:", error);
   }
+
+  const nomeSalvo = localStorage.getItem("alunoNome");
+
+  if (nomeSalvo) {
+    const saudacaoTopo = document.querySelector("#topo p");
+    if (saudacaoTopo) {
+      saudacaoTopo.innerText = `Olá, ${nomeSalvo}`;
+    }
+  }
 });
 
 window.prepararAdicao = (index) => {
@@ -112,22 +121,30 @@ window.prepararAdicao = (index) => {
 window.adicionarAoCarrinho = (produto) => {
   let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-  const idBanco = produto.id_produto;
-
-  const index = carrinho.findIndex((item) => item.id === idBanco);
+  const index = carrinho.findIndex(item => item.id === produto.id_produto);
 
   if (index > -1) {
     carrinho[index].qtd += 1;
   } else {
     carrinho.push({
-      id: produto.idBanco,
+      id: produto.id_produto || produto.id,
       nome: produto.nome,
       preco: parseFloat(produto.preco),
       qtd: 1,
-      imagem: `http://localhost:3000${produto.imagem}`,
+      imagem: produto.imagem,
     });
   }
 
   localStorage.setItem("carrinho", JSON.stringify(carrinho));
   alert(`${produto.nome} adicionado com sucesso!`);
 };
+
+document.getElementById("logout").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  localStorage.removeItem("alunoNome");
+  localStorage.removeItem("carrinho");
+
+  alert("Sessão encerrada!");
+  window.location.href = "loginaluno.html";
+});

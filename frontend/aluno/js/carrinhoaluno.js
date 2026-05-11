@@ -1,6 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
   renderizarCarrinho();
+  exibirPerfil();
 });
+
+function exibirPerfil() {
+  const nomeSalvo = localStorage.getItem("alunoNome");
+
+  if (nomeSalvo) {
+    const saudacaoTopo = document.querySelector("#topo p");
+    if (saudacaoTopo) saudacaoTopo.innerText = `Olá, ${nomeSalvo}`;
+
+    const perfilNome = document.querySelector(".perfil-aluno p strong");
+    if (perfilNome && perfilNome.nextSibling) {
+      perfilNome.nextSibling.textContent = ` ${nomeSalvo}`;
+    }
+  }
+}
 
 function renderizarCarrinho() {
   const listaProdutos = document.getElementById("lista-produtos");
@@ -61,27 +76,69 @@ window.alterarQuantidade = (index, delta) => {
 
 window.finalizarPedido = async () => {
   const carrinho = JSON.parse(localStorage.getItem("carrinho"));
+  const alunoId = localStorage.getItem("alunoId");
   const metodoPagamento = document.querySelector(
     'input[name="pagamento"]:checked',
   ).value;
+
+  if (!alunoId || alunoId === "undefined") {
+    alert(
+      "Sessão expirada ou usuário não identificado. Por favor, faça login novamente.",
+    );
+    window.location.href = "loginaluno.html";
+    return;
+  }
 
   if (!carrinho || carrinho.length === 0) {
     alert("O seu carrinho está vazio!");
     return;
   }
 
-  const pedido = {
-    alunoId: 1,
+  if (!metodoPagamento) {
+    alert("Selecione uma forma de pagamento!");
+    return;
+  }
+
+  const totalGeral = carrinho.reduce(
+    (acc, item) => acc + item.preco * item.qtd,
+    0,
+  );
+
+  const dadosPedido = {
+    usuario_id: parseInt(alunoId),
+    total_pedido: totalGeral,
+    forma_pagamento: metodoPagamento,
     itens: carrinho,
-    pagamento: metodoPagamento,
-    total: carrinho.reduce((acc, item) => acc + item.preco * item.qtd, 0),
   };
 
-  console.log("Enviando pedido ao servidor:", pedido);
-
   try {
-    alert("Simulação: Pedido enviado com sucesso via " + metodoPagamento);
+    const response = await fetch("http://localhost:3000/orders/checkout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dadosPedido),
+    });
+
+    const resultado = await response.json();
+
+    if (response.ok) {
+      alert("Pedido #" + resultado.pedidoId + " enviado com sucesso!");
+      localStorage.removeItem("carrinho"); // Limpa o carrinho
+      window.location.href = "meuspedidos.html"; // Volta para o início
+    } else {
+      alert("Erro: " + resultado.message);
+    }
   } catch (error) {
-    console.error("Erro ao finalizar pedido:", error);
+    console.error("Erro na requisição:", error);
+    alert("Erro ao conectar com o servidor.");
   }
 };
+
+document.getElementById("logout").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  localStorage.removeItem("alunoNome");
+  localStorage.removeItem("carrinho");
+
+  alert("Sessão encerrada!");
+  window.location.href = "loginaluno.html";
+});
