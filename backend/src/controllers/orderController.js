@@ -72,4 +72,57 @@ const getOrdersByUser = async (req, res) => {
   }
 };
 
-module.exports = { createOrder, getOrdersByUser };
+const getAllOrders = async (req, res) => {
+  try {
+    const [pedidos] = await db.execute(`
+      SELECT p.*, u.nome as nome_usuario 
+      FROM pedidos p 
+      JOIN usuarios u ON p.usuario_id = u.id_usuario 
+      WHERE p.status_pedido IN ('Pendente', 'Preparando')
+      ORDER BY p.data_pedido ASC
+    `);
+
+    const pedidosComItens = await Promise.all(
+      pedidos.map(async (pedido) => {
+        const [itens] = await db.execute(
+          `
+            SELECT ip.*, p.nome 
+            FROM itens_pedido ip 
+            JOIN produtos p ON ip.produto_id = p.id_produto 
+            WHERE ip.pedido_id = ?
+          `,
+          [pedido.id_pedido],
+        );
+
+        return { ...pedido, itens };
+      }),
+    );
+
+    res.status(200).json(pedidosComItens);
+  } catch (error) {
+    console.error("Erro ao buscar pedidos ativos:", error);
+    res.status(500).json({ message: "Erro ao carregar painel." });
+  }
+};
+
+const updateOrderStatus = async (req, res) => {
+  const { id_pedido, novo_status } = req.body;
+
+  try {
+    await db.execute(
+      "UPDATE pedidos SET status_pedido = ? WHERE id_pedido = ?",
+      [novo_status, id_pedido],
+    );
+    res.status(200).json({ message: "Status atualizado com sucesso!" });
+  } catch (error) {
+    console.error("Erro ao atualizar status:", error);
+    res.status(500).json({ message: "Erro ao atualizar pedido." });
+  }
+};
+
+module.exports = {
+  createOrder,
+  getOrdersByUser,
+  getAllOrders,
+  updateOrderStatus,
+};

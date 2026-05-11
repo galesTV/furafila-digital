@@ -66,7 +66,7 @@ const loginStudent = async (req, res) => {
     return res.status(200).json({
       message: "Login bem-sucedido!",
       user: {
-        id_usuario: usuario.id_usuario, // Forçando a chave id_usuario
+        id_usuario: usuario.id_usuario,
         nome: usuario.nome,
         email: usuario.email,
       },
