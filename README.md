@@ -6,7 +6,7 @@ Esta é a branch principal de trabalho diário da equipe. Aqui estão as última
 
 Para manter a organização do código, utilizamos o seguinte fluxo:
 1. **`develop`**: Branch onde integram o frontend e o backend.
-2. **`feature/nome-da-funcionalidade`**: Branches criadas para novas implementações. Não é permitido subir código direto na `develop` sem passar pelo sistema de Pull Requests (PRs).
+2. **`feature/nome-da-funcionalidade`**: Branches criadas para novas implementações.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -50,7 +50,7 @@ npm start
 O servidor rodará por padrão na porta http://localhost:3000.
 
 ### 3.1 Pasta `uploads`
-*Caso não encontre a pasta `uploads` dentro da raiz de `backend`, ao lado de `src`, crie-a manualmente*
+
 
 ### 4. Rodar o Frontend
 Abra a estrutura de pastas do frontend e selecione o arquivo que deseja abrir.
