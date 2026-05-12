@@ -22,19 +22,19 @@
                         <h2>Perfil do Aluno</h2>
                         <img src="../aluno/logo-imagens/pessoa.png" alt="pessoa"> 
                         <p class="bolder">-Nome do Aluno-</p>
-                        <p>Cauê Anhê de Souza</p> 
+                        <p id="perfil-nome">Carregando...</p>
                         <hr>
                         <p class="bolder">-Gmail do Aluno-</p>
-                        <p>caueanhe@gmail.com</p>
+                        <p id="perfil-email">Carregando...</p>
                         <hr>
                         <p class="bolder">-ID de escola-</p>
-                        <p>FF9933</p> 
+                        <p id="perfil-id-escola">Carregando...</p> 
                         <hr>
                         <p class="bolder">-Série-</p>
-                        <p>1º ano do ensino médio</p> 
+                        <p id="perfil-serie">Carregando...</p>> 
                         <hr>
                         <p class="bolder">-Preferência-</p>
-                        <p>Vegetariano</p>   
+                        <p id="perfil-preferencia">Carregando...</p>   
                     </center>
                 </div>
                 <div id="corpo-centro">
@@ -43,7 +43,7 @@
                     <h2 class="roxo">Seu Saldo e Pagamentos</h2>
                     <div class="saldo">
                     <h3>Saldo</h3>
-                    <h2 class="roxo">Saldo Atual: R$ 67,00</h2  >
+                    <h2 class="roxo">Saldo Atual: R$ <span id="perfil-saldo">0,00</span></h2>
                     <h4 class="dourado">Disponível para uso imediato</h4>
                     </div>
                     <h2 class="bolder">Carregador de Créditos</h2>
@@ -54,22 +54,13 @@
                     </center>
                 </div>
                 <div id="corpo-direita">
-                    <center>
-                    <h1>Histórico de Transações e pedidos</h1>
-                    <h2>Atividades recentes(1)</h2>
-                    <p class="bolder">-Pedido- | -Total- | -Status-</p>
-                    <p>#13338 | R$ 25,00 | Prontos</p>
-                    <button>Ver Código</button>
-                    <h2>Entregue(3)</h2>
-                    <p class="bolder">-Pedido- | -Data- | -Status-</p>
-                    <p>#13267 | 20/04/2026 | Entregue</p>
-                    <p>#13303 | 21/04/2026 | Entregue</p>
-                    <p>#13338 | 22/04/2026 | Entregue</p>
-                    <button>Ver Histórico Completo</button>
-                    </center>
-                </div>
+    <center>
+        <h1>Histórico de Transações e pedidos</h1>
+        <div id="container-pedidos">
             </div>
-      
+        <button onclick="window.location.href='meuspedidos.html'">Ver Histórico Completo</button>
+    </center>
 </div>
+<script src="js/perfilaluno.js"></script>
 </body>
 </html>
