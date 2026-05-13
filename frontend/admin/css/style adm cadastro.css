@@ -6,12 +6,13 @@
   --btn-text: #000;
 }
 
-body.dark-mode {
-  --bg-color: #945797;
-  --input-bg: #31083f;
+/* Quando o checkbox estiver marcado, as variáveis mudam */
+#dark-mode-toggle:checked ~ .login-container {
+  --bg-color: #31083f;
+  --input-bg: #945797;
   --text-h1: #fee8ff;
   --text-label: #fee8ff;
-  --btn-text: #fee8ff;
+  --btn-text: #fff;
 }
 
 * {
@@ -22,19 +23,44 @@ body.dark-mode {
 }
 
 body {
-  background-color: var(--bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin: 0;
+  /* O fundo do body agora segue o container */
+  background-color: #fee8ff; 
   transition: background-color 0.3s ease;
+}
+
+/* Ajuste para o fundo do body mudar junto */
+body:has(#dark-mode-toggle:checked) {
+    background-color: #31083f;
 }
 
 .login-container {
   text-align: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   padding: 20px;
+  background-color: var(--bg-color);
+  transition: all 0.3s ease;
+}
+
+.toggle-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.btn-toggle {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    color: #000;
 }
 
 .logo {
@@ -45,14 +71,14 @@ body {
 h1 {
   color: var(--text-h1);
   margin-bottom: 30px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .register-form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 20px;
+  justify-content: space-between;
 }
 
 .input-group {
@@ -60,7 +86,7 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   flex: 1 1 30%;
-  min-width: 200px;
+  min-width: 250px;
 }
 
 label {
@@ -74,8 +100,7 @@ input {
   border: none;
   border-radius: 8px;
   background-color: var(--input-bg);
-  color: var(--text-label);
-  outline: none;
+  color: var(--btn-text);
 }
 
 .button-row {
@@ -83,27 +108,22 @@ input {
   display: flex;
   justify-content: space-between;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
-button,
-.button-row a {
+.btn-secondary, .btn-primary, .btn-highlight {
   flex: 1;
   padding: 12px;
-  border: none;
   border-radius: 8px;
-  cursor: pointer;
   font-weight: bold;
-  transition: 0.3s;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
   font-size: 1rem;
 }
 
-.btn-secondary,
-.btn-primary {
+.btn-secondary, .btn-primary {
   background-color: var(--input-bg);
   color: var(--btn-text);
 }
@@ -111,9 +131,4 @@ button,
 .btn-highlight {
   background-color: #ffe4b5;
   color: #000;
-}
-
-button:hover,
-.button-row a:hover {
-  filter: brightness(0.9);
 }
