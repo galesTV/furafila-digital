@@ -6,15 +6,12 @@ const registerStudent = async (req, res) => {
 
   if (!escola || !email || !senha || !nome) {
     return res.status(400).json({
-      message:
-        "Erro: Todos os campos (escola, email, senha, nome) são obrigatórios.",
+      message: "Erro: Todos os campos (escola, email, senha, nome) são obrigatórios.",
     });
   }
 
   if (!email.includes("@")) {
-    return res
-      .status(400)
-      .json({ message: "Erro: Formato de email inválido." });
+    return res.status(400).json({ message: "Erro: Formato de email inválido." });
   }
 
   try {
@@ -57,20 +54,17 @@ const loginStudent = async (req, res) => {
       return res.status(401).json({ message: "Usuário não encontrado." });
 
     const usuario = usuarios[0];
-
     const senhaValida = await bcrypt.compare(senha, usuario.senha);
 
     if (!senhaValida)
       return res.status(401).json({ message: "Senha incorreta." });
 
     return res.status(200).json({
-      message: "Login realizado com sucesso!",
+      message: "Login bem-sucedido!",
       user: {
-        id: usuario.id_usuario,
+        id_usuario: usuario.id_usuario,
         nome: usuario.nome,
         email: usuario.email,
-        escola: usuario.id_escola,
-        role: usuario.tipo_perfil,
       },
     });
   } catch (error) {
@@ -78,4 +72,25 @@ const loginStudent = async (req, res) => {
   }
 };
 
-module.exports = { registerStudent, loginStudent };
+// NOVA FUNÇÃO: Buscar Perfil do Usuário
+const getUserProfile = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const [usuarios] = await db.execute(
+      "SELECT nome, email, id_escola, serie, preferencia_alimentar, saldo_carteira FROM usuarios WHERE id_usuario = ?",
+      [id]
+    );
+
+    if (usuarios.length === 0) {
+      return res.status(404).json({ message: "Usuário não encontrado." });
+    }
+
+    return res.status(200).json(usuarios[0]);
+  } catch (error) {
+    console.error("Erro ao buscar perfil:", error);
+    return res.status(500).json({ message: "Erro no servidor ao buscar perfil." });
+  }
+};
+
+module.exports = { registerStudent, loginStudent, getUserProfile };

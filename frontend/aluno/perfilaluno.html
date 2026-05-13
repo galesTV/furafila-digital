@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../aluno/css/perfilaluno.css">
+    <title>Perfil do Aluno</title>
+</head>
+<body>
+  <div id="master">
+        <div id="topo">
+            <img src="../aluno/logo-imagens/logo-horizontal.png" alt="logo-horizontal">
+            <center><input type="text" placeholder="   Pesquisar..."></center>
+            <p>Olá, alunos</p>
+            <div class="row">
+               <button> <a href="../admin/adm login.html" class="button-row">Administrador</a></button>
+            </div>
+        </div>
+            <div id="corpo">
+                <div id="corpo-esquerda">
+                    <center>
+                        <h2>Perfil do Aluno</h2>
+                        <img src="../aluno/logo-imagens/pessoa.png" alt="pessoa"> 
+                        <p class="bolder">-Nome do Aluno-</p>
+                        <p id="perfil-nome">Carregando...</p>
+                        <hr>
+                        <p class="bolder">-Gmail do Aluno-</p>
+                        <p id="perfil-email">Carregando...</p>
+                        <hr>
+                        <p class="bolder">-ID de escola-</p>
+                        <p id="perfil-id-escola">Carregando...</p> 
+                        <hr>
+                        <p class="bolder">-Série-</p>
+                        <p id="perfil-serie">Carregando...</p>> 
+                        <hr>
+                        <p class="bolder">-Preferência-</p>
+                        <p id="perfil-preferencia">Carregando...</p>   
+                    </center>
+                </div>
+                <div id="corpo-centro">
+                    <center>
+                    <h1>Carteira Digital</h1>
+                    <h2 class="roxo">Seu Saldo e Pagamentos</h2>
+                    <div class="saldo">
+                    <h3>Saldo</h3>
+                    <h2 class="roxo">Saldo Atual: R$ <span id="perfil-saldo">0,00</span></h2>
+                    <h4 class="dourado">Disponível para uso imediato</h4>
+                    </div>
+                    <h2 class="bolder">Carregador de Créditos</h2>
+                    <button>Pix Rápido</button>
+                    <button>Transferência Bancária</button>
+                    <button>Cartão de Crédito</button>
+                    <button>Confirmar Recarga</button>
+                    </center>
+                </div>
+                <div id="corpo-direita">
+    <center>
+        <h1>Histórico de Transações e pedidos</h1>
+        <div id="container-pedidos">
+            </div>
+        <button onclick="window.location.href='meuspedidos.html'">Ver Histórico Completo</button>
+    </center>
+</div>
+<script src="js/perfilaluno.js"></script>
+</body>
+</html>

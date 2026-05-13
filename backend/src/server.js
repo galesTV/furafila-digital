@@ -6,6 +6,7 @@ const path = require("path");
 const adminRoutes = require("./routes/adminRoutes");
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
+const orderRoutes = require("./routes/orderRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -22,6 +23,7 @@ app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 app.use("/admin", adminRoutes);
 app.use("/user", userRoutes);
 app.use("/products", productRoutes);
+app.use("/orders", orderRoutes);
 
 // Rota de teste
 app.get("/", (req, res) => {

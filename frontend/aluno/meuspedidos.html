@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meus Pedidos - FuraFila Digital</title>
+        <script src="js/auth.js"></script>
+        <link rel="stylesheet" href="css/meuspedidos.css">
+    </head>
+    
+    <body>
+        <header id="topo">
+            <img src="../images/logo-horizontal.png" alt="FuraFila Digital"
+                class="logo">
+            <div class="user-info">
+                <p id="saudacao-nome">Olá, Aluno</p> <div class="actions">
+                    <a href="menualuno.html" class="btn-voltar">Voltar ao
+                        Menu</a>
+                    <button id="logout" class="btn-logout">Sair</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="header-pagina">
+                <h2>Meu Histórico de Pedidos</h2>
+                <p class="subtitle">Acompanhe o status das suas compras em tempo
+                    real.</p>
+            </div>
+
+            <div id="lista-pedidos">
+                <div class="loader">Carregando seus pedidos...</div>
+            </div>
+        </main>
+
+        <script src="js/meuspedidos.js"></script>
+    </body>
+</html>
