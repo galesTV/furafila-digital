@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,60 +7,81 @@
     <title>Perfil do Aluno</title>
 </head>
 <body>
-  <div id="master">
+    <div id="master">
         <div id="topo">
-            <img src="../aluno/logo-imagens/logo-horizontal.png" alt="logo-horizontal">
-            <center><input type="text" placeholder="   Pesquisar..."></center>
-            <p>Olá, alunos</p>
-            <div class="row">
-               <button> <a href="../admin/adm login.html" class="button-row">Administrador</a></button>
+            <img src="../images/logo-horizontal.png" alt="logo-horizontal" class="logo">
+            
+            <div class="search-container">
+                <input type="text" placeholder="Pesquisar...">
+                <button id="dark-mode-toggle" class="btn-tema">🌓 Tema</button>
+            </div>
+
+            <div class="user-info">
+                <p>Olá, <strong>$aluno</strong></p>
+                <div class="row">
+                    <a href="../admin/adm login.html" class="button-row">Admin</a>
+                </div>
             </div>
         </div>
-            <div id="corpo">
-                <div id="corpo-esquerda">
-                    <center>
-                        <h2>Perfil do Aluno</h2>
-                        <img src="../aluno/logo-imagens/pessoa.png" alt="pessoa"> 
-                        <p class="bolder">-Nome do Aluno-</p>
-                        <p id="perfil-nome">Carregando...</p>
+
+        <div id="corpo">
+            <div id="corpo-esquerda">
+                <center>
+                    <h2>Perfil do Aluno</h2>
+                    <img src="../aluno/logo-imagens/pessoa.png" alt="pessoa" class="profile-img"> 
+                    <div class="info-group">
+                        <p class="label">-Nome do Aluno-</p>
+                        <p id="perfil-nome">Gael Leite Guzman</p>
                         <hr>
-                        <p class="bolder">-Gmail do Aluno-</p>
-                        <p id="perfil-email">Carregando...</p>
+                        <p class="label">-Gmail do Aluno-</p>
+                        <p id="perfil-email">gael.guzman@escola.com</p>
                         <hr>
-                        <p class="bolder">-ID de escola-</p>
-                        <p id="perfil-id-escola">Carregando...</p> 
+                        <p class="label">-ID de escola-</p>
+                        <p id="perfil-id-escola">FF9933</p> 
                         <hr>
-                        <p class="bolder">-Série-</p>
-                        <p id="perfil-serie">Carregando...</p>> 
-                        <hr>
-                        <p class="bolder">-Preferência-</p>
-                        <p id="perfil-preferencia">Carregando...</p>   
-                    </center>
-                </div>
-                <div id="corpo-centro">
-                    <center>
-                    <h1>Carteira Digital</h1>
-                    <h2 class="roxo">Seu Saldo e Pagamentos</h2>
-                    <div class="saldo">
-                    <h3>Saldo</h3>
-                    <h2 class="roxo">Saldo Atual: R$ <span id="perfil-saldo">0,00</span></h2>
-                    <h4 class="dourado">Disponível para uso imediato</h4>
+                        <p class="label">-Série-</p>
+                        <p id="perfil-serie">1º Ano Ensino Médio</p>
                     </div>
-                    <h2 class="bolder">Carregador de Créditos</h2>
-                    <button>Pix Rápido</button>
-                    <button>Transferência Bancária</button>
-                    <button>Cartão de Crédito</button>
-                    <button>Confirmar Recarga</button>
-                    </center>
-                </div>
-                <div id="corpo-direita">
-    <center>
-        <h1>Histórico de Transações e pedidos</h1>
-        <div id="container-pedidos">
+                </center>
             </div>
-        <button onclick="window.location.href='meuspedidos.html'">Ver Histórico Completo</button>
-    </center>
-</div>
-<script src="js/perfilaluno.js"></script>
+
+            <div id="corpo-centro">
+                <center>
+                    <h1>Carteira Digital</h1>
+                    <h2 class="roxo">Seu Saldo e Pagamento</h2>
+                    <div class="saldo-box">
+                        <h3>SALDO</h3>
+                        <h2 class="roxo-bold">SALDO ATUAL: R$ 67,00</h2>
+                        <p class="dourado">Disponível para uso imediato</p>
+                    </div>
+                    
+                    <h2 class="bolder">Carregador Créditos</h2>
+                    <button class="btn-action">Pix Rápido</button>
+                    <button class="btn-action">Transferência Bancária</button>
+                    <button class="btn-action">Confirmar Recarga</button>
+                </center>
+            </div>
+
+            <div id="corpo-direita">
+                <center>
+                    <h1>Atividade Recente</h1>
+                    <p class="subtitle">Histórico de transações e Pedidos</p>
+                    <button class="btn-history" onclick="window.location.href='meuspedidos.html'">Ver Histórico Completo</button>
+                    <div id="container-pedidos"></div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        if (localStorage.getItem('theme') === 'dark') body.classList.add('dark-mode');
+        
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+        });
+    </script>
 </body>
 </html>
