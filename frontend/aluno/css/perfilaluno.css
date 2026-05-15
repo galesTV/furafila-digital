@@ -1,128 +1,191 @@
 :root {
-    --bg-light: #FFF9E2;
-    --bg-container: #FFDEB8;
-    --roxo: #5E2F91;
-    --roxo-claro: #D1B3FF;
-    --dourado: #936025;
+  --bg-light: #f7e7ce;
+  --bg-card: #fff9e2;
+  --bg-container: #ffdeb8;
+  --roxo: #5e2f91;
+  --roxo-claro: #d1b3ff;
+  --dourado: #936025;
+  --borda-card: #f3d4b0;
+}
+
+body.dark-mode {
+  --bg-light: #1a1a1a;
+  --bg-card: #2d2d2d;
+  --bg-container: #3d3d3d;
+  --roxo: #bb86fc;
+  --roxo-claro: #4a0072;
+  --dourado: #ffcc80;
+  --borda-card: #444;
 }
 
 body {
-    background-color: var(--bg-light);
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--bg-light);
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+body.dark-mode {
+  color: #f0f0f0;
 }
 
 #master {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* --- TOPO --- */
 #topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: var(--bg-container);
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-container);
+  padding: 15px 30px;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
-.search-container {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espaço entre a barra e o botão de tema */
-    flex-grow: 1;
-    justify-content: center;
+.logo {
+  height: 50px;
 }
 
 #topo input {
-    width: 400px;
-    height: 35px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding-left: 10px;
-}
-
-.btn-tema {
-    background-color: var(--roxo-claro);
-    border: 1px solid var(--roxo);
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 5px 10px;
-    font-weight: bold;
+  width: 500px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
 }
 
 .user-info {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
 }
 
-.row {
-    background-color: var(--roxo-claro);
-    padding: 8px 15px;
-    border-radius: 5px;
+.user-info p {
+  margin: 0;
 }
 
-.row a { text-decoration: none; color: black; font-weight: bold; }
+.btn-admin {
+  padding: 8px 16px;
+  background-color: var(--roxo-claro);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
 
-/* --- CORPO --- */
 #corpo {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 20px;
-    gap: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
 }
 
-#corpo-esquerda, #corpo-centro, #corpo-direita {
-    background-color: var(--bg-light);
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+#corpo-esquerda,
+#corpo-centro,
+#corpo-direita {
+  background-color: var(--bg-card);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 2px solid var(--borda-card);
+  text-align: center;
 }
 
-#corpo-esquerda { width: 22%; }
-#corpo-centro { width: 40%; }
-#corpo-direita { width: 28%; }
+#corpo-esquerda {
+  width: 25%;
+}
+#corpo-centro {
+  width: 45%;
+}
+#corpo-direita {
+  width: 30%;
+}
 
-/* Detalhes Internos */
-.profile-img { width: 120px; border-radius: 50%; border: 4px solid black; margin: 15px 0; }
-.label { font-weight: bold; margin-bottom: 2px; }
-hr { border: 0; height: 1px; background: #ccc; width: 80%; }
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #ddd;
+  border: 3px solid #fff;
+  margin-bottom: 15px;
+}
+
+.info-group {
+  text-align: left;
+}
+.label {
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+  color: #666;
+}
+body.dark-mode .label {
+  color: #bbb;
+}
+.info-group p:not(.label) {
+  font-weight: bold;
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+hr {
+  border: 0.5px solid #eee;
+  margin: 10px 0;
+}
 
 .saldo-box {
-    background-color: var(--bg-container);
-    padding: 15px;
-    border-radius: 10px;
-    margin: 20px 0;
+  background-color: var(--bg-container);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
 }
 
-.btn-action, .btn-history {
-    width: 80%;
-    padding: 10px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 8px;
-    background-color: var(--bg-container);
-    font-weight: bold;
-    cursor: pointer;
+.roxo {
+  color: var(--roxo);
+}
+.roxo-bold {
+  color: var(--roxo);
+  font-weight: 900;
+}
+.dourado {
+  color: var(--dourado);
+  font-size: 0.9rem;
 }
 
-.roxo { color: var(--roxo); }
-.roxo-bold { color: var(--roxo); font-weight: 800; font-size: 1.5rem; }
-.dourado { color: var(--dourado); font-weight: bold; }
+.btn-action {
+  width: 100%;
+  padding: 15px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--bg-container);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
 
-/* --- MODO ESCURO --- */
-body.dark-mode { background-color: #1a1a1a; }
-body.dark-mode #topo { background-color: #945797; }
-body.dark-mode #corpo-esquerda, 
-body.dark-mode #corpo-centro, 
-body.dark-mode #corpo-direita { background-color: #31083F; color: white; }
-body.dark-mode .saldo-box, 
-body.dark-mode .btn-action { background-color: #945797; color: white; }
-body.dark-mode #topo p { color: white; }
+.btn-action:hover {
+  transform: scale(1.02);
+}
+
+.btn-history {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--bg-container);
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+#container-pedidos {
+  text-align: left;
+  font-size: 0.85rem;
+}
