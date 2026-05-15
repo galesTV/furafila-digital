@@ -139,6 +139,32 @@ window.adicionarAoCarrinho = (produto) => {
   alert(`${produto.nome} adicionado com sucesso!`);
 };
 
+// Seleciona o botão e o corpo da página
+const btnDark = document.getElementById('toggle-dark');
+const body = document.body;
+
+// 1. Verifica se o usuário já usou o modo escuro antes (salvo no navegador)
+if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    btnDark.innerHTML = '☀️'; // Muda o ícone para sol
+}
+
+// 2. Adiciona o evento de clique
+btnDark.addEventListener('click', () => {
+    // Alterna a classe .dark-mode no body
+    body.classList.toggle('dark-mode');
+    
+    // 3. Salva a preferência e muda o ícone
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        btnDark.innerHTML = '☀️';
+    } else {
+        localStorage.setItem('theme', 'light');
+        btnDark.innerHTML = '🌙';
+    }
+});
+
+
 document.getElementById("logout").addEventListener("click", (e) => {
   e.preventDefault();
 

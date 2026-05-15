@@ -1,81 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../aluno/css/cadastroaluno.css">
-        <title>Perfil do Aluno</title>
-    </head>
-    <body>
-        <div id="master">
-            <div id="topo">
-                <img src="../images/logo-horizontal.png" alt="logo-horizontal"
-                    class="logo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuraFila Digital - Cadastro</title>
+    <link rel="stylesheet" href="../aluno/css/cadastroaluno.css">
+</head>
+<body>
+    <input type="checkbox" id="dark-mode-trigger">
+    
+    <label for="dark-mode-trigger" class="toggle-label">Alternar Modo</label>
 
-                <div class="search-container">
-                    <input type="text" placeholder="Pesquisar...">
-                    <button id="dark-mode-toggle" class="btn-tema">🌓
-                        Tema</button>
+    <main class="cadastro-container">
+        <img src="../images/Logo.png" alt="Logo" class="logo">
+
+        <h1>CADASTRO - Aluno</h1>
+
+        <form class="cadastro-form">
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="escola">ID da Escola:</label>
+                    <input type="text" id="escola">
                 </div>
 
-                <div class="user-info">
-                    <p>Olá, <strong>aluno</strong></p>
-                    <a href="../admin/adm login.html"
-                        class="btn-admin">Admin</a>
-                </div>
-            </div>
-
-            <div id="corpo">
-                <div id="corpo-esquerda">
-                    <h2>PERFIL DO ALUNO</h2>
-                    <div class="perfil-container">
-                        <img src="../aluno/logo-imagens/pessoa.png" alt="pessoa"
-                            class="profile-img">
-                        <div class="info-group">
-                            <p class="label">Nome:</p>
-                            <p id="perfil-nome">Carregando...</p>
-                            <hr>
-                            <p class="label">Email:</p>
-                            <p id="perfil-email">Carregando...</p>
-                            <hr>
-                            <p class="label">ID da Escola:</p>
-                            <p id="perfil-id-escola">Carregando...</p>
-                            <hr>
-                            <p class="label">Série:</p>
-                            <p id="perfil-serie">Carregando...</p>
-                            <hr>
-                            <p class="label">Preferência:</p>
-                            <p id="perfil-preferencia">Carregando...</p>
-                        </div>
-                    </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
                 </div>
 
-                <div id="corpo-centro">
-                    <h1>CARTEIRA DIGITAL</h1>
-                    <h2 class="roxo">Seu Saldo e Pagamento</h2>
-                    <div class="saldo-box">
-                        <h3>SALDO</h3>
-                        <h2 class="roxo-bold">SALDO ATUAL: R$ <span
-                                id="perfil-saldo">0,00</span></h2>
-                        <p class="dourado">Disponível para uso imediato</p>
-                    </div>
-
-                    <h2 class="bolder">Carregador Créditos</h2>
-                    <button class="btn-action">Pix Rápido</button>
-                    <button class="btn-action">Transferência Bancária</button>
-                    <button class="btn-action">Confirmar Recarga</button>
-                </div>
-
-                <div id="corpo-direita">
-                    <h1>Atividade Recente</h1>
-                    <p class="subtitle">Histórico de transações e Pedidos</p>
-                    <div id="container-pedidos"></div>
-                    <button class="btn-history"
-                        onclick="window.location.href='meuspedidos.html'">Ver
-                        Histórico Completo</button>
+                <div class="input-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha">
                 </div>
             </div>
 
-            <script src="js/perfilaluno.js"></script>
-        </body>
-    </html>
+            <div class="button-row">
+                <a href="loginaluno.html" class="btn-secondary">Já tenho conta</a>
+                <button type="submit" class="btn-primary">Cadastrar</button>
+                <a href="../admin/adm cadastro.html" class="btn-highlight">Entrar Como Admin</a>
+            </div>
+        </form>
+    </main>
+    <script src="js/aluno cadastro.js"></script>
+</body>
+</html>

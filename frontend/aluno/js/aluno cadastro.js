@@ -1,68 +1,38 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  const alunoId = localStorage.getItem("alunoId");
+const registerForm = document.querySelector(".cadastro-form");
 
-  if (!alunoId) {
-    alert("Usuário não identificado. Faça login.");
-    window.location.href = "loginaluno.html";
-    return;
-  }
+registerForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const escola = document.getElementById("escola").value;
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+
+  const nomeGenerico = email.split("@")[0];
 
   try {
-    const resUser = await fetch(`http://localhost:3000/user/${alunoId}`);
-    const usuario = await resUser.json();
+    const response = await fetch("http://localhost:3000/user/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nome: nomeGenerico,
+        escola,
+        email,
+        senha,
+      }),
+    });
 
-    if (resUser.ok) {
-      document.getElementById("perfil-nome").innerText =
-        usuario.nome || "Não informado";
-      document.getElementById("perfil-email").innerText =
-        usuario.email || "Não informado";
-      document.getElementById("perfil-id-escola").innerText =
-        usuario.id_escola || "Não informado";
-      document.getElementById("perfil-serie").innerText =
-        usuario.serie || "Não definida";
-      document.getElementById("perfil-preferencia").innerText =
-        usuario.preferencia_alimentar || "Nenhuma";
+    const data = await response.json();
 
-      const saldo = parseFloat(usuario.saldo_carteira) || 0;
-      document.getElementById("perfil-saldo").innerText = saldo.toLocaleString(
-        "pt-BR",
-        { minimumFractionDigits: 2 },
-      );
+    if (response.ok) {
+      alert("Cadastro realizado com sucesso!");
+      window.location.href = "loginaluno.html";
+    } else {
+      alert(data.message || "Erro ao cadastrar aluno.");
     }
-
-    const resOrders = await fetch(
-      `http://localhost:3000/orders/my-orders/${alunoId}`,
-    );
-    const pedidos = await resOrders.json();
-
-    if (resOrders.ok) {
-      const container = document.getElementById("container-pedidos");
-      const ultimosPedidos = pedidos.slice(0, 3);
-
-      let htmlPedidos = `<h2>Últimas Atividades</h2>
-                           <p class="bolder">-Pedido- | -Data- | -Status-</p>`;
-
-      ultimosPedidos.forEach((p) => {
-        const dataF = new Date(p.data_pedido).toLocaleDateString("pt-BR");
-        const statusF = p.status || p.status_pedido || "Pendente";
-        htmlPedidos += `<p>#${p.id_pedido} | ${dataF} | ${statusF}</p>`;
-      });
-
-      container.innerHTML = htmlPedidos;
-    }
-  } catch (err) {
-    console.error("Erro na integração:", err);
+  } catch (error) {
+    console.error("Erro na conexão:", error);
+    alert("Não foi possível conectar ao servidor.");
   }
-});
-
-const toggleBtn = document.getElementById("dark-mode-toggle");
-const body = document.body;
-if (localStorage.getItem("theme") === "dark") body.classList.add("dark-mode");
-
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-  localStorage.setItem(
-    "theme",
-    body.classList.contains("dark-mode") ? "dark" : "light",
-  );
 });
