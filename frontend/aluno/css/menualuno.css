@@ -64,6 +64,8 @@ body {
 }
 
 #topo {
+  
+  max-width: 87%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,8 +83,8 @@ body {
 
 #topo input {
   flex: 1;
-  min-width: 200px;
-  max-width: 600px;
+  min-width: 10%;
+  max-width: 50%;
   height: 40px;
   border-radius: 7px;
   border: none;
@@ -91,12 +93,15 @@ body {
 }
 
 .row {
+  max-width: 70%;
+  min-width: 10%;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .btn-carrinho {
+  min-height: max-content;
   background-color: #fff9e2;
   border-radius: 10px;
   padding: 8px 15px;
