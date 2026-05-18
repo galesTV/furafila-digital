@@ -11,16 +11,16 @@
 }
 
 body:has(#dark-mode-trigger:checked) {
-    --bg-page: #121212;      /* Preto da tela toda */
-    --bg-input: #4a4a4a;     /* Cinza dos inputs */
-    --bg-btn-primary: #4a4a4a; /* Botão Cadastrar cinza */
-    --bg-btn-admin: #3b0a45;   /* Roxo escuro do Admin */
-    --text-main: #ffffff;    /* Título Branco */
-    --text-label: #ffffff;   /* Labels Brancas */
-    --text-btn: #ffffff;     /* Texto dos botões Branco */
+    --bg-page: #31083F;  
+    --bg-input: #945797;   
+    --bg-btn-primary: #945797; 
+    --bg-btn-admin: #300a28;   
+    --text-main: #ffffff;    
+    --text-label: #ffffff;   
+    --text-btn: #ffffff;   
 }
 
-/* --- ESTILOS GERAIS --- */
+
 * {
     margin: 0; padding: 0; box-sizing: border-box;
     font-family: "Segoe UI", Tahoma, sans-serif;
@@ -86,10 +86,10 @@ input {
     color: var(--text-label);
 }
 
-/* --- BOTÕES COM ESPAÇAMENTO DA IMAGEM 1 --- */
+
 .button-row {
     display: flex;
-    justify-content: space-between; /* Espaço igual entre os 3 */
+    justify-content: space-between; 
     gap: 20px;
 }
 
