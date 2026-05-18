@@ -37,14 +37,14 @@ body {
 
 #dark-mode-trigger { display: none; }
 
-/* Botão Alternar */
+
 .toggle-label {
     position: fixed; top: 20px; right: 20px;
     background-color: var(--text-main);
     color: var(--bg-page);
-    padding: 10px 15px; border-radius: 8px;
+    padding: 10px 20px; border-radius: 8px;
     cursor: pointer; font-weight: bold; z-index: 1000;
-    border: 1px solid var(--text-main);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .cadastro-container {
@@ -55,13 +55,13 @@ body {
 
 .logo { width: 250px; margin-bottom: 20px; }
 
-h1 { color: var(--text-main); margin-bottom: 30px; font-weight: 500; }
+h1 { color: var(--text-main); margin-bottom: 40px; font-weight: 500; }
 
-/* --- INPUTS EM LINHA --- */
+
 .input-row {
     display: flex;
     gap: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .input-group {
@@ -74,7 +74,7 @@ h1 { color: var(--text-main); margin-bottom: 30px; font-weight: 500; }
 label {
     color: var(--text-label);
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 input {
@@ -96,7 +96,7 @@ input {
 button, .button-row a {
     flex: 1;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
     text-decoration: none;
     display: inline-flex;

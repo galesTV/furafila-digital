@@ -47,7 +47,7 @@ body {
 
 .cadastro-container {
     text-align: center;
-    width: 100%; max-width: 900px;
+    width: 100%; max-width: 950px;
     padding: 20px;
 }
 
@@ -85,7 +85,7 @@ input {
     color: var(--text-btn);
 }
 
-/* --- BOTÕES ALINHADOS (IGUAL IMAGEM 1) --- */
+
 .button-row {
     display: flex;
     justify-content: space-between;
