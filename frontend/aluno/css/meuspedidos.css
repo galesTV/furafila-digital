@@ -18,7 +18,6 @@
     transition: transform 0.2s;
 }
 
-
 body.dark-mode {
     --bg: #31083F;
     --primary: #945797;

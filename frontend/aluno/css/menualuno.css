@@ -11,7 +11,7 @@
   --text: #000;
   --modal-bg: #fff9e2;
 }
-/* Estilo do Botão */
+
 .btn-dark-mode {
     background-color: #4b0082;
     border: none;
@@ -26,7 +26,6 @@
     transform: scale(1.1);
 }
 
-/* Variáveis para o Modo Escuro */
 body.dark-mode {
     --bg: #31083F;
     --primary: #945797;
@@ -34,11 +33,10 @@ body.dark-mode {
     --modal-bg: #333333;
 }
 
-/* Ajustes de cores específicas para o modo escuro */
 body.dark-mode .deitado > p, 
 body.dark-mode .modal-info h2,
 body.dark-mode .modal-price {
-    color: #bb86fc; /* Um roxo mais claro para contraste no preto */
+    color: #bb86fc;
 }
 
 body.dark-mode .product-btn {
@@ -63,9 +61,8 @@ body {
   padding: 10px;
 }
 
-#topo {
-  
-  max-width: 87%;
+#topo { 
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
