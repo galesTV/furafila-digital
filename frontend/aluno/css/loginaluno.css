@@ -1,4 +1,4 @@
-/* --- DEFINIÇÃO DE CORES (VARIÁVEIS) --- */
+
 :root {
     --bg-page: #fff9e2;
     --bg-input: #ffdeb8;
@@ -9,12 +9,12 @@
     --text-btn: #000;
 }
 
-/* --- MODO ESCURO (IDÊNTICO ÀS IMAGENS) --- */
+
 body:has(#dark-mode-trigger:checked) {
-    --bg-page: #121212;
-    --bg-input: #4a4a4a;
-    --bg-btn-primary: #4a4a4a;
-    --bg-btn-admin: #3b0a45;
+    --bg-page: #31083F;
+    --bg-input: #945797;
+    --bg-btn-primary: #945797;
+    --bg-btn-admin: #300a28;
     --text-main: #ffffff;
     --text-label: #ffffff;
     --text-btn: #ffffff;
@@ -47,7 +47,7 @@ body {
 
 .cadastro-container {
     text-align: center;
-    width: 100%; max-width: 900px;
+    width: 100%; max-width: 950px;
     padding: 20px;
 }
 
@@ -55,7 +55,6 @@ body {
 
 h1 { color: var(--text-main); margin-bottom: 40px; font-weight: 500; font-size: 2rem; }
 
-/* --- GRID DE INPUTS EM LINHA --- */
 .cadastro-form {
   display: flex;
   flex-wrap: wrap;
@@ -85,7 +84,7 @@ input {
     color: var(--text-btn);
 }
 
-/* --- BOTÕES ALINHADOS (IGUAL IMAGEM 1) --- */
+
 .button-row {
   width: 100%;
   display: flex;

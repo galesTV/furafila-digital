@@ -11,16 +11,16 @@
 }
 
 body:has(#dark-mode-trigger:checked) {
-    --bg-page: #121212;      /* Preto da tela toda */
-    --bg-input: #4a4a4a;     /* Cinza dos inputs */
-    --bg-btn-primary: #4a4a4a; /* Botão Cadastrar cinza */
-    --bg-btn-admin: #3b0a45;   /* Roxo escuro do Admin */
-    --text-main: #ffffff;    /* Título Branco */
-    --text-label: #ffffff;   /* Labels Brancas */
-    --text-btn: #ffffff;     /* Texto dos botões Branco */
+    --bg-page: #31083F;  
+    --bg-input: #945797;   
+    --bg-btn-primary: #945797; 
+    --bg-btn-admin: #300a28;   
+    --text-main: #ffffff;    
+    --text-label: #ffffff;   
+    --text-btn: #ffffff;   
 }
 
-/* --- ESTILOS GERAIS --- */
+
 * {
     margin: 0; padding: 0; box-sizing: border-box;
     font-family: "Segoe UI", Tahoma, sans-serif;
@@ -37,14 +37,14 @@ body {
 
 #dark-mode-trigger { display: none; }
 
-/* Botão Alternar */
+
 .toggle-label {
     position: fixed; top: 20px; right: 20px;
     background-color: var(--text-main);
     color: var(--bg-page);
-    padding: 10px 15px; border-radius: 8px;
+    padding: 10px 20px; border-radius: 8px;
     cursor: pointer; font-weight: bold; z-index: 1000;
-    border: 1px solid var(--text-main);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .cadastro-container {
@@ -64,7 +64,6 @@ h1 { color: var(--text-main); margin-bottom: 30px; font-weight: 500; }
   justify-content: space-between;
 }
 
-/* --- INPUTS EM LINHA --- */
 .cadastro-form {
   display: flex;
   flex-wrap: wrap;
@@ -82,8 +81,8 @@ h1 { color: var(--text-main); margin-bottom: 30px; font-weight: 500; }
 
 label {
     color: var(--text-label);
-   
     margin-bottom: 8px;
+    font-weight: bold;
 }
 
 input {
@@ -95,7 +94,7 @@ input {
     color: var(--text-label);
 }
 
-/* --- BOTÕES COM ESPAÇAMENTO DA IMAGEM 1 --- */
+
 .button-row {
   width: 100%;
   display: flex;
@@ -107,7 +106,7 @@ input {
 button, .button-row a {
     flex: 1;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
     text-decoration: none;
     display: inline-flex;
