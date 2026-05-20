@@ -39,6 +39,7 @@ body.dark-mode #lista-pedidos,
 body.dark-mode .loader {
     color: white;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -50,6 +51,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   min-height: 100vh;
+  transition: 0.3s;
 }
 
 #topo {

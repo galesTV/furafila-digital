@@ -1,3 +1,10 @@
+const adminNameElement = document.querySelector(".admin-name");
+const nomeSalvo = localStorage.getItem("adminNome");
+
+if (nomeSalvo) {
+  adminNameElement.textContent = `Olá, ${nomeSalvo}`;
+}
+
 const tabelaPedidos = document.querySelector(".admin-table tbody");
 
 async function carregarPedidos() {
