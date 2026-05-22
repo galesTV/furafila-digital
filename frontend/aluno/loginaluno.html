@@ -4,39 +4,39 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FuraFila Digital - Login</title>
-        <link rel="stylesheet" href="css/cadastroaluno.css">
+        <link rel="stylesheet" href="../aluno/css/loginaluno.css">
     </head>
     
     <body>
+        <input type="checkbox" id="dark-mode-trigger">
+        <label for="dark-mode-trigger" class="toggle-label">Alternar Modo</label>
+
         <main class="cadastro-container">
-            <img src="../images/Logo.png" alt="Logo"
-                class="logo">
+            <img src="../images/Logo.png" alt="Logo" class="logo">
 
             <h1>LOGIN - Aluno</h1>
 
             <form class="cadastro-form">
-                <div class="input-group">
-                    <label for="escola">ID da Escola:</label>
-                    <input type="text" id="escola">
-                </div>
+            
+                    <div class="input-group">
+                        <label for="escola">ID da Escola:</label>
+                        <input type="text" id="escola">
+                    </div>
 
-                <div class="input-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email">
-                </div>
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email">
+                    </div>
 
-                <div class="input-group">
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha">
-                </div>
-
+                    <div class="input-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha">
+                    </div>
+                
                 <div class="button-row">
-                    <a href="cadastroaluno.html" class="btn-secondary">Não tenho
-                        conta</a>
+                    <a href="cadastroaluno.html" class="btn-secondary">Não tenho conta</a>
                     <button type="submit" class="btn-primary">Entrar</button>
-                    <a href="../admin/adm login.html"
-                        class="btn-highlight">Login Como
-                        Admin</a>
+                    <a href="../admin/adm login.html" class="btn-highlight">Login Como Admin</a>
                 </div>
             </form>
         </main>

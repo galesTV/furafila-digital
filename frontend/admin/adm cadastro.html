@@ -1,57 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FuraFila Digital - Cadastro</title>
-        <link rel="stylesheet" href="css/style adm cadastro.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuraFila Digital - Cadastro</title>
+    <link rel="stylesheet" href="../admin/css/style adm cadastro.css">
+</head>
+<body>
+    <input type="checkbox" id="dark-mode-toggle" style="display: none;">
 
-    <body>
-        <main class="login-container"> <div
-                style="text-align: right; width: 100%; max-width: 800px; margin-bottom: 10px;">
-                <button type="button" id="toggle-dark"
-                    style="cursor: pointer; padding: 5px 10px; border-radius: 5px; border: 1px solid #ccc; background: #fff; font-size: 12px;">
-                    Alternar Modo
-                </button>
+    <main class="login-container">
+        <div class="toggle-container">
+            <label for="dark-mode-toggle" class="btn-toggle">Alternar Modo</label>
+        </div>
+
+        <img src="../images/Logo.png" alt="FuraFila Digital Logo" class="logo">
+        <h1>CADASTRO - Admin</h1>
+
+        <form class="register-form">
+            <div class="input-group">
+                <label for="escola">ID da Escola:</label>
+                <input type="text" id="escola">
             </div>
 
-            <img src="../images/Logo.png" alt="FuraFila Digital Logo"
-                class="logo">
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+            </div>
 
-            <h1>CADASTRO - Admin</h1>
+            <div class="input-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha">
+            </div>
 
-            <form class="register-form"> <div class="input-group">
-                    <label for="escola">ID da Escola:</label>
-                    <input type="text" id="escola">
-                </div>
-
-                <div class="input-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email">
-                </div>
-
-                <div class="input-group">
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha">
-                </div>
-
-                <div class="button-row">
-                    <div style="display: flex; gap: 15px; flex: 2;">
-                        <a href="adm login.html" class="btn-secondary">Já tenho
-                            conta</a>
-                        <button type="submit"
-                            class="btn-primary">Cadastrar</button>
-                    </div>
-
-                    <a href="../aluno/cadastroaluno.html" class="btn-highlight"
-                        style="flex: 1; max-width: 250px;">
-                        Entrar Como Aluno
-                    </a>
-                </div>
-            </form>
-        </main>
-
-        <script src="js/adm cadastro.js"></script>
-    </body>
+            <div class="button-row">
+                <a href="adm login.html" class="btn-secondary">Já tenho conta</a>
+                <button type="submit" class="btn-primary">Cadastrar</button>
+                <a href="../aluno/cadastroaluno.html" class="btn-highlight">Entrar Como Aluno</a>
+            </div>
+        </form>
+    </main>
+    <script src="js/adm cadastro.js"></script>
+</body>
 </html>

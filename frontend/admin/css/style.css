@@ -39,21 +39,32 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-header);
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-radius: 8px;
   margin-bottom: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .logo-img {
-  height: 60px;
+  height: 50px;
+}
+
+.search-container {
+  flex: 1;
+  max-width: 600px;
+  min-width: 200px;
 }
 
 .search-input {
-  width: 450px;
-  padding: 15px;
-  border-radius: 5px;
-  border: none;
-  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-dark);
+  font-size: 1rem;
+  outline: none;
 }
 
 .header-right {
@@ -61,26 +72,39 @@ body {
   align-items: center;
   gap: 15px;
   color: var(--text-dark);
+  flex-wrap: wrap;
+}
+
+.btn-logout, .btn-student, .btn-toggle {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.btn-toggle:hover, .btn-student:hover, .btn-logout:hover {
+  filter: brightness(0.9);
+  transform: translateY(-2px);
 }
 
 .btn-logout {
   background: #ff0000;
-  border: none;
-  padding: 8px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  color: black;
+  color: #4b0082;
 }
 
 .btn-student {
   background: var(--accent);
-  border: none;
-  padding: 8px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  color: black;
+  color: #4b0082;
+}
+
+.btn-toggle {
+  background-color: #333;
+  color: #fff;
 }
 
 .btn-container {
@@ -89,9 +113,10 @@ body {
   margin-top: 30px;
   padding-bottom: 30px;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
-.btn-produto {
+.btn-produto, .btn-painel {
   background: var(--bg-header);
   border: none;
   padding: 12px 30px;
@@ -102,50 +127,23 @@ body {
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
+  text-align: center;
 }
 
-.btn-produto:hover {
+.btn-produto:hover, .btn-painel:hover {
   filter: brightness(0.9);
   transform: translateY(-2px);
-}
-
-.btn-painel {
-  background: var(--bg-header);
-  border: none;
-  padding: 12px 30px;
-  border-radius: 8px;
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-}
-
-.btn-painel:hover {
-  filter: brightness(0.9);
-  transform: translateY(-2px);
-}
-
-.btn-toggle {
-  background-color: #333;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 8px;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .stats-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
   margin-bottom: 20px;
 }
 
 .card {
   background: var(--bg-card);
-  flex: 1;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -153,9 +151,9 @@ body {
 }
 
 .card p {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   margin-bottom: 10px;
-  color: var(--text-card);
+  color: var(--text-dark);
 }
 
 .card strong {
@@ -166,7 +164,7 @@ body {
 .table-container {
   background: var(--bg-card);
   border-radius: 10px;
-  overflow: hidden;
+  overflow-x: auto;
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -174,6 +172,7 @@ body {
 .admin-table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 600px;
 }
 
 .admin-table th {
@@ -193,4 +192,44 @@ body {
 
 .admin-table tbody tr:hover {
   background-color: rgba(0, 0, 0, 0.02);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .main-header {
+    flex-direction: column; 
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .header-left {
+    display: flex;
+    justify-content: center;
+  }
+
+  .search-container {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .header-right {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .admin-name {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .btn-container {
+    flex-direction: column;
+  }
+  
+  .btn-produto, .btn-painel {
+    width: 100%;
+  }
 }

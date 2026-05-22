@@ -10,6 +10,43 @@
   color: #4b0082;
   text-decoration: none;
 }
+/* Ajustes para o Modo Escuro no Carrinho */
+body.dark-mode .card-carrinho {
+    background-color: #945797;
+    color: white;
+}
+
+body.dark-mode .card-carrinho h3, 
+body.dark-mode .resumo-total,
+body.dark-mode .perfil-link {
+    color: #bb86fc;
+}
+
+body.dark-mode .item-cart {
+    background-color: #945797;
+    color: white;
+}
+
+body.dark-mode .metodo-card {
+    background-color: #31083F;
+    border-color: #945797;
+    color: white;
+}
+
+body.dark-mode .btn-finalizar {
+    background-color: #945797;
+    color: white;
+    border-color: #bb86fc;
+}
+
+body.dark-mode .card-mini {
+    background-color: #945797;
+    color: white;
+}
+
+body.dark-mode th, body.dark-mode td {
+    color: white;
+}
 
 .container-carrinho {
   display: flex;

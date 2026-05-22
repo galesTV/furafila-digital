@@ -1,6 +1,5 @@
 
 :root {
-
     --bg-page: #fff9e2;
     --bg-input: #ffdeb8;
     --bg-btn-primary: #ffdeb8;
@@ -10,16 +9,16 @@
     --text-btn: #000;
 }
 
-body:has(#dark-mode-trigger:checked) {
-    --bg-page: #31083F;  
-    --bg-input: #945797;   
-    --bg-btn-primary: #945797; 
-    --bg-btn-admin: #300a28;   
-    --text-main: #ffffff;    
-    --text-label: #ffffff;   
-    --text-btn: #ffffff;   
-}
 
+body:has(#dark-mode-trigger:checked) {
+    --bg-page: #31083F;
+    --bg-input: #945797;
+    --bg-btn-primary: #945797;
+    --bg-btn-admin: #300a28;
+    --text-main: #ffffff;
+    --text-label: #ffffff;
+    --text-btn: #ffffff;
+}
 
 * {
     margin: 0; padding: 0; box-sizing: border-box;
@@ -37,7 +36,6 @@ body {
 
 #dark-mode-trigger { display: none; }
 
-
 .toggle-label {
     position: fixed; top: 20px; right: 20px;
     background-color: var(--text-main);
@@ -49,20 +47,13 @@ body {
 
 .cadastro-container {
     text-align: center;
-    width: 100%; 
-    max-width: 950px;
+    width: 100%; max-width: 950px;
     padding: 20px;
 }
 
 .logo { width: 250px; margin-bottom: 20px; }
 
-h1 { color: var(--text-main); margin-bottom: 30px; font-weight: 500; }
-.register-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-}
+h1 { color: var(--text-main); margin-bottom: 40px; font-weight: 500; font-size: 2rem; }
 
 .cadastro-form {
   display: flex;
@@ -71,18 +62,17 @@ h1 { color: var(--text-main); margin-bottom: 30px; font-weight: 500; }
   justify-content: space-between;
 }
 
-.input-group {  
+.input-group {
+    flex: 1 1 30%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex: 1 1 30%;
-    min-width: 250px;
+     min-width: 250px;
 }
 
 label {
     color: var(--text-label);
-    margin-bottom: 8px;
-    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 input {
@@ -91,7 +81,7 @@ input {
     border: none;
     border-radius: 8px;
     background-color: var(--bg-input);
-    color: var(--text-label);
+    color: var(--text-btn);
 }
 
 
@@ -119,13 +109,8 @@ button, .button-row a {
     color: var(--text-btn);
 }
 
-.btn-secondary, .btn-primary {
-    background-color: var(--bg-btn-primary);
-}
-
-.btn-highlight {
-    background-color: var(--bg-btn-admin);
-}
+.btn-secondary, .btn-primary { background-color: var(--bg-btn-primary); }
+.btn-highlight { background-color: var(--bg-btn-admin); }
 
 button:hover, .button-row a:hover {
     filter: brightness(0.9);

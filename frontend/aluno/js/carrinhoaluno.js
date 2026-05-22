@@ -132,6 +132,26 @@ window.finalizarPedido = async () => {
     alert("Erro ao conectar com o servidor.");
   }
 };
+const btnDark = document.getElementById('toggle-dark');
+const body = document.body;
+
+// Verifica se o modo escuro estava ativo
+if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    btnDark.innerHTML = '☀️';
+}
+
+btnDark.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        btnDark.innerHTML = '☀️';
+    } else {
+        localStorage.setItem('theme', 'light');
+        btnDark.innerHTML = '🌙';
+    }
+});
 
 document.getElementById("logout").addEventListener("click", (e) => {
   e.preventDefault();

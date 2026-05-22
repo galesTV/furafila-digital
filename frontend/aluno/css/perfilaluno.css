@@ -1,187 +1,203 @@
+:root {
+  --bg-light: #f7e7ce;
+  --bg-card: #fff9e2;
+  --bg-container: #ffdeb8;
+  --roxo: #5e2f91;
+  --roxo-claro: #d1b3ff;
+  --dourado: #936025;
+  --borda-card: #f3d4b0;
+}
+
+body.dark-mode {
+  --bg-light: #1a1a1a;
+  --bg-card: #945797;
+  --bg-container: #31083F;
+  --roxo: #bb86fc;
+  --roxo-claro: #4a0072;
+  --dourado: #ffcc80;
+  --borda-card: #444;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2:not(.roxo),
+body.dark-mode h3, 
+body.dark-mode p:not(.dourado), 
+body.dark-mode .btn-action {
+    color: #ffffff;
+}
+
+body.dark-mode .btn-history {
+    color: #ffffff;
+}
+
 body {
-    background-color: #FFF9E2;
-   
-}
-#master{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-    #topo{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width:100%;
-    height: 5%;
-    background-color: #FFDEB8;
-    border-radius: 8px;
-    
-}
-#topo img{
-    width: 15%;
-    height: 4%;
-    margin-left: 2%;
-    
-    
-}
-#topo input{
-    width: 600px;
-    height: 40px;
-    margin-left: 40%;
-    margin-right: 5%;
-    border-radius: 7px;
-    border: none;
-    opacity: 0.8;
-    font-size: medium;
-    
+  background-color: var(--bg-light);
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  transition: background 0.3s ease;
 }
 
-#topo p{
-    font-size:18px;
-    font-weight: bold;
-    color: #000000;
-    margin-left: 30%;
-
-}
-#topo button {
-    height: 5%;
-    background-color: #FFDEB8;
+body.dark-mode {
+  color: #f0f0f0;
 }
 
-#topo button a{
-    width: 100%;
-    height: 6%;
-    border-radius: 7px;
-    background-color: #D1B3FF;
-    border: none;
-    font-size: medium;
-}
-.row {
-    width: 5%;
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    background-color: #D1B3FF;
-    margin-left: 3%;
-    margin-right: 3%;
-    border-radius: 8px;
-}
-button,
-.row a {
-    flex: 1;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 1rem;
-}
-#corpo{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 90%;
-    background-color: #FFDEB8;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    border-radius: 8px;
-}
-#corpo-esquerda{
-    width: 20%;
-    height: 85%;
-    background-color: #FFF9E2;
-    border-radius: 8px;
-    margin-left: 3%;
-    margin-right:3%;
-    margin-top: 1%;   
-}
-#corpo-esquerda img{
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-top: 10px;
-}
-#corpo-esquerda hr{
-    width: 70%;
-    height: 1px;
-    background-color: #000;
-    margin-bottom: 2%;
+#master {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-#corpo-centro{
-    width: 40%;
-    height: 75%;
-    background-color: #FFF9E2;
-    border-radius: 8px;
-    margin-top: 1%;   
-    margin-bottom: 2%;   
-}
-#corpo-centro div{
-     width: 70%;
-    height: 140px;
-    border-radius: 7px;
-    background-color: #FFDEB8;
-    border: none;
-    
-}
-#corpo-centro .saldo {
-    padding-top: 1px;
-    padding-bottom: 1px;
-    width: 70%;
-    height: 15%;
-    border-radius: 7px;
-    background-color: #FFDEB8;
-    border: none;
-    font-size: 18px;
-   
+#topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-container);
+  padding: 15px 30px;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
-#corpo-centro button{
-    width: 70%;
-    height: 15%;
-    margin-bottom: 3%;
-    margin-top: 1%;
-    border-radius: 7px;
-    background-color: #FFDEB8;
-    border: none;
-    font-size: 18px;
+.logo {
+  height: 50px;
 }
 
-
-#corpo-direita{
-    width: 32%;
-    height: 85%;
-    background-color: #FFF9E2;
-    border-radius: 8px;
-    margin-left:3%;
-    margin-right: 3%; 
-    margin-top: 1%;
-}
-#corpo-direita button{
-     width: 70%;
-    height: 25%;
-    margin-bottom: 3%;
-    margin-top: 3%;
-    border-radius: 7px;
-    background-color: #FFDEB8;
-    border: none;
-    font-size: large;
+#topo input {
+  width: 500px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
 }
 
-.bolder{
-    font-weight: bold;
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
 }
-.roxo{
-    color: #5E2F91;
+
+.user-info p {
+  margin: 0;
 }
-.dourado{
-    color: #936025;
+
+.btn-admin {
+  padding: 8px 16px;
+  background-color: var(--roxo-claro);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#corpo {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+#corpo-esquerda,
+#corpo-centro,
+#corpo-direita {
+  background-color: var(--bg-card);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 2px solid var(--borda-card);
+  text-align: center;
+}
+
+#corpo-esquerda {
+  width: 25%;
+}
+#corpo-centro {
+  width: 45%;
+}
+#corpo-direita {
+  width: 30%;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #ddd;
+  border: 3px solid #fff;
+  margin-bottom: 15px;
+}
+
+.info-group {
+  text-align: left;
+}
+.label {
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+  color: #666;
+}
+body.dark-mode .label {
+  color: #bbb;
+}
+.info-group p:not(.label) {
+  font-weight: bold;
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+hr {
+  border: 0.5px solid #eee;
+  margin: 10px 0;
+}
+
+.saldo-box {
+  background-color: var(--bg-container);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.roxo {
+  color: var(--roxo);
+}
+.roxo-bold {
+  color: var(--roxo);
+  font-weight: 900;
+}
+.dourado {
+  color: var(--dourado);
+  font-size: 0.9rem;
+}
+
+.btn-action {
+  width: 100%;
+  padding: 15px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--bg-container);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-action:hover {
+  transform: scale(1.02);
+}
+
+.btn-history {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--bg-container);
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+#container-pedidos {
+  text-align: left;
+  font-size: 0.85rem;
 }
