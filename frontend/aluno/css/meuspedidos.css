@@ -1,0 +1,289 @@
+:root {
+  --primary: #ffdeb8;
+  --bg: #fff9e2;
+  --text: #000;
+  --accent: #4b0082;
+  --card-bg: #ffffff;
+  --border-radius: 15px;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  transition: 0.3s;
+}
+
+body.dark-mode {
+  --bg: #31083f;
+  --primary: #945797;
+  --text: #ffffff;
+  --card-bg: #945797;
+  --accent: #bb86fc;
+}
+
+body.dark-mode .subtitle {
+  color: #bbb;
+}
+
+body.dark-mode .info-principal p {
+  color: #ddd;
+}
+
+body.dark-mode #lista-pedidos,
+body.dark-mode .loader {
+  color: white;
+}
+
+body.dark-mode .card-pedido {
+  border-left-color: var(--accent);
+}
+
+#master {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 2000px;
+}
+
+#topo {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: var(--primary);
+  border-radius: 8px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#topo img {
+  width: 150px;
+  height: auto;
+}
+
+#topo p {
+  font-weight: bold;
+  color: var(--text);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-voltar,
+.btn-logout,
+.btn-dark-mode {
+  padding: 8px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+}
+
+.btn-voltar {
+  background-color: #fff9e2;
+  color: #4b0082;
+}
+
+.btn-logout {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.btn-dark-mode {
+  background-color: #4b0082;
+  font-size: 18px;
+  padding: 6px 12px;
+}
+
+.btn-voltar:hover,
+.btn-logout:hover,
+.btn-dark-mode:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.btn-dark-mode {
+  background-color: #4b0082;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 10px;
+}
+
+.header-pagina {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header-pagina h2 {
+  color: var(--accent);
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 1rem;
+}
+
+#lista-pedidos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-pedido {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 10px solid #4b0082;
+  transition: transform 0.2s;
+  gap: 15px;
+}
+
+.card-pedido:hover {
+  transform: translateY(-3px);
+}
+
+.info-principal h3 {
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.info-principal p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.detalhes-pagamento {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.valor-total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.status-badge {
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.status-pendente {
+  background-color: #ffeaa7;
+  color: #d35400;
+}
+.status-preparando {
+  background-color: #81ecec;
+  color: #0097e6;
+}
+.status-pronto {
+  background-color: #55efc4;
+  color: #00b894;
+}
+
+.loader {
+  text-align: center;
+  font-weight: bold;
+  color: var(--accent);
+  padding: 50px;
+}
+
+@media (max-width: 768px) {
+  #topo {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 15px;
+  }
+
+  #topo img {
+    margin: 0 auto;
+  }
+
+  #topo p {
+    margin: 5px 0;
+  }
+
+  .row {
+    max-width: 100%;
+    min-width: 100%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .btn-dark-mode {
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  .card-pedido {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .detalhes-pagamento {
+    text-align: left;
+    width: 100%;
+    margin-top: 10px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .btn-dark-mode {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Painel de Pedidos - FuraFila Digital</title>
+        <script src="js/auth.js"></script>
+        <link rel="stylesheet" href="../admin/css/painel de pedidos ativos.css">
+    </head>
+
+    <body>
+        <nav class="navbar-superior">
+            <div class="logo-area">
+                <img src="../images/logo-horizontal.png" alt="Logo do Projeto"
+                    class="logo-img-destaque">
+            </div>
+
+            <div class="barra-pesquisa">
+                <input type="text" placeholder="Pesquisar">
+            </div>
+
+            <div class="perfil-usuario">
+                <span class="admin-name">Olá, Admin</span>
+                <a href="index.html" class="btn-voltar">Voltar ao Menu</a>
+                <button type="button" id="toggle-dark" class="btn-toggle"
+                style="background-color: #333; color: #fff;">Modo
+                Escuro</button>
+                <a href="../aluno/loginaluno.html" class="btn-aluno-header">Aluno</a>
+                <button id="logout" class="btn-logout">Sair</button>
+            </div>
+        </nav>
+
+        <main class="painel-principal">
+            <header>
+                <h1>Painel de Pedidos Ativos - Fila de Preparo</h1>
+                <p class="legenda-filtros">Filtros Rápidos e indicadores</p>
+            </header>
+
+            <div class="container-tags">
+                <span class="tag tag-todos" data-filter="Todos">Todos</span>
+                <span class="tag tag-pendentes"
+                    data-filter="Pendente">Pendentes</span>
+                <span class="tag tag-preparando"
+                    data-filter="Preparando">Preparando</span>
+                <span class="tag tag-pronto" data-filter="Pronto">Pronto</span>
+            </div>
+
+            <table class="tabela-pedidos">
+                <thead>
+                    <tr>
+                        <th>Fila de Preparos<br><small>Pedido</small></th>
+                        <th><br><small>Aluno</small></th>
+                        <th><br><small>Itens</small></th>
+                        <th><br><small>Status</small></th>
+                        <th><br><small>Hora Pedido</small></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </main>
+
+        <script src="js/painelpedidos.js"></script>
+    </body>
+</html>

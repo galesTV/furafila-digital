@@ -1,0 +1,350 @@
+:root {
+  --bg-main: #e6ceee;
+  --bg-header: #d8b3ff;
+  --bg-card: #ffffff;
+  --text-dark: #333333;
+  --accent: #ffdeb8;
+  --border-color: #dddddd;
+  --border-table: #fffbfb;
+  --table-head-bg: #cccccc;
+  --text-card: #666666;
+  --status-pendente: #fff9c4;
+  --status-preparando: #bbdefb;
+  --status-pronto: #c8e6c9;
+  --status-atrasado: #ffcdd2;
+}
+
+body.dark-mode {
+  --bg-main: #31083f;
+  --bg-header: #6d34b3;
+  --bg-card: #945797;
+  --text-dark: #dddddd;
+  --border-color: #7b3e7e;
+  --border-table: #945797;
+  --table-head-bg: #6a1b9a;
+  --text-card: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  transition: 0.3s;
+}
+
+.navbar-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: var(--bg-header);
+  padding: 15px 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  gap: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img-destaque {
+  height: 50px;
+  width: auto;
+}
+
+.barra-pesquisa {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  max-width: 800px;
+}
+
+.barra-pesquisa input {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-dark);
+  font-size: 1rem;
+  outline: none;
+}
+
+.perfil-usuario {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: bold;
+}
+
+.btn-toggle,
+.btn-aluno-header {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  color: var(--text-dark);
+}
+
+.btn-toggle {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .btn-toggle {
+  background-color: var(--accent);
+  color: #333;
+}
+
+.btn-aluno-header {
+  background-color: var(--accent);
+  color: #4b0082;
+  text-decoration: none;
+}
+
+.btn-voltar:hover,
+.btn-toggle:hover,
+.btn-aluno-header:hover,
+.btn-logout:hover {
+  filter: brightness(0.9);
+  transform: translateY(-2px);
+}
+
+.btn-voltar {
+  background-color: var(--bg-header);
+  border-radius: 10px;
+  padding: 8px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4b0082;
+  text-decoration: none;
+}
+
+.btn-logout {
+  background-color: #ff0000;
+  border-radius: 10px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4b0082;
+  text-decoration: none;
+}
+
+.painel-principal {
+  width: 100%;
+  background-color: var(--bg-card);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.painel-principal header h1 {
+  color: var(--text-dark);
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.legenda-filtros {
+  color: var(--text-card);
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.container-tags {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: #000000;
+}
+
+.tag:hover {
+  filter: brightness(0.95);
+  transform: translateY(-1px);
+}
+
+.tag-todos {
+  background-color: var(--bg-header);
+  color: var(--text-dark);
+}
+.tag-pendentes {
+  background-color: var(--status-pendente);
+}
+.tag-preparando {
+  background-color: var(--status-preparando);
+}
+.tag-pronto {
+  background-color: var(--status-pronto);
+}
+.tag-atrasados {
+  background-color: var(--status-atrasado);
+}
+
+.tabela-pedidos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.tabela-pedidos th {
+  background-color: var(--table-head-bg);
+  color: var(--text-dark);
+  font-weight: bold;
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid var(--border-color);
+}
+
+.tabela-pedidos td {
+  padding: 15px;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--border-table);
+  color: var(--text-dark);
+  vertical-align: middle;
+}
+
+.tabela-pedidos tbody tr:hover td {
+  filter: brightness(0.98);
+}
+
+.status-select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-dark);
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 1024px) {
+  .navbar-superior {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  
+  .barra-pesquisa {
+    order: 3; 
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .navbar-superior {
+    margin-bottom: 20px;
+  }
+
+  .perfil-usuario span {
+    display: none;
+  }
+
+  .painel-principal {
+    padding: 15px;
+  }
+
+  .painel-principal header h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .legenda-filtros {
+    text-align: center;
+  }
+
+  .container-tags {
+    justify-content: center;
+  }
+
+  .tabela-pedidos, 
+  .tabela-pedidos tbody, 
+  .tabela-pedidos tr, 
+  .tabela-pedidos td { 
+    display: block; 
+    width: 100%;
+  }
+
+  .tabela-pedidos thead {
+    display: none;
+  }
+
+  .tabela-pedidos tr {
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .tabela-pedidos td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    padding: 12px 15px;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .tabela-pedidos tr td:last-child {
+    border-bottom: none;
+  }
+
+  .tabela-pedidos td::before {
+    font-weight: bold;
+    color: var(--text-dark);
+    opacity: 0.8;
+    text-align: left;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    margin-right: 15px;
+  }
+
+  .tabela-pedidos td:nth-of-type(1)::before { content: "Pedido:"; }
+  .tabela-pedidos td:nth-of-type(2)::before { content: "Aluno:"; }
+  .tabela-pedidos td:nth-of-type(3)::before { content: "Itens:"; }
+  .tabela-pedidos td:nth-of-type(4)::before { content: "Status:"; }
+  .tabela-pedidos td:nth-of-type(5)::before { content: "Hora:"; }
+  
+  .status-select {
+    max-width: 150px;
+    padding: 6px 10px;
+  }
+}

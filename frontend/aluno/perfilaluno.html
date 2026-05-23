@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Perfil do Aluno</title>
+        <script src="js/auth.js"></script>
+        <link rel="stylesheet" href="../aluno/css/perfilaluno.css">
+    </head>
+
+    <body>
+        <div id="master">
+            <div id="topo">
+                <img src="../images/logo-horizontal.png" alt="logo-horizontal">
+                <input type="text" id="search-input"
+                    placeholder="Pesquisar...">
+                <div class="row">
+                    <a href="perfilaluno.html">Olá, aluno</a>
+                    <a href="menualuno.html" class="btn-cardapio">Ver
+                        Cardápio</a>
+                    <a href="carrinhoaluno.html" class="btn-carrinho">Ver
+                        Carrinho</a>
+                    <a href="../admin/adm login.html"
+                        class="btn-admin">Admin</a>
+                    <a class="btn-logout" href="loginaluno.html"
+                        id="logout">Sair</a>
+                    <button id="toggle-dark" class="btn-dark-mode">🌙</button>
+                </div>
+            </div>
+
+            <div id="corpo">
+                <div id="corpo-esquerda">
+                    <h2>PERFIL DO ALUNO</h2>
+                    <div class="perfil-container">
+                        <img src="../images/pessoa.png" alt="pessoa"
+                            class="profile-img">
+                        <div class="info-group">
+                            <p class="label">Nome:</p>
+                            <p id="perfil-nome">Carregando...</p>
+                            <hr>
+                            <p class="label">Email:</p>
+                            <p id="perfil-email">Carregando...</p>
+                            <hr>
+                            <p class="label">ID da Escola:</p>
+                            <p id="perfil-id-escola">Carregando...</p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="corpo-centro">
+                    <h1>CARTEIRA DIGITAL</h1>
+                    <h2 class="roxo">Seu Saldo e Pagamento</h2>
+                    <div class="saldo-box">
+                        <h3>SALDO</h3>
+                        <h2 class="roxo-bold">SALDO ATUAL: R$ <span
+                                id="perfil-saldo">0,00</span></h2>
+                        <p class="dourado">Disponível para uso imediato</p>
+                    </div>
+
+                    <h2 class="bolder">Carregador Créditos</h2>
+                    <button class="btn-action">Pix Rápido</button>
+                    <button class="btn-action">Transferência Bancária</button>
+                    <button class="btn-action">Confirmar Recarga</button>
+                </div>
+
+                <div id="corpo-direita">
+                    <h1>Atividade Recente</h1>
+                    <p class="subtitle">Histórico de transações e Pedidos</p>
+                    <div id="container-pedidos"></div>
+                    <button class="btn-history"
+                        onclick="window.location.href='meuspedidos.html'">Ver
+                        Histórico Completo</button>
+                </div>
+            </div>
+
+            <script src="js/perfilaluno.js"></script>
+        </body>
+    </html>
