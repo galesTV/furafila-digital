@@ -1,12 +1,12 @@
-# FuraFila Digital - Desenvolvimento 🚀
+# FuraFila Digital 🥪 🥤
 
-Esta é a branch principal de trabalho diário da equipe. Aqui estão as últimas atualizações da integração do sistema (frontend, backend e banco de dados).
+O **FuraFila Digital** é um sistema full-stack de gestão para cantinas escolares, projetado para otimizar o tempo de espera em filas, agilizar a entrega de pedidos e oferecer um controle financeiro prático para os alunos através de uma carteira digital.
 
-## 📌 Fluxo de Branches
+## 🚀 Status do Projeto: Em Produção (Render)
 
-Para manter a organização do código, utilizamos o seguinte fluxo:
-1. **`develop`**: Branch onde integram o frontend e o backend.
-2. **`feature/nome-da-funcionalidade`**: Branches criadas para novas implementações. Não é permitido subir código direto na `develop` sem passar pelo sistema de Pull Requests (PRs).
+A branch **`main`** contém a versão estável, homologada e integrada da aplicação, conectada diretamente à esteira de Deploy Contínuo no **Render**.
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -14,9 +14,7 @@ Para manter a organização do código, utilizamos o seguinte fluxo:
 - **Backend**: Node.js (Express, Multer para imagens, CORS).
 - **Banco de Dados**: MySQL.
 
-## 🚀 Como Rodar o Projeto
-
-Siga os passos abaixo para rodar a aplicação localmente.
+## 💻 Como Rodar o Projeto Localmente
 
 ### Pré-requisitos
 Certifique-se de ter instalado em sua máquina:
@@ -34,7 +32,18 @@ git clone https://github.com/galesTV/furafila-digital.git
 ### 2. Configurar o Banco de Dados
 Acesse o MySQL e crie o banco de dados do projeto usando o arquivo `schema.sql`, encontrado na pasta `database`
 
-### 3. Rodar o Backend
+### 3. Configurar as Variáveis de Ambiente
+Crie um arquivo .env na raiz do projeto backend com as seguintes credenciais:
+
+```
+PORT=3000
+DB_HOST=localhost
+DB_USER=seu_usuario
+DB_PASSWORD=sua_senha
+DB_NAME=furafila_digital
+```
+
+### 4. Executar o Servidor Backend
 Entre na pasta do backend
 
 ```bash
@@ -49,17 +58,17 @@ npm start
 
 O servidor rodará por padrão na porta http://localhost:3000.
 
-### 3.1 Pasta `uploads`
+### 4.1 Pasta `uploads`
 *Caso não encontre a pasta `uploads` dentro da raiz de `backend`, ao lado de `src`, crie-a manualmente*
 
-### 4. Rodar o Frontend
+### 5. Executar o Frontend
 Abra a estrutura de pastas do frontend e selecione o arquivo que deseja abrir.
 
 Você pode usar a extensão Live Server no VS Code para abrir os arquivos HTML (como `adm cadastro.html`) no navegador.
 
-## 👥 Contribuidores
+## 👥 Equipe de Desenvolvimento
+- Gael Guzman (Líder do Projeto, Back-end & Integração)
 - Cauê Anhê (Front-end)
-- Gael Guzman (Líder do Projeto, Back-end/Integração)
 - Gustavo Borges (Integração)
 - Isabelly Mendes (Front-end)
 - Nicolas Melo (Banco de Dados)
