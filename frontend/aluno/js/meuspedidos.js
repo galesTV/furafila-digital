@@ -69,25 +69,24 @@ document.addEventListener("DOMContentLoaded", async () => {
       "<p class='loader'>Não foi possível carregar seu histórico no momento.</p>";
   }
 });
-const btnDark = document.getElementById('toggle-dark');
+const btnDark = document.getElementById("toggle-dark");
 const body = document.body;
 
-// Verifica se o modo escuro já estava ativo em outra página
-if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
-    if(btnDark) btnDark.innerHTML = '☀️';
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  if (btnDark) btnDark.innerHTML = "☀️";
 }
 
-if(btnDark) {
-    btnDark.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
-            btnDark.innerHTML = '☀️';
-        } else {
-            localStorage.setItem('theme', 'light');
-            btnDark.innerHTML = '🌙';
-        }
-    });
+if (btnDark) {
+  btnDark.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+      btnDark.innerHTML = "☀️";
+    } else {
+      localStorage.setItem("theme", "light");
+      btnDark.innerHTML = "🌙";
+    }
+  });
 }

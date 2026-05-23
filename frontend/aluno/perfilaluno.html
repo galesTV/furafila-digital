@@ -3,25 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../aluno/css/perfilaluno.css">
         <title>Perfil do Aluno</title>
+        <script src="js/auth.js"></script>
+        <link rel="stylesheet" href="../aluno/css/perfilaluno.css">
     </head>
+
     <body>
         <div id="master">
             <div id="topo">
-                <img src="../images/logo-horizontal.png" alt="logo-horizontal"
-                    class="logo">
-
-                <div class="search-container">
-                    <input type="text" placeholder="Pesquisar...">
-                    <button id="dark-mode-toggle" class="btn-tema">🌓
-                        Tema</button>
-                </div>
-
-                <div class="user-info">
-                    <p>Olá, <strong>aluno</strong></p>
+                <img src="../images/logo-horizontal.png" alt="logo-horizontal">
+                <input type="text" id="search-input"
+                    placeholder="Pesquisar...">
+                <div class="row">
+                    <a href="perfilaluno.html">Olá, aluno</a>
+                    <a href="menualuno.html" class="btn-cardapio">Ver
+                        Cardápio</a>
+                    <a href="carrinhoaluno.html" class="btn-carrinho">Ver
+                        Carrinho</a>
                     <a href="../admin/adm login.html"
                         class="btn-admin">Admin</a>
+                    <a class="btn-logout" href="loginaluno.html"
+                        id="logout">Sair</a>
+                    <button id="toggle-dark" class="btn-dark-mode">🌙</button>
                 </div>
             </div>
 
@@ -41,11 +44,6 @@
                             <p class="label">ID da Escola:</p>
                             <p id="perfil-id-escola">Carregando...</p>
                             <hr>
-                            <p class="label">Série:</p>
-                            <p id="perfil-serie">Carregando...</p>
-                            <hr>
-                            <p class="label">Preferência:</p>
-                            <p id="perfil-preferencia">Carregando...</p>
                         </div>
                     </div>
                 </div>
@@ -77,6 +75,5 @@
             </div>
 
             <script src="js/perfilaluno.js"></script>
-            
         </body>
     </html>

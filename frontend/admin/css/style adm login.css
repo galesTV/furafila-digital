@@ -4,14 +4,18 @@
   --text-h1: #4b0082;
   --text-label: #333;
   --btn-text: #000;
+  --btn-toggle: #31083f;
+  --btn-toggle-text: #fee8ff;
 }
 
 body.dark-mode {
-  --bg-color: #945797;
-  --input-bg: #31083f;
+  --bg-color: #31083f;
+  --input-bg: #945797;
   --text-h1: #fee8ff;
   --text-label: #fee8ff;
   --btn-text: #fee8ff;
+  --btn-toggle: #fee8ff;
+  --btn-toggle-text: #4b0082;
 }
 
 * {
@@ -37,6 +41,20 @@ body {
   padding: 20px;
 }
 
+.btn-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--btn-toggle);
+  color: var(--btn-toggle-text);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .logo {
   width: 250px;
   margin-bottom: 20px;
@@ -45,7 +63,7 @@ body {
 h1 {
   color: var(--text-h1);
   margin-bottom: 30px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .login-form {
@@ -68,14 +86,31 @@ label {
   color: var(--text-label);
 }
 
-input {
+input,
+select {
   width: 100%;
   padding: 12px;
   border: none;
   border-radius: 8px;
   background-color: var(--input-bg);
-  color: var(--text-label);
+  color: var(--btn-text);
+  font-size: 1rem;
   outline: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input:focus,
+select:focus {
+  background-color: #e2ceff;
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus {
+  background-color: #451254;
 }
 
 .button-row {
