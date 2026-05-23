@@ -1,4 +1,4 @@
-z# Ignore node modules
+# Ignore node modules
 node_modules/
 
 # Ignore environment variables
