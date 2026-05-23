@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const response = await fetch(
-      `http://localhost:3000/orders/my-orders/${alunoId}`,
+      `https://furafila-digital.onrender.com/orders/my-orders/${alunoId}`,
     );
 
     if (!response.ok) throw new Error("Erro ao buscar pedidos");

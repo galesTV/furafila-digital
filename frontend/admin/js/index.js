@@ -9,7 +9,7 @@ const tabelaPedidos = document.querySelector(".admin-table tbody");
 
 async function carregarPedidos() {
   try {
-    const response = await fetch(`http://localhost:3000/orders/admin/all`);
+    const response = await fetch(`https://furafila-digital.onrender.com/orders/admin/all`);
 
     if (!response.ok) {
       throw new Error("Erro ao buscar pedidos");

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const resUser = await fetch(`http://localhost:3000/user/${alunoId}`);
+    const resUser = await fetch(`https://furafila-digital.onrender.com/user/${alunoId}`);
     const usuario = await resUser.json();
 
     if (resUser.ok) {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     const resOrders = await fetch(
-      `http://localhost:3000/orders/my-orders/${alunoId}`,
+      `https://furafila-digital.onrender.com/orders/my-orders/${alunoId}`,
     );
     const pedidos = await resOrders.json();
 

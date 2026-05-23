@@ -10,7 +10,7 @@ registerForm.addEventListener("submit", async (event) => {
   const nomeGenerico = email.split("@")[0];
 
   try {
-    const response = await fetch("http://localhost:3000/user/register", {
+    const response = await fetch("https://furafila-digital.onrender.com/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
