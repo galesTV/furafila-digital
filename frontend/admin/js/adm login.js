@@ -22,7 +22,7 @@ loginForm.addEventListener("submit", async (event) => {
       alert(data.message);
       localStorage.setItem("adminNome", data.user.nome);
 
-      window.location.href = "index.html";
+      window.location.href = "/admin/index.html";
     } else {
       alert(data.message);
     }

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nomeSalvo = localStorage.getItem("alunoNome");
 
   if (!nomeSalvo) {
-    window.location.href = "loginaluno.html";
+    window.location.href = "/aluno/loginaluno.html";
     return;
   }
 
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.removeItem("carrinho");
       alert("Sessão encerrada!");
 
-      window.location.href = "loginaluno.html";
+      window.location.href = "/aluno/loginaluno.html";
     });
   }
 });

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (!alunoId) {
     alert("Usuário não identificado. Faça login.");
-    window.location.href = "loginaluno.html";
+    window.location.href = "/aluno/loginaluno.html";
     return;
   }
 

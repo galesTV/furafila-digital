@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         <div class="vazio">
             <p>Você ainda não realizou nenhum pedido.</p>
             <br>
-            <a href="menualuno.html" class="btn-voltar">Ir para o Cardápio</a>
+            <a href="/aluno/menualuno.html" class="btn-voltar">Ir para o Cardápio</a>
         </div>`;
       return;
     }

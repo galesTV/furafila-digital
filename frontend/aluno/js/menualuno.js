@@ -166,5 +166,5 @@ document.getElementById("logout").addEventListener("click", (e) => {
   localStorage.removeItem("carrinho");
 
   alert("Sessão encerrada!");
-  window.location.href = "loginaluno.html";
+  window.location.href = "/aluno/loginaluno.html";
 });

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nomeSalvo = localStorage.getItem("adminNome");
 
     if (!nomeSalvo) {
-        window.location.href = "adm login.html";
+        window.location.href = "/admin/adm login.html";
         return;
     }
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.removeItem("adminId");
             alert("Sessão encerrada!");
             
-            window.location.href = "adm login.html";
+            window.location.href = "/admin/adm login.html";
         });
     }
 });

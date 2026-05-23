@@ -28,7 +28,7 @@ registerForm.addEventListener("submit", async (event) => {
     if (response.ok) {
       alert(data.message);
       localStorage.setItem("adminNome", nomeGenerico);
-      window.location.href = "adm login.html";
+      window.location.href = "/admin/adm login.html";
     } else {
       alert(data.message);
     }

@@ -16,7 +16,7 @@ btnToggle.addEventListener("click", () => {
 const logout = document.getElementById("logout");
 logout.addEventListener("click", () => {
   localStorage.removeItem("adminNome");
-  window.location.href = "adm login.html";
+  window.location.href = "/admin/adm login.html";
 });
 
 document
@@ -43,7 +43,7 @@ document
 
       if (response.ok) {
         alert("Produto e imagem salvos!");
-        window.location.href = "index.html";
+        window.location.href = "/admin/index.html";
       } else {
         const err = await response.json();
         alert("Erro ao salvar: " + err.message);

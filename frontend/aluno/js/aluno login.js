@@ -20,7 +20,7 @@ loginForm.addEventListener("submit", async (event) => {
       alert("Bem-vindo(a)!");
       localStorage.setItem("alunoNome", data.user.nome);
       localStorage.setItem("alunoId", data.user.id_usuario);
-      window.location.href = "menualuno.html";
+      window.location.href = "/aluno/menualuno.html";
     } else {
       alert(data.message);
     }

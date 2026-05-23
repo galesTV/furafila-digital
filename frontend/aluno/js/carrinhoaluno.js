@@ -85,7 +85,7 @@ window.finalizarPedido = async () => {
     alert(
       "Sessão expirada ou usuário não identificado. Por favor, faça login novamente.",
     );
-    window.location.href = "loginaluno.html";
+    window.location.href = "/aluno/loginaluno.html";
     return;
   }
 
@@ -123,7 +123,7 @@ window.finalizarPedido = async () => {
     if (response.ok) {
       alert("Pedido #" + resultado.pedidoId + " enviado com sucesso!");
       localStorage.removeItem("carrinho");
-      window.location.href = "meuspedidos.html"; 
+      window.location.href = "/aluno/meuspedidos.html"; 
     } else {
       alert("Erro: " + resultado.message);
     }
@@ -159,5 +159,5 @@ document.getElementById("logout").addEventListener("click", (e) => {
   localStorage.removeItem("carrinho");
 
   alert("Sessão encerrada!");
-  window.location.href = "loginaluno.html";
+  window.location.href = "/aluno/loginaluno.html";
 });

@@ -27,7 +27,7 @@ registerForm.addEventListener("submit", async (event) => {
 
     if (response.ok) {
       alert("Cadastro realizado com sucesso!");
-      window.location.href = "loginaluno.html";
+      window.location.href = "/aluno/loginaluno.html";
     } else {
       alert(data.message || "Erro ao cadastrar aluno.");
     }
