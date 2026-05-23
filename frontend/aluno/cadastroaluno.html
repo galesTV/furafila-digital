@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FuraFila Digital - Cadastro</title>
-    <link rel="stylesheet" href="../aluno/css/cadastroaluno.css">
-</head>
-<body>
-    <input type="checkbox" id="dark-mode-trigger">
-    
-    <label for="dark-mode-trigger" class="toggle-label">Alternar Modo</label>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FuraFila Digital - Cadastro</title>
+        <link rel="stylesheet" href="../aluno/css/cadastroaluno.css">
+    </head>
+    <body>
+        <input type="checkbox" id="dark-mode-trigger">
 
-    <main class="cadastro-container">
-        <img src="../images/Logo.png" alt="Logo" class="logo">
+        <label for="dark-mode-trigger" class="toggle-label">Alternar
+            Modo</label>
 
-        <h1>CADASTRO - Aluno</h1>
+        <main class="cadastro-container">
+            <img src="../images/Logo.png" alt="Logo" class="logo">
 
-        <form class="cadastro-form">
-     
+            <h1>CADASTRO - Aluno</h1>
+
+            <form class="cadastro-form">
+
                 <div class="input-group">
                     <label for="escola">ID da Escola:</label>
-                    <input type="text" id="escola">
+                    <select id="escola" required>
+                        <option value disabled selected>Selecione a
+                            Escola...</option>
+                        <option value="ADM001">ADM001</option>
+                        <option value="ADM002">ADM002</option>
+                    </select>
                 </div>
 
                 <div class="input-group">
@@ -32,15 +38,16 @@
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha">
                 </div>
-       
 
-            <div class="button-row">
-                <a href="loginaluno.html" class="btn-secondary">Já tenho conta</a>
-                <button type="submit" class="btn-primary">Cadastrar</button>
-                <a href="../admin/adm cadastro.html" class="btn-highlight">Entrar Como Admin</a>
-            </div>
-        </form>
-    </main>
-    <script src="js/aluno cadastro.js"></script>
-</body>
+                <div class="button-row">
+                    <a href="loginaluno.html" class="btn-secondary">Já tenho
+                        conta</a>
+                    <button type="submit" class="btn-primary">Cadastrar</button>
+                    <a href="../admin/adm cadastro.html"
+                        class="btn-highlight">Entrar Como Admin</a>
+                </div>
+            </form>
+        </main>
+        <script src="js/aluno cadastro.js"></script>
+    </body>
 </html>

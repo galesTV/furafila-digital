@@ -91,7 +91,8 @@ body {
   font-weight: bold;
 }
 
-.btn-toggle, .btn-aluno-header {
+.btn-toggle,
+.btn-aluno-header {
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
@@ -118,7 +119,10 @@ body.dark-mode .btn-toggle {
   text-decoration: none;
 }
 
-.btn-voltar:hover, .btn-toggle:hover, .btn-aluno-header:hover, .btn-logout:hover {
+.btn-voltar:hover,
+.btn-toggle:hover,
+.btn-aluno-header:hover,
+.btn-logout:hover {
   filter: brightness(0.9);
   transform: translateY(-2px);
 }
@@ -131,7 +135,7 @@ body.dark-mode .btn-toggle {
   font-weight: bold;
   color: #4b0082;
   text-decoration: none;
-} 
+}
 
 .btn-logout {
   background-color: #ff0000;
@@ -188,11 +192,22 @@ body.dark-mode .btn-toggle {
   transform: translateY(-1px);
 }
 
-.tag-todos { background-color: var(--bg-header); color: var(--text-dark); }
-.tag-pendentes { background-color: var(--status-pendente); }
-.tag-preparando { background-color: var(--status-preparando); }
-.tag-pronto { background-color: var(--status-pronto); }
-.tag-atrasados { background-color: var(--status-atrasado); }
+.tag-todos {
+  background-color: var(--bg-header);
+  color: var(--text-dark);
+}
+.tag-pendentes {
+  background-color: var(--status-pendente);
+}
+.tag-preparando {
+  background-color: var(--status-preparando);
+}
+.tag-pronto {
+  background-color: var(--status-pronto);
+}
+.tag-atrasados {
+  background-color: var(--status-atrasado);
+}
 
 .tabela-pedidos {
   width: 100%;
@@ -240,9 +255,9 @@ body.dark-mode .btn-toggle {
     flex-wrap: wrap;
     padding: 15px;
   }
-  
+
   .barra-pesquisa {
-    order: 3; 
+    order: 3;
     width: 100%;
     max-width: 100%;
   }
@@ -278,11 +293,11 @@ body.dark-mode .btn-toggle {
     justify-content: center;
   }
 
-  .tabela-pedidos, 
-  .tabela-pedidos tbody, 
-  .tabela-pedidos tr, 
-  .tabela-pedidos td { 
-    display: block; 
+  .tabela-pedidos,
+  .tabela-pedidos tbody,
+  .tabela-pedidos tr,
+  .tabela-pedidos td {
+    display: block;
     width: 100%;
   }
 
@@ -322,12 +337,22 @@ body.dark-mode .btn-toggle {
     margin-right: 15px;
   }
 
-  .tabela-pedidos td:nth-of-type(1)::before { content: "Pedido:"; }
-  .tabela-pedidos td:nth-of-type(2)::before { content: "Aluno:"; }
-  .tabela-pedidos td:nth-of-type(3)::before { content: "Itens:"; }
-  .tabela-pedidos td:nth-of-type(4)::before { content: "Status:"; }
-  .tabela-pedidos td:nth-of-type(5)::before { content: "Hora:"; }
-  
+  .tabela-pedidos td:nth-of-type(1)::before {
+    content: "Pedido:";
+  }
+  .tabela-pedidos td:nth-of-type(2)::before {
+    content: "Aluno:";
+  }
+  .tabela-pedidos td:nth-of-type(3)::before {
+    content: "Itens:";
+  }
+  .tabela-pedidos td:nth-of-type(4)::before {
+    content: "Status:";
+  }
+  .tabela-pedidos td:nth-of-type(5)::before {
+    content: "Hora:";
+  }
+
   .status-select {
     max-width: 150px;
     padding: 6px 10px;

@@ -75,7 +75,9 @@ body {
   flex-wrap: wrap;
 }
 
-.btn-logout, .btn-student, .btn-toggle {
+.btn-logout,
+.btn-student,
+.btn-toggle {
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
@@ -87,7 +89,9 @@ body {
   text-decoration: none;
 }
 
-.btn-toggle:hover, .btn-student:hover, .btn-logout:hover {
+.btn-toggle:hover,
+.btn-student:hover,
+.btn-logout:hover {
   filter: brightness(0.9);
   transform: translateY(-2px);
 }
@@ -116,7 +120,8 @@ body {
   flex-wrap: wrap;
 }
 
-.btn-produto, .btn-painel {
+.btn-produto,
+.btn-painel {
   background: var(--bg-header);
   border: none;
   padding: 12px 30px;
@@ -130,7 +135,8 @@ body {
   text-align: center;
 }
 
-.btn-produto:hover, .btn-painel:hover {
+.btn-produto:hover,
+.btn-painel:hover {
   filter: brightness(0.9);
   transform: translateY(-2px);
 }
@@ -200,7 +206,7 @@ body {
   }
 
   .main-header {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: stretch;
     text-align: center;
   }
@@ -224,12 +230,13 @@ body {
     width: 100%;
     margin-bottom: 5px;
   }
-  
+
   .btn-container {
     flex-direction: column;
   }
-  
-  .btn-produto, .btn-painel {
+
+  .btn-produto,
+  .btn-painel {
     width: 100%;
   }
 }

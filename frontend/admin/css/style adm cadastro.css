@@ -4,15 +4,18 @@
   --text-h1: #4b0082;
   --text-label: #333;
   --btn-text: #000;
+  --btn-toggle: #31083f;
+  --btn-toggle-text: #fee8ff;
 }
 
-/* Quando o checkbox estiver marcado, as variáveis mudam */
 #dark-mode-toggle:checked ~ .login-container {
   --bg-color: #31083f;
   --input-bg: #945797;
   --text-h1: #fee8ff;
   --text-label: #fee8ff;
   --btn-text: #fff;
+  --btn-toggle: #fee8ff;
+  --btn-toggle-text: #4b0082;
 }
 
 * {
@@ -28,14 +31,12 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  /* O fundo do body agora segue o container */
-  background-color: #fee8ff; 
+  background-color: #fee8ff;
   transition: background-color 0.3s ease;
 }
 
-/* Ajuste para o fundo do body mudar junto */
 body:has(#dark-mode-toggle:checked) {
-    background-color: #31083f;
+  background-color: #31083f;
 }
 
 .login-container {
@@ -47,20 +48,18 @@ body:has(#dark-mode-toggle:checked) {
   transition: all 0.3s ease;
 }
 
-.toggle-container {
-    text-align: right;
-    margin-bottom: 20px;
-}
-
 .btn-toggle {
-    display: inline-block;
-    padding: 8px 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background: #fff;
-    font-size: 12px;
-    cursor: pointer;
-    color: #000;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--btn-toggle);
+  color: var(--btn-toggle-text);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -94,13 +93,31 @@ label {
   color: var(--text-label);
 }
 
-input {
+input,
+select {
   width: 100%;
   padding: 12px;
   border: none;
   border-radius: 8px;
   background-color: var(--input-bg);
   color: var(--btn-text);
+  font-size: 1rem;
+  outline: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input:focus,
+select:focus {
+  background-color: #e2ceff;
+}
+
+body.dark-mode input:focus,
+body.dark-mode select:focus {
+  background-color: #451254;
 }
 
 .button-row {
@@ -111,7 +128,9 @@ input {
   margin-top: 30px;
 }
 
-.btn-secondary, .btn-primary, .btn-highlight {
+.btn-secondary,
+.btn-primary,
+.btn-highlight {
   flex: 1;
   padding: 12px;
   border-radius: 8px;
@@ -123,7 +142,8 @@ input {
   font-size: 1rem;
 }
 
-.btn-secondary, .btn-primary {
+.btn-secondary,
+.btn-primary {
   background-color: var(--input-bg);
   color: var(--btn-text);
 }

@@ -3,7 +3,7 @@
 }
 
 body.dark-mode {
-  --text-dark: #fee8ff
+  --text-dark: #fee8ff;
 }
 
 .main-header h2 {
@@ -18,7 +18,7 @@ body.dark-mode {
   font-weight: bold;
   color: var(--text-dark);
   text-decoration: none;
-} 
+}
 
 .form-container {
   background: var(--bg-card);
@@ -27,7 +27,9 @@ body.dark-mode {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s;
 }
 
 .form-group {
@@ -99,7 +101,8 @@ body.dark-mode {
     font-size: 1.6rem;
   }
 
-  .header-left, .header-right {
+  .header-left,
+  .header-right {
     flex: 1;
     justify-content: center;
     min-width: 250px;
@@ -134,7 +137,9 @@ body.dark-mode {
     gap: 10px;
   }
 
-  .btn-toggle, .btn-student, .btn-logout {
+  .btn-toggle,
+  .btn-student,
+  .btn-logout {
     width: 100%;
     text-align: center;
     padding: 12px;

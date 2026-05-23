@@ -55,7 +55,6 @@ function renderizarTabela(pedidosParaExibir) {
                 <option value="Pendente" ${pedido.status_pedido === "Pendente" ? "selected" : ""}>Pendente</option>
                 <option value="Preparando" ${pedido.status_pedido === "Preparando" ? "selected" : ""}>Preparando</option>
                 <option value="Pronto" ${pedido.status_pedido === "Pronto" ? "selected" : ""}>Pronto</option>
-                <option value="Concluido">Finalizar (Sair da lista)</option>
             </select>
         </td>
         <td>${hora}</td>
