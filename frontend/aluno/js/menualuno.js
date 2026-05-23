@@ -2,7 +2,7 @@ let produtosCarregados = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const response = await fetch("http://localhost:3000/products");
+    const response = await fetch("https://furafila-digital.onrender.com/products");
     if (!response.ok) {
       throw new Error("Erro ao carregar os produtos");
     }
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const productCardHTML = `
                 <button id="${idBtn}" class="product-btn">
-                    <img src="http://localhost:3000${produto.imagem}" alt="${produto.nome}" onerror="this.src='../images/placeholder.png'">
+                    <img src="https://furafila-digital.onrender.com${produto.imagem}" alt="${produto.nome}" onerror="this.src='../images/placeholder.png'">
                     <div>
                         <h4>${produto.nome}</h4>
                         <p>R$ ${parseFloat(produto.preco).toFixed(2).replace(".", ",")}</p>
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           <div id="${idModal}" class="modal">
               <div class="modal-content">
                   <span class="${idFechar}">&times;</span>
-                  <img src="http://localhost:3000${produto.imagem}" alt="${produto.nome}" onerror="this.src='../images/placeholder.png'">
+                  <img src="https://furafila-digital.onrender.com${produto.imagem}" alt="${produto.nome}" onerror="this.src='../images/placeholder.png'">
                   <div class="modal-info">
                       <h2>${produto.nome}</h2>
                       <p>${produto.descricao}</p>

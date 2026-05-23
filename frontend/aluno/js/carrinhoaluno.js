@@ -112,7 +112,7 @@ window.finalizarPedido = async () => {
   };
 
   try {
-    const response = await fetch("http://localhost:3000/orders/checkout", {
+    const response = await fetch("https://furafila-digital.onrender.com/orders/checkout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dadosPedido),
