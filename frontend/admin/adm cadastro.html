@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FuraFila Digital - Cadastro</title>
+        <link rel="stylesheet" href="../admin/css/style adm cadastro.css">
+    </head>
+    <body>
+        <input type="checkbox" id="dark-mode-toggle" style="display: none;">
+
+        <main class="login-container">
+            <label for="dark-mode-toggle" class="btn-toggle">Alternar
+                Modo</label>
+
+            <img src="../images/Logo.png" alt="FuraFila Digital Logo"
+                class="logo">
+            <h1>CADASTRO - Admin</h1>
+
+            <form class="register-form">
+                <div class="input-group">
+                    <label for="escola">ID da Escola:</label>
+                    <select id="escola" required>
+                        <option value disabled selected>Selecione a
+                            Escola...</option>
+                        <option value="ADM001">ADM001</option>
+                        <option value="ADM002">ADM002</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha">
+                </div>
+
+                <div class="button-row">
+                    <a href="adm login.html" class="btn-secondary">Já tenho
+                        conta</a>
+                    <button type="submit" class="btn-primary">Cadastrar</button>
+                    <a href="../aluno/cadastroaluno.html"
+                        class="btn-highlight">Entrar Como Aluno</a>
+                </div>
+            </form>
+        </main>
+        <script src="js/adm cadastro.js"></script>
+    </body>
+</html>

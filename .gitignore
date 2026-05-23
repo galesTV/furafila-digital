@@ -1,4 +1,4 @@
-# Ignore node modules
+z# Ignore node modules
 node_modules/
 
 # Ignore environment variables
@@ -6,3 +6,7 @@ node_modules/
 
 # Ignore logs
 *.log
+
+# Ignore image files
+backend/uploads/*.png
+backend/uploads/*.jpg
