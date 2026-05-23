@@ -255,9 +255,9 @@ body.dark-mode .btn-toggle {
     flex-wrap: wrap;
     padding: 15px;
   }
-
+  
   .barra-pesquisa {
-    order: 3;
+    order: 3; 
     width: 100%;
     max-width: 100%;
   }
@@ -293,11 +293,11 @@ body.dark-mode .btn-toggle {
     justify-content: center;
   }
 
-  .tabela-pedidos,
-  .tabela-pedidos tbody,
-  .tabela-pedidos tr,
-  .tabela-pedidos td {
-    display: block;
+  .tabela-pedidos, 
+  .tabela-pedidos tbody, 
+  .tabela-pedidos tr, 
+  .tabela-pedidos td { 
+    display: block; 
     width: 100%;
   }
 
@@ -337,22 +337,12 @@ body.dark-mode .btn-toggle {
     margin-right: 15px;
   }
 
-  .tabela-pedidos td:nth-of-type(1)::before {
-    content: "Pedido:";
-  }
-  .tabela-pedidos td:nth-of-type(2)::before {
-    content: "Aluno:";
-  }
-  .tabela-pedidos td:nth-of-type(3)::before {
-    content: "Itens:";
-  }
-  .tabela-pedidos td:nth-of-type(4)::before {
-    content: "Status:";
-  }
-  .tabela-pedidos td:nth-of-type(5)::before {
-    content: "Hora:";
-  }
-
+  .tabela-pedidos td:nth-of-type(1)::before { content: "Pedido:"; }
+  .tabela-pedidos td:nth-of-type(2)::before { content: "Aluno:"; }
+  .tabela-pedidos td:nth-of-type(3)::before { content: "Itens:"; }
+  .tabela-pedidos td:nth-of-type(4)::before { content: "Status:"; }
+  .tabela-pedidos td:nth-of-type(5)::before { content: "Hora:"; }
+  
   .status-select {
     max-width: 150px;
     padding: 6px 10px;

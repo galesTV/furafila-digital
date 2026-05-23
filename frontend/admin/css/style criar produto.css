@@ -101,8 +101,7 @@ body.dark-mode {
     font-size: 1.6rem;
   }
 
-  .header-left,
-  .header-right {
+  .header-left, .header-right {
     flex: 1;
     justify-content: center;
     min-width: 250px;
@@ -137,9 +136,7 @@ body.dark-mode {
     gap: 10px;
   }
 
-  .btn-toggle,
-  .btn-student,
-  .btn-logout {
+  .btn-toggle, .btn-student, .btn-logout {
     width: 100%;
     text-align: center;
     padding: 12px;

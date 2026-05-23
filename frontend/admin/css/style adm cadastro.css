@@ -142,8 +142,7 @@ body.dark-mode select:focus {
   font-size: 1rem;
 }
 
-.btn-secondary,
-.btn-primary {
+.btn-secondary, .btn-primary {
   background-color: var(--input-bg);
   color: var(--btn-text);
 }

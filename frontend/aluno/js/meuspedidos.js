@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 const btnDark = document.getElementById("toggle-dark");
 const body = document.body;
 
-// Verifica se o modo escuro já estava ativo em outra página
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark-mode");
   if (btnDark) btnDark.innerHTML = "☀️";

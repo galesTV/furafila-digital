@@ -59,10 +59,7 @@ body {
   padding: 20px;
 }
 
-.logo {
-  width: 250px;
-  margin-bottom: 20px;
-}
+.logo { width: 250px; margin-bottom: 20px; }
 
 h1 {
   color: var(--text-main);
@@ -116,6 +113,7 @@ input:focus, select:focus {
   filter: brightness(0.95);
 }
 
+
 .button-row {
   width: 100%;
   display: flex;
@@ -150,7 +148,6 @@ button,
   background-color: var(--bg-btn-admin);
 }
 
-button:hover,
-.button-row a:hover {
-  filter: brightness(0.9);
+button:hover, .button-row a:hover {
+    filter: brightness(0.9);
 }
