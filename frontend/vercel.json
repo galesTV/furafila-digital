@@ -1,0 +1,3 @@
+{
+  "rewrites": [{ "source": "/", "destination": "/aluno/cadastroaluno.html" }]
+}
