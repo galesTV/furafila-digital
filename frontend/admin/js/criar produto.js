@@ -36,7 +36,7 @@ document
     }
 
     try {
-      const response = await fetch("http://localhost:3000/products/register", {
+      const response = await fetch("https://furafila-digital.onrender.com/products/register", {
         method: "POST",
         body: formData,
       });

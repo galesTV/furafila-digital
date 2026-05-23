@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function carregarPedidos() {
   try {
-    const response = await fetch("http://localhost:3000/orders/admin/all");
+    const response = await fetch("https://furafila-digital.onrender.com/orders/admin/all");
     todosOsPedidos = await response.json();
     renderizarTabela(todosOsPedidos);
     atualizarContadores();
@@ -98,7 +98,7 @@ function atualizarContadores() {
 async function alterarStatus(id_pedido, novo_status) {
   try {
     const response = await fetch(
-      "http://localhost:3000/orders/admin/update-status",
+      "https://furafila-digital.onrender.com/orders/admin/update-status",
       {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
